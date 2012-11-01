@@ -1,0 +1,411 @@
+2012/10/30 23:05:41 [error] [exception.CDbException] exception 'CDbException' with message 'The table "houses" for active record class "Houses" cannot be found in the database.' in C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php:2264
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(379): CActiveRecordMetaData->__construct(Object(Houses))
+#1 C:\xampp\htdocs\yii\framework\web\CActiveDataProvider.php(75): CActiveRecord::model('Houses')
+#2 C:\xampp\htdocs\filipponeinmobiliaria\protected\controllers\HousesController.php(130): CActiveDataProvider->__construct('Houses')
+#3 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(50): HousesController->actionIndex()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#8 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(292): CFilterChain->run()
+#11 C:\xampp\htdocs\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(276): CController->run('index')
+#13 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('houses/index')
+#14 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\filipponeinmobiliaria\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/filipponeinmobiliaria/index.php?r=houses/index
+---
+2012/10/30 23:11:46 [error] [exception.CDbException] exception 'CDbException' with message 'The table "houses" for active record class "Houses" cannot be found in the database.' in C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php:2264
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(379): CActiveRecordMetaData->__construct(Object(Houses))
+#1 C:\xampp\htdocs\yii\framework\web\CActiveDataProvider.php(75): CActiveRecord::model('Houses')
+#2 C:\xampp\htdocs\filipponeinmobiliaria\protected\controllers\HousesController.php(130): CActiveDataProvider->__construct('Houses')
+#3 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(50): HousesController->actionIndex()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#8 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(292): CFilterChain->run()
+#11 C:\xampp\htdocs\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(276): CController->run('index')
+#13 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('houses/index')
+#14 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\filipponeinmobiliaria\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/filipponeinmobiliaria/index.php?r=houses/index
+---
+2012/10/30 23:18:45 [error] [exception.CException] exception 'CException' with message 'Property "User.salt" is not defined.' in C:\xampp\htdocs\yii\framework\base\CComponent.php:131
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(144): CComponent->__get('salt')
+#1 C:\xampp\htdocs\filipponeinmobiliaria\protected\models\User.php(92): CActiveRecord->__get('salt')
+#2 C:\xampp\htdocs\filipponeinmobiliaria\protected\components\UserIdentity.php(42): User->validatePassword('user')
+#3 C:\xampp\htdocs\filipponeinmobiliaria\protected\models\LoginForm.php(52): UserIdentity->authenticate()
+#4 C:\xampp\htdocs\yii\framework\validators\CInlineValidator.php(43): LoginForm->authenticate('password', Array)
+#5 C:\xampp\htdocs\yii\framework\validators\CValidator.php(197): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#6 C:\xampp\htdocs\yii\framework\base\CModel.php(158): CValidator->validate(Object(LoginForm), NULL)
+#7 C:\xampp\htdocs\filipponeinmobiliaria\protected\controllers\SiteController.php(88): CModel->validate()
+#8 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(50): SiteController->actionLogin()
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#11 C:\xampp\htdocs\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(276): CController->run('login')
+#13 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('site/login')
+#14 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\filipponeinmobiliaria\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/filipponeinmobiliaria/index.php?r=site/login
+HTTP_REFERER=http://localhost/filipponeinmobiliaria/index.php?r=site/login
+---
+2012/10/30 23:35:32 [error] [exception.CException] exception 'CException' with message 'User and its behaviors do not have a method or closure named "validatePassword".' in C:\xampp\htdocs\yii\framework\base\CComponent.php:266
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(226): CComponent->__call('validatePasswor...', Array)
+#1 C:\xampp\htdocs\filipponeinmobiliaria\protected\components\UserIdentity.php(42): CActiveRecord->__call('validatePasswor...', Array)
+#2 C:\xampp\htdocs\filipponeinmobiliaria\protected\components\UserIdentity.php(42): User->validatePassword('user')
+#3 C:\xampp\htdocs\filipponeinmobiliaria\protected\models\LoginForm.php(52): UserIdentity->authenticate()
+#4 C:\xampp\htdocs\yii\framework\validators\CInlineValidator.php(43): LoginForm->authenticate('password', Array)
+#5 C:\xampp\htdocs\yii\framework\validators\CValidator.php(197): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#6 C:\xampp\htdocs\yii\framework\base\CModel.php(158): CValidator->validate(Object(LoginForm), NULL)
+#7 C:\xampp\htdocs\filipponeinmobiliaria\protected\controllers\SiteController.php(88): CModel->validate()
+#8 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(50): SiteController->actionLogin()
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#11 C:\xampp\htdocs\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(276): CController->run('login')
+#13 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('site/login')
+#14 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\filipponeinmobiliaria\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/filipponeinmobiliaria/index.php?r=site/login
+HTTP_REFERER=http://localhost/filipponeinmobiliaria/index.php?r=site/login
+---
+2012/10/30 23:42:23 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\xampp\htdocs\yii\framework\web\auth\CAccessControlFilter.php:157
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\auth\CAccessControlFilter.php(120): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(292): CFilterChain->run()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(276): CController->run('admin')
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('user/admin')
+#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\filipponeinmobiliaria\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/filipponeinmobiliaria/index.php?r=user/admin
+HTTP_REFERER=http://localhost/filipponeinmobiliaria/index.php?r=user/index
+---
+2012/10/30 23:42:30 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\xampp\htdocs\yii\framework\web\auth\CAccessControlFilter.php:157
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\auth\CAccessControlFilter.php(120): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(292): CFilterChain->run()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(276): CController->run('admin')
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('user/admin')
+#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\filipponeinmobiliaria\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/filipponeinmobiliaria/index.php?r=user/admin
+HTTP_REFERER=http://localhost/filipponeinmobiliaria/index.php?r=user/index
+---
+2012/10/31 00:03:42 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\xampp\htdocs\yii\framework\web\auth\CAccessControlFilter.php:157
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\auth\CAccessControlFilter.php(120): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(292): CFilterChain->run()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(276): CController->run('admin')
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('user/admin')
+#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\filipponeinmobiliaria\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/filipponeinmobiliaria/index.php?r=user/admin
+HTTP_REFERER=http://localhost/filipponeinmobiliaria/index.php?r=user/index
+---
+2012/10/31 00:05:17 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\xampp\htdocs\yii\framework\web\auth\CAccessControlFilter.php:157
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\auth\CAccessControlFilter.php(120): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(292): CFilterChain->run()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(276): CController->run('admin')
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('user/admin')
+#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\filipponeinmobiliaria\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/filipponeinmobiliaria/index.php?r=user/admin
+---
+2012/10/31 00:05:26 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\xampp\htdocs\yii\framework\web\auth\CAccessControlFilter.php:157
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\auth\CAccessControlFilter.php(120): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(292): CFilterChain->run()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(276): CController->run('admin')
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('houses/admin')
+#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\filipponeinmobiliaria\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/filipponeinmobiliaria/index.php?r=houses/admin
+HTTP_REFERER=http://localhost/filipponeinmobiliaria/index.php?r=houses/
+---
+2012/10/31 00:10:13 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\xampp\htdocs\yii\framework\web\auth\CAccessControlFilter.php:157
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\auth\CAccessControlFilter.php(120): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(292): CFilterChain->run()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(276): CController->run('admin')
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('user/admin')
+#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\filipponeinmobiliaria\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/filipponeinmobiliaria/index.php?r=user/admin
+---
+2012/10/31 00:10:22 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\xampp\htdocs\yii\framework\web\auth\CAccessControlFilter.php:157
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\auth\CAccessControlFilter.php(120): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(292): CFilterChain->run()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(276): CController->run('delete')
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('user/delete')
+#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\filipponeinmobiliaria\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/filipponeinmobiliaria/index.php?r=user/delete&id=2
+HTTP_REFERER=http://localhost/filipponeinmobiliaria/index.php?r=user/view&id=2
+---
+2012/10/31 00:14:31 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\xampp\htdocs\yii\framework\web\auth\CAccessControlFilter.php:157
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\auth\CAccessControlFilter.php(120): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(292): CFilterChain->run()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(276): CController->run('create')
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('user/create')
+#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\filipponeinmobiliaria\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/filipponeinmobiliaria/index.php?r=user/create
+---
+2012/10/31 00:14:36 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\xampp\htdocs\yii\framework\web\auth\CAccessControlFilter.php:157
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\auth\CAccessControlFilter.php(120): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(292): CFilterChain->run()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(276): CController->run('')
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('user')
+#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\filipponeinmobiliaria\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/filipponeinmobiliaria/index.php?r=user
+---
+2012/10/31 00:14:42 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\xampp\htdocs\yii\framework\web\auth\CAccessControlFilter.php:157
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\auth\CAccessControlFilter.php(120): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(292): CFilterChain->run()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(276): CController->run('index')
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('user/index')
+#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\filipponeinmobiliaria\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/filipponeinmobiliaria/index.php?r=user/index
+---
+2012/10/31 23:17:41 [error] [php] mail() [<a href='function.mail'>function.mail</a>]: Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set() (C:\xampp\htdocs\filipponeinmobiliaria\protected\controllers\SiteController.php:61)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(309): CInlineAction->runWithParams()
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(287): SiteController->runAction()
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(266): SiteController->runActionWithFilters()
+#3 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(276): SiteController->run()
+#4 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#5 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#6 C:\xampp\htdocs\filipponeinmobiliaria\index.php(13): CWebApplication->run()
+REQUEST_URI=/filipponeinmobiliaria/index.php?r=site/contact
+in C:\xampp\htdocs\filipponeinmobiliaria\protected\controllers\SiteController.php (61)
+in C:\xampp\htdocs\filipponeinmobiliaria\index.php (13)
+2012/10/31 23:24:00 [error] [php] mail() [<a href='function.mail'>function.mail</a>]: Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set() (C:\xampp\htdocs\filipponeinmobiliaria\protected\controllers\SiteController.php:61)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(309): CInlineAction->runWithParams()
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(287): SiteController->runAction()
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(266): SiteController->runActionWithFilters()
+#3 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(276): SiteController->run()
+#4 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#5 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#6 C:\xampp\htdocs\filipponeinmobiliaria\index.php(13): CWebApplication->run()
+REQUEST_URI=/filipponeinmobiliaria/index.php?r=site/contact
+in C:\xampp\htdocs\filipponeinmobiliaria\protected\controllers\SiteController.php (61)
+in C:\xampp\htdocs\filipponeinmobiliaria\index.php (13)
+2012/10/31 23:39:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "viewEstates/index".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('viewEstates/ind...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\filipponeinmobiliaria\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/filipponeinmobiliaria/index.php?r=viewEstates/index
+HTTP_REFERER=http://localhost/filipponeinmobiliaria/index.php?r=site/index
+---
+2012/10/31 23:40:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "viewEstates/index".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('viewEstates/ind...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\filipponeinmobiliaria\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/filipponeinmobiliaria/index.php?r=viewEstates/index
+---
+2012/10/31 23:40:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "viewEstates/index".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('viewEstates/ind...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\filipponeinmobiliaria\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/filipponeinmobiliaria/index.php?r=viewEstates/index
+HTTP_REFERER=http://localhost/filipponeinmobiliaria/index.php?r=viewEstates/index
+---
+2012/10/31 23:40:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "viewEstates/index".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('viewEstates/ind...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\filipponeinmobiliaria\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/filipponeinmobiliaria/index.php?r=viewEstates/index
+HTTP_REFERER=http://localhost/filipponeinmobiliaria/index.php?r=site/index
+---
+2012/10/31 23:41:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "viewEstates/index".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('viewEstates/ind...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\filipponeinmobiliaria\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/filipponeinmobiliaria/index.php?r=viewEstates/index
+---
+2012/10/31 23:41:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "estates/index".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('estates/index')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\filipponeinmobiliaria\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/filipponeinmobiliaria/index.php?r=estates/index
+HTTP_REFERER=http://localhost/filipponeinmobiliaria/index.php?r=viewEstates/index
+---
+2012/10/31 23:41:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "estates/index".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('estates/index')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\filipponeinmobiliaria\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/filipponeinmobiliaria/index.php?r=estates/index
+HTTP_REFERER=http://localhost/filipponeinmobiliaria/index.php?r=site/index
+---
+2012/10/31 23:43:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "estates/index".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('estates/index')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\filipponeinmobiliaria\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/filipponeinmobiliaria/index.php?r=estates/index
+---
+2012/10/31 23:47:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "estates/index".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('estates/index')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\filipponeinmobiliaria\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/filipponeinmobiliaria/index.php?r=estates/index
+HTTP_REFERER=http://localhost/filipponeinmobiliaria/index.php?r=site/index
+---
+2012/10/31 23:50:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "housse".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('housse')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\filipponeinmobiliaria\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/filipponeinmobiliaria/index.php?r=housse
+---
+2012/10/31 23:51:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "estates".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('estates')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\filipponeinmobiliaria\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/filipponeinmobiliaria/index.php?r=estates&view=index
+HTTP_REFERER=http://localhost/filipponeinmobiliaria/index.php?r=site/index
+---
+2012/10/31 23:51:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "estates".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('estates')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\filipponeinmobiliaria\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/filipponeinmobiliaria/index.php?r=estates
+---
+2012/10/31 23:52:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "estates".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('estates')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\filipponeinmobiliaria\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/filipponeinmobiliaria/index.php?r=estates&view=index
+---
+2012/10/31 23:55:03 [error] [exception.CException] exception 'CException' with message 'ViewEstatesController cannot find the requested view "_view".' in C:\xampp\htdocs\yii\framework\web\CController.php:879
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\zii\widgets\CListView.php(242): CController->renderPartial('_view', Array)
+#1 C:\xampp\htdocs\yii\framework\zii\widgets\CBaseListView.php(158): CListView->renderItems()
+#2 [internal function]: CBaseListView->renderSection(Array)
+#3 C:\xampp\htdocs\yii\framework\zii\widgets\CBaseListView.php(141): preg_replace_callback('/{(\w+)}/', Array, '{summary}?{sort...')
+#4 C:\xampp\htdocs\yii\framework\zii\widgets\CBaseListView.php(126): CBaseListView->renderContent()
+#5 C:\xampp\htdocs\yii\framework\web\CBaseController.php(174): CBaseListView->run()
+#6 C:\xampp\htdocs\filipponeinmobiliaria\protected\views\viewEstates\index.php(6): CBaseController->widget('zii.widgets.CLi...', Array)
+#7 C:\xampp\htdocs\yii\framework\web\CBaseController.php(127): require('C:\xampp\htdocs...')
+#8 C:\xampp\htdocs\yii\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(870): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(783): CController->renderPartial('index', Array, true)
+#11 C:\xampp\htdocs\filipponeinmobiliaria\protected\controllers\ViewEstatesController.php(14): CController->render('index', Array)
+#12 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(50): ViewEstatesController->actionIndex()
+#13 C:\xampp\htdocs\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#14 C:\xampp\htdocs\yii\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#15 C:\xampp\htdocs\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(276): CController->run('index')
+#17 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('viewEstates/ind...')
+#18 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#19 C:\xampp\htdocs\filipponeinmobiliaria\index.php(13): CApplication->run()
+#20 {main}
+REQUEST_URI=/filipponeinmobiliaria/index.php?r=viewEstates/index
+---

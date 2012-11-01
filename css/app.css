@@ -1,0 +1,14 @@
+
+#logo.logo {
+	padding: 30px 20px;
+	font-size: 200%;
+}
+
+.title-bar
+{
+	background:white url(bg.gif) repeat-x left top;
+	margin-bottom: 0px;
+	padding: 5px 10px;
+	font-size: 16px;
+	font-weight: bold;
+}
