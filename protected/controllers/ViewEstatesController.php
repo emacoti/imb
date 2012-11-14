@@ -8,9 +8,34 @@ class ViewEstatesController extends Controller
 	 */
 	public function actionIndex()
 	{
-		$dataProvider=new CActiveDataProvider('Houses');
+		$model=new Estates('search');
+		$model->unsetAttributes();  // clear any default values
+		$title= 'Todas';
+		
+		if(isset($_GET['Estates'])) {
+		
+			$aux= $_GET['Estates'];
+			$model->attributes= $aux;
+			$title= '';
+			if (isset($aux['category_id'])) {
+				$title= Categories::model()->findByPk($aux['category_id'])->name;
+			}
+		}		
+		
 		$this->render('index',array(
-			'dataProvider'=>$dataProvider,
+			'model'=>$model,
+			'title'=>$title
+		));
+	}
+	
+	/**
+	 * Displays a particular model.
+	 * @param integer $id the ID of the model to be displayed
+	 */
+	public function actionView($id)
+	{
+		$this->render('view',array(
+			'model'=>Estates::model()->with('datas')->findByPk($id)
 		));
 	}
 
@@ -26,60 +51,5 @@ class ViewEstatesController extends Controller
 	    	else
 	        	$this->render('error', $error);
 	    }
-	}
-
-	/**
-	 * Displays the contact page
-	 */
-	public function actionContact()
-	{
-		$model=new ContactForm;
-		if(isset($_POST['ContactForm']))
-		{
-			$model->attributes=$_POST['ContactForm'];
-			if($model->validate())
-			{
-				$headers="From: {$model->email}\r\nReply-To: {$model->email}";
-				mail(Yii::app()->params['adminEmail'],$model->subject,$model->body,$headers);
-				Yii::app()->user->setFlash('contact','Thank you for contacting us. We will respond to you as soon as possible.');
-				$this->refresh();
-			}
-		}
-		$this->render('contact',array('model'=>$model));
-	}
-
-	/**
-	 * Displays the login page
-	 */
-	public function actionLogin()
-	{
-		$model=new LoginForm;
-
-		// if it is ajax validation request
-		if(isset($_POST['ajax']) && $_POST['ajax']==='login-form')
-		{
-			echo CActiveForm::validate($model);
-			Yii::app()->end();
-		}
-
-		// collect user input data
-		if(isset($_POST['LoginForm']))
-		{
-			$model->attributes=$_POST['LoginForm'];
-			// validate user input and redirect to the previous page if valid
-			if($model->validate() && $model->login())
-				$this->redirect(Yii::app()->user->returnUrl);
-		}
-		// display the login form
-		$this->render('login',array('model'=>$model));
-	}
-
-	/**
-	 * Logs out the current user and redirect to homepage.
-	 */
-	public function actionLogout()
-	{
-		Yii::app()->user->logout();
-		$this->redirect(Yii::app()->homeUrl);
-	}
+	}	
 }

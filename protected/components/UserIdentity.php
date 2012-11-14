@@ -39,4 +39,17 @@ class UserIdentity extends CUserIdentity
     {
         return $this->_id;
     }
+	
+	public function getIsAdmin() {
+	
+		$username=strtolower($this->username);
+		if ($username == 'admin') {
+		
+			return true;
+		}
+		else {
+
+			return false;
+		}
+	}
 }

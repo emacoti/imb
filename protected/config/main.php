@@ -34,6 +34,8 @@ return array(
 		'user'=>array(
 			// enable cookie-based authentication
 			'allowAutoLogin'=>true,
+			// Uncoment this for custom user authentication
+			//'class' => 'UserIdentity',
 		),
 		// uncomment the following to enable URLs in path-format
 		/*

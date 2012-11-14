@@ -1,15 +1,15 @@
 <?php
 $this->breadcrumbs=array(
-	'Houses',
+	'Datas',
 );
 
 $this->menu=array(
-	array('label'=>'Create Houses', 'url'=>array('create')),
-	array('label'=>'Manage Houses', 'url'=>array('admin')),
+	array('label'=>'Create Data', 'url'=>array('create')),
+	array('label'=>'Manage Data', 'url'=>array('admin')),
 );
 ?>
 
-<h1>Houses</h1>
+<h1>Datas</h1>
 
 <?php $this->widget('zii.widgets.CListView', array(
 	'dataProvider'=>$dataProvider,

@@ -1,7 +1,7 @@
 <div class="form">
 
 <?php $form=$this->beginWidget('CActiveForm', array(
-	'id'=>'houses-form',
+	'id'=>'conditions-form',
 	'enableAjaxValidation'=>false,
 )); ?>
 
@@ -11,7 +11,7 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'name'); ?>
-		<?php echo $form->textField($model,'name',array('size'=>50,'maxlength'=>50)); ?>
+		<?php echo $form->textField($model,'name',array('size'=>25,'maxlength'=>25)); ?>
 		<?php echo $form->error($model,'name'); ?>
 	</div>
 

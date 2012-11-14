@@ -1,18 +1,24 @@
 <?php
 
 /**
- * This is the model class for table "houses".
+ * This is the model class for table "data".
  *
- * The followings are the available columns in table 'houses':
+ * The followings are the available columns in table 'data':
  * @property integer $id
+ * @property integer $estate_id
  * @property string $name
+ * @property string $data_type
+ * @property string $value
+ *
+ * The followings are the available model relations:
+ * @property Estates $estate
  */
-class Houses extends CActiveRecord
+class Data extends CActiveRecord
 {
 	/**
 	 * Returns the static model of the specified AR class.
 	 * @param string $className active record class name.
-	 * @return Houses the static model class
+	 * @return Data the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{
@@ -24,7 +30,7 @@ class Houses extends CActiveRecord
 	 */
 	public function tableName()
 	{
-		return 'houses';
+		return 'data';
 	}
 
 	/**
@@ -35,11 +41,12 @@ class Houses extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('name', 'required'),
-			array('name', 'length', 'max'=>50),
+			array('estate_id, name, data_type, value', 'required'),
+			array('estate_id', 'numerical', 'integerOnly'=>true),
+			array('name, data_type, value', 'length', 'max'=>50),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, name', 'safe', 'on'=>'search'),
+			array('id, estate_id, name, data_type, value', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -51,6 +58,7 @@ class Houses extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
+			'estate' => array(self::BELONGS_TO, 'Estates', 'estate_id'),
 		);
 	}
 
@@ -61,7 +69,10 @@ class Houses extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
+			'estate_id' => 'Estate',
 			'name' => 'Name',
+			'data_type' => 'Data Type',
+			'value' => 'Value',
 		);
 	}
 
@@ -77,7 +88,10 @@ class Houses extends CActiveRecord
 		$criteria=new CDbCriteria;
 
 		$criteria->compare('id',$this->id);
+		$criteria->compare('estate_id',$this->estate_id);
 		$criteria->compare('name',$this->name,true);
+		$criteria->compare('data_type',$this->data_type,true);
+		$criteria->compare('value',$this->value,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

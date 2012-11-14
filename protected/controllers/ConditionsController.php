@@ -1,6 +1,6 @@
 <?php
 
-class HousesController extends Controller
+class ConditionsController extends Controller
 {
 	/**
 	 * @var string the default layout for the views. Defaults to '//layouts/column2', meaning
@@ -26,17 +26,17 @@ class HousesController extends Controller
 	public function accessRules()
 	{
 		return array(
-			array('allow',  // allow user and admin user to perform 'index' and 'view' actions
+			array('allow',  // allow all users to perform 'index' and 'view' actions
 				'actions'=>array('index','view'),
-				'users'=>array('user','admin'),
+				'users'=>array('*'),
 			),
-			array('allow', // allow user and admin user to perform 'create' and 'update' actions
+			array('allow', // allow authenticated user to perform 'create' and 'update' actions
 				'actions'=>array('create','update'),
-				'users'=>array('user','admin'),
+				'users'=>array('@'),
 			),
-			array('allow', // allow user and admin user to perform 'admin' and 'delete' actions
+			array('allow', // allow admin user to perform 'admin' and 'delete' actions
 				'actions'=>array('admin','delete'),
-				'users'=>array('user','admin'),
+				'users'=>array('admin'),
 			),
 			array('deny',  // deny all users
 				'users'=>array('*'),
@@ -61,14 +61,14 @@ class HousesController extends Controller
 	 */
 	public function actionCreate()
 	{
-		$model=new Houses;
+		$model=new Conditions;
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
-		if(isset($_POST['Houses']))
+		if(isset($_POST['Conditions']))
 		{
-			$model->attributes=$_POST['Houses'];
+			$model->attributes=$_POST['Conditions'];
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->id));
 		}
@@ -90,9 +90,9 @@ class HousesController extends Controller
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
-		if(isset($_POST['Houses']))
+		if(isset($_POST['Conditions']))
 		{
-			$model->attributes=$_POST['Houses'];
+			$model->attributes=$_POST['Conditions'];
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->id));
 		}
@@ -127,7 +127,7 @@ class HousesController extends Controller
 	 */
 	public function actionIndex()
 	{
-		$dataProvider=new CActiveDataProvider('Houses');
+		$dataProvider=new CActiveDataProvider('Conditions');
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,
 		));
@@ -138,10 +138,10 @@ class HousesController extends Controller
 	 */
 	public function actionAdmin()
 	{
-		$model=new Houses('search');
+		$model=new Conditions('search');
 		$model->unsetAttributes();  // clear any default values
-		if(isset($_GET['Houses']))
-			$model->attributes=$_GET['Houses'];
+		if(isset($_GET['Conditions']))
+			$model->attributes=$_GET['Conditions'];
 
 		$this->render('admin',array(
 			'model'=>$model,
@@ -155,7 +155,7 @@ class HousesController extends Controller
 	 */
 	public function loadModel($id)
 	{
-		$model=Houses::model()->findByPk($id);
+		$model=Conditions::model()->findByPk($id);
 		if($model===null)
 			throw new CHttpException(404,'The requested page does not exist.');
 		return $model;
@@ -167,7 +167,7 @@ class HousesController extends Controller
 	 */
 	protected function performAjaxValidation($model)
 	{
-		if(isset($_POST['ajax']) && $_POST['ajax']==='houses-form')
+		if(isset($_POST['ajax']) && $_POST['ajax']==='conditions-form')
 		{
 			echo CActiveForm::validate($model);
 			Yii::app()->end();
