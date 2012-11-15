@@ -46,6 +46,17 @@ $db->exec(
 			
 			FOREIGN KEY(estate_id) REFERENCES estates(id))'
 		));
+		
+$db->exec(
+	utf8_encode(
+		'CREATE TABLE IF NOT EXISTS images (
+			id INTEGER PRIMARY KEY,
+			estate_id INTEGER UNSIGNED NOT NULL,
+			path VARCHAR(50) NOT NULL,
+			description VARCHAR(250),
+			
+			FOREIGN KEY(estate_id) REFERENCES estates(id))'
+		));
  
 $db->exec(utf8_encode('CREATE TABLE IF NOT EXISTS users(id INTEGER PRIMARY KEY, username VARCHAR(50) NOT NULL UNIQUE, password VARCHAR(50) NOT NULL, salt VARCHAR(128) NOT NULL)'));
 

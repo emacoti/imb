@@ -16,16 +16,31 @@ class ViewEstatesController extends Controller
 		
 			$aux= $_GET['Estates'];
 			$model->attributes= $aux;
-			$title= '';
-			if (isset($aux['category_id'])) {
-				$title= Categories::model()->findByPk($aux['category_id'])->name;
-			}
+			
+			$title= $this->hasSearch($aux);
 		}		
 		
 		$this->render('index',array(
 			'model'=>$model,
 			'title'=>$title
 		));
+	}
+	
+	// revisa si fue seteado alguno de los atributos
+	// para filtrar las propiedades
+	function hasSearch($attributes) {
+		
+		$title= '';
+		
+		if ($attributes['category_id'] != null) {
+			$title= Categories::model()->findByPk($attributes['category_id'])->name;
+		}
+		
+		if ($title === '') {
+			$title= 'Todas';
+		}
+			
+		return $title;
 	}
 	
 	/**
@@ -35,7 +50,7 @@ class ViewEstatesController extends Controller
 	public function actionView($id)
 	{
 		$this->render('view',array(
-			'model'=>Estates::model()->with('datas')->findByPk($id)
+			'model'=>Estates::model()->findByPk($id)
 		));
 	}
 
