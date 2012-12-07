@@ -1,11 +1,48 @@
 
+body {
+	background: #fff url(../images/bg-1.png);
+	background-position:center top;
+}
+
 #logo.logo {
 	padding: 30px 20px;
 	font-size: 200%;
 }
 
-.title-bar
-{
+.art-nav.art-nav-sup div {
+	height: 25px;
+}
+.art-nav.art-nav-sup {
+	height: 25px;
+}
+.art-nav.art-nav-inf > .l {
+	left: 30px;
+	right: 0px;
+}
+.art-nav.art-nav-inf > .r {
+	right: 80px;
+	clip: rect(auto, auto, auto, 80px);
+	*clip: rect(auto auto auto 80px);
+}
+
+div.art-header {
+	height: 150px;
+}
+
+.title-bar {
+	background:white url(bg.gif) repeat-x left top;
+	margin: 0px 0px 20px;
+	padding: 5px 10px;
+}
+
+.title-bar label {
+	margin: 0px;
+	padding: 5px 0px;
+	font-size: 16px;
+	font-weight: bold;
+}
+
+.title-panel {
 	background:white url(bg.gif) repeat-x left top;
 	margin-bottom: 0px;
 	padding: 5px 10px;
@@ -13,9 +50,161 @@
 	font-weight: bold;
 }
 
+div.breadcrumbs {
+	padding: 5px 28px;
+}
+
+
+/****** Administracion ********/
+
+.art-blockcontent-body .menu-adm  #sidebar {
+	margin-bottom: 20px;
+}
+
+.view.admin > div {
+	display: inline;
+}
+
+.view.admin > div a {
+	float: right;
+}
+
+/*****************************/
+
+
+/****** home ********/
+
+.carousel-inner .item img {
+	margin: 0px;
+}
+
+/***********************************/
+
+/****** Listado propiedades ********/
+.accordion-inner.well.search-estates {
+	padding: 20px;
+}
+.search-estates .controls-row  {
+	margin-bottom: 20px;
+}
+.search-estates .controls-row.last {
+	margin-bottom: 0px;
+}
+.search-estates .controls-row .span-custom {
+	width: 183px;
+}
+.search-estates .controls-row .span {
+	margin-right: 0px;
+}
+.search-estates .controls-row .span.btn-submit {
+	text-align: right;
+}
+.controls-row .span .art-button-wrapper {
+	margin-top: 20px;
+}
+.controls-row .span .select-custom {
+	width: 180px;
+	margin-bottom: 0px;
+}
+.controls-row .span .input-custom {
+	width: 165px;
+	margin-bottom: 0px;
+}
+
+.list-view.list-view-estates .sorter {
+	text-align: left;
+	float: left;
+}
+.list-view-estates .sorter li {
+	background: transparent;
+}
+.list-view-estates .items a {
+	text-decoration: none;
+	color: #363636;
+}
 .list-view-estates .items a:hover {
 	text-decoration: none;
+	color: #AB2B2B;
+	cursor: pointer;
 }
+
+div.view.view-estates {
+	margin: 0px 0px 10px;
+}
+
+.view.view-estates {
+	display: inline-block;
+}
+
+.view.view-estates .img {
+	float: left;
+	margin-right: 10px;
+}
+.view.view-estates .img img {
+	width: 140px;
+	height: 105px;
+}
+.view.view-estates .info {
+	float: left;
+	width: 660px;
+}
+.view.view-estates .info div {
+	display: inline;
+}
+.view.view-estates .info div.right {
+	float: right;
+}
+
+/*****************************/
+
+/****** Ver propiedad ********/
+
+.view-estate .estate-description {
+	text-align: justify;
+}
+
+.detail-view.view-est-att {
+	width: 100%;
+}
+.detail-view.view-est-att th {
+	width: 200px;
+	padding-right: 20px;
+}
+.detail-view.view-est-att .odd th {
+	background: #E5F1F4;
+}
+.detail-view.view-est-att .even th {
+	background: #F8F8F8;
+}
+.detail-view.view-est-att td {
+	padding-left: 20px;
+}
+.detail-view.view-est-att .odd td {
+	background: #E5F1F4;
+}.detail-view.view-est-att .even td {
+	background: #F8F8F8;
+}
+.view-est-img img {
+	height: 114px;
+	width: 160px;
+}
+#imgBody .carousel {
+	margin-bottom: 0px;
+}
+
+/*****************************/
+
+
+/*** personalizado de main style ***/
+
+div.view  {
+	padding: 10px;
+	margin: 10px 0;
+	border: 1px solid #CACACA;
+}
+
+/***********************************/
+
 
 /*** personalizado de bootstrap ***/
 .accordion-inner.well {
@@ -29,4 +218,11 @@
 [class*="span"] {
 	margin-left: 0px;
 	margin-right: 20px;
+}
+
+.carousel .carousel-control.left,
+.carousel .carousel-control.right {
+	text-decoration: none;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	color: white;
 }

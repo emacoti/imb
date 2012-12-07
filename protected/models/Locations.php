@@ -65,7 +65,7 @@ class Locations extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-			'name' => 'Name',
+			'name' => 'Barrio',
 		);
 	}
 

@@ -1,18 +1,18 @@
 <?php
 $this->breadcrumbs=array(
-	'Estates'=>array('index'),
+	'Propiedades'=>array('index'),
 	$model->id=>array('view','id'=>$model->id),
 	'Update',
 );
 
 $this->menu=array(
-	array('label'=>'List Estates', 'url'=>array('index')),
-	array('label'=>'Create Estates', 'url'=>array('create')),
-	array('label'=>'View Estates', 'url'=>array('view', 'id'=>$model->id)),
-	array('label'=>'Manage Estates', 'url'=>array('admin')),
+	array('label'=>'Listar Propiedades', 'url'=>array('index')),
+	array('label'=>'Crear Propiedad', 'url'=>array('create')),
+	array('label'=>'Ver Propiedad', 'url'=>array('view', 'id'=>$model->id)),
+	array('label'=>'Manage Propiedades', 'url'=>array('admin')),
 );
 ?>
 
-<h1>Update Estates <?php echo $model->id; ?></h1>
+<h1>Editar Propiedad con ID <?php echo $model->id; ?></h1>
 
 <?php echo $this->renderPartial('_form', array('model'=>$model)); ?>

@@ -1,4 +1,5 @@
 <?php
+Yii::import('application.extensions.EWideImage.EWideImage');
 
 class SiteController extends Controller
 {
@@ -29,6 +30,8 @@ class SiteController extends Controller
 	{
 		// renders the view file 'protected/views/site/index.php'
 		// using the default layout 'protected/views/layouts/main.php'
+		//$url= 'http://'.Yii::app()->request->getServerName() . $this->createUrl('/images/bootstrap-mdo-sfmoma-01.jpg');
+		//$tt= EWideImage::load($url)->crop('center', 'center', 350, 350)->output('png');
 		$this->render('index');
 	}
 
@@ -86,7 +89,7 @@ class SiteController extends Controller
 			$model->attributes=$_POST['LoginForm'];
 			// validate user input and redirect to the previous page if valid
 			if($model->validate() && $model->login())
-				$this->redirect(Yii::app()->user->returnUrl);
+				$this->redirect(array('admin/index'));
 		}
 		// display the login form
 		$this->render('login',array('model'=>$model));

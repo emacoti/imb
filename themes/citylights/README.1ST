@@ -1,0 +1,32 @@
+﻿README for Artisteer-based Theme – “City Lights”
+Created: April 18, 2011
+
+Requirements: 
+-----------------
+Artisteer requires a custom menu called ArtMenu.php provided in the theme zip file.  
+Copy ArtMenu.php to your protected/components directory BEFORE using the theme.  
+
+The contents of the zip file should be unzipped in your themes directory as usual.
+
+Optional Configuration:
+The header displayed on all themed pages includes an art-logo-name and art-logo-text (i.e. the subtitle).  By default, the theme will use the application name set in the protected/config/main.php file.  If the art-logo-name and art-logo-text parameters are set in the config file, these will be used.  Sample settings are provided below:
+        'params'=>array(
+                ...
+                'art-logo-name'=>'BIG MONEY, INC.',
+                'art-logo-text'=>'A Hand In Every Pocket',
+        ),
+
+OTHER: 
+----------
+1-column and 2-column layouts are provided.  The 2-column layout (column2.php) 
+includes a left sidebar with dummy content to show markup options.  
+
+Also included is an index.php file in the ../views/site directory.  This displays a sample 
+with examples of the various style settings when you first install the theme.  Most likely 
+you'll want to rename this file and use your own index.php under the protected/views/site 
+directory.  
+
+Lastly, a page.html file is included in the css directory.  This file, when displayed in a 
+browser, will show a sample two column display with all the various styles included in 
+index.php.  You can best understand how to use Artisteer markup by studying the 
+provided layouts and page.html file.

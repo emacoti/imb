@@ -11,6 +11,7 @@ class ViewEstatesController extends Controller
 		$model=new Estates('search');
 		$model->unsetAttributes();  // clear any default values
 		$title= 'Todas';
+		$wasSearch= false;
 		
 		if(isset($_GET['Estates'])) {
 		
@@ -18,11 +19,13 @@ class ViewEstatesController extends Controller
 			$model->attributes= $aux;
 			
 			$title= $this->hasSearch($aux);
+			$wasSearch= true;
 		}		
 		
 		$this->render('index',array(
 			'model'=>$model,
-			'title'=>$title
+			'title'=>$title,
+			'wasSearch'=> $wasSearch
 		));
 	}
 	
@@ -67,4 +70,14 @@ class ViewEstatesController extends Controller
 	        	$this->render('error', $error);
 	    }
 	}	
+	
+	public function actionUpdateAjax()
+    {
+        $data = '';	
+		
+		$i= $_GET['index'];
+		$mod= Estates::model()->findByPk($_GET['id']);
+		
+		$this->renderPartial('_carrousel', array('images'=>$mod->images, 'index'=>$i));
+    }
 }

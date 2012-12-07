@@ -65,7 +65,7 @@ class Categories extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-			'name' => 'Name',
+			'name' => 'Rubro',
 		);
 	}
 

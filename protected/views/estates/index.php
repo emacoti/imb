@@ -1,15 +1,15 @@
 <?php
 $this->breadcrumbs=array(
-	'Estates',
+	'Propiedades',
 );
 
 $this->menu=array(
-	array('label'=>'Create Estates', 'url'=>array('create')),
-	array('label'=>'Manage Estates', 'url'=>array('admin')),
+	array('label'=>'Crear Propiedad', 'url'=>array('create')),
+	array('label'=>'Manage Propiedades', 'url'=>array('admin')),
 );
 ?>
 
-<h1>Estates</h1>
+<h1>Propiedades</h1>
 
 <?php $this->widget('zii.widgets.CListView', array(
 	'dataProvider'=>$dataProvider,

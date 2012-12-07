@@ -49,6 +49,7 @@
 	<?php if(isset($this->breadcrumbs)):?>
 		<?php $this->widget('zii.widgets.CBreadcrumbs', array(
 			'links'=>$this->breadcrumbs,
+			'homeLink'=>$this->homeLink
 		)); ?><!-- breadcrumbs -->
 	<?php endif?>
 

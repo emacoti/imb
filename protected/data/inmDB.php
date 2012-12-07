@@ -19,19 +19,29 @@ $db->exec(utf8_encode('CREATE TABLE IF NOT EXISTS categories(id INTEGER PRIMARY 
 $db->exec(utf8_encode('CREATE TABLE IF NOT EXISTS conditions(id INTEGER PRIMARY KEY, name VARCHAR(25) NOT NULL UNIQUE)'));
  
 $db->exec(utf8_encode('CREATE TABLE IF NOT EXISTS locations(id INTEGER PRIMARY KEY, name VARCHAR(30) NOT NULL UNIQUE)'));
+
+$db->exec(
+	utf8_encode(
+		'CREATE TABLE IF NOT EXISTS currencies (
+			id INTEGER PRIMARY KEY,
+			name VARCHAR(30) NOT NULL UNIQUE,
+			symbol VARCHAR(10) NOT NULL)'
+		));
  
 $db->exec(
 	utf8_encode(
 		'CREATE TABLE IF NOT EXISTS estates (
-			id INTEGER PRIMARY KEY, 
-			category_id INTEGER UNSIGNED NOT NULL, 
-			condition_id INTEGER UNSIGNED NOT NULL, 
-			location_id INTEGER UNSIGNED NOT NULL, 
-			neighborhood VARCHAR(50) NOT NULL, 
-			description TEXT, 
+			id INTEGER PRIMARY KEY,
+			category_id INTEGER UNSIGNED NOT NULL,
+			condition_id INTEGER UNSIGNED NOT NULL,
+			location_id INTEGER UNSIGNED NOT NULL,
+			currency_id INTEGER UNSIGNED NOT NULL,
+			value INTEGER,
+			neighborhood VARCHAR(50) NOT NULL,
+			description TEXT,
 			
-			FOREIGN KEY(category_id) REFERENCES categories(id), 
-			FOREIGN KEY(condition_id) REFERENCES conditions(id), 
+			FOREIGN KEY(category_id) REFERENCES categories(id),
+			FOREIGN KEY(condition_id) REFERENCES conditions(id),
 			FOREIGN KEY(location_id) REFERENCES locations(id))'
 		));
  
@@ -52,7 +62,7 @@ $db->exec(
 		'CREATE TABLE IF NOT EXISTS images (
 			id INTEGER PRIMARY KEY,
 			estate_id INTEGER UNSIGNED NOT NULL,
-			path VARCHAR(50) NOT NULL,
+			path_name VARCHAR(20) NOT NULL,
 			description VARCHAR(250),
 			
 			FOREIGN KEY(estate_id) REFERENCES estates(id))'
@@ -84,13 +94,24 @@ $db->exec(utf8_encode('INSERT INTO locations (name) VALUES ("Zona");'));
 $db->exec(utf8_encode('INSERT INTO locations (name) VALUES ("Buenos Aires");'));
 $db->exec(utf8_encode('INSERT INTO locations (name) VALUES ("Otras Provincias");'));
 
+/*** Inserto monedas ***/
+$db->exec(utf8_encode('INSERT INTO currencies (name, symbol) VALUES ("Peso", "$");'));
+$db->exec(utf8_encode('INSERT INTO currencies (name, symbol) VALUES ("Dolar", "U$D");'));
+$db->exec(utf8_encode('INSERT INTO currencies (name, symbol) VALUES ("Euro", "€");'));
+
 /*** Inserto propiedades ***/
 $description= "IBB - Villa Belgrano - Lucero al 2.600 - DAUB Inmobiliaria vende una casa en construccion de 1 dormitorio con cocina comedor, un baño y un quincho,
 	todo en construccion hasta dinteles, tiene un tanque australiano chico en el patio. se ubica en Villa Belgrano a mts. de la ruta, implantado sobre lote de 240 m2.";
-$db->exec(utf8_encode('INSERT INTO estates (category_id, condition_id, location_id, neighborhood, description) VALUES (1, 1, 1, "Villa Belgrano", "' . $description . '");'));
+$db->exec(utf8_encode(
+	'INSERT INTO
+		estates (category_id, condition_id, location_id, currency_id, value, neighborhood, description)
+		VALUES (1, 1, 1, 1, 200000, "Villa Belgrano", "' . $description . '");'));
 
 /*** Inserto atributos ***/
 $db->exec(utf8_encode('INSERT INTO data (estate_id, name, data_type, value) VALUES (1, "Living-comedor", "VARCHAR", "3.00 x 5.00");'));
+
+/*** Inserto imagenes ***/
+$db->exec(utf8_encode('INSERT INTO images (estate_id, path_name) VALUES (1, "1_m.jpg");'));
 
 /*** Inserto usuario admin ***/
 $db->exec(utf8_encode('INSERT INTO users (username, password, salt) VALUES ("admin", "d4863fb315f0e9ea68bc848f4f53b351", "25948");'));

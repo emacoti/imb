@@ -1,6 +1,6 @@
 <?php
 
-class ConditionsController extends Controller
+class ConditionsController extends AbmController
 {
 	/**
 	 * @var string the default layout for the views. Defaults to '//layouts/column2', meaning

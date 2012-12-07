@@ -12,17 +12,39 @@
 
 	<div class="row">
 		<?php echo $form->label($model,'category_id'); ?>
-		<?php echo $form->textField($model,'category_id'); ?>
+		<?php echo $form->dropDownList(
+							$model,'category_id',
+							CHtml::listData(Categories::model()->findAll(),'id','name'),
+							array('empty'=>'Seleccionar..', 'class'=>'input-medium')); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->label($model,'condition_id'); ?>
-		<?php echo $form->textField($model,'condition_id'); ?>
+		<?php echo $form->dropDownList(
+							$model,'condition_id',
+							CHtml::listData(Conditions::model()->findAll(),'id','name'),
+							array('empty'=>'Seleccionar..', 'class'=>'input-medium')); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'location_id'); ?>
-		<?php echo $form->textField($model,'location_id'); ?>
+		<?php echo $form->label($model,'location_id'); ?>		
+		<?php echo $form->dropDownList(
+							$model,'location_id',
+							CHtml::listData(Locations::model()->findAll(),'id','name'),
+							array('empty'=>'Seleccionar..', 'class'=>'input-medium')); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->label($model,'currency_id'); ?>
+		<?php echo $form->dropDownList(
+							$model,'currency_id',
+							CHtml::listData(Currencies::model()->findAll(),'id','name'),
+							array('empty'=>'Seleccionar..', 'class'=>'input-medium')); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->label($model,'value'); ?>
+		<?php echo $form->textField($model,'value'); ?>
 	</div>
 
 	<div class="row">

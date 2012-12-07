@@ -1,12 +1,13 @@
 <?php
 
-class EstatesController extends Controller
+class EstatesController extends AbmController
 {
 	/**
 	 * @var string the default layout for the views. Defaults to '//layouts/column2', meaning
 	 * using two-column layout. See 'protected/views/layouts/column2.php'.
 	 */
 	public $layout='//layouts/column2';
+	public $mod= null;
 
 	/**
 	 * @return array action filters
@@ -27,15 +28,7 @@ class EstatesController extends Controller
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view'),
-				'users'=>array('*'),
-			),
-			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update'),
-				'users'=>array('@'),
-			),
-			array('allow', // allow admin user to perform 'admin' and 'delete' actions
-				'actions'=>array('admin','delete'),
+				'actions'=>array('index','view','create','update','admin','delete','updateAjax'),
 				'users'=>array('admin'),
 			),
 			array('deny',  // deny all users
@@ -96,7 +89,9 @@ class EstatesController extends Controller
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->id));
 		}
-
+		
+		$this->mod= $model;
+		$img= array(0=>array(0=>'tt')); // agrego pq sino falla el evento ajax
 		$this->render('update',array(
 			'model'=>$model,
 		));
@@ -129,7 +124,7 @@ class EstatesController extends Controller
 	{
 		$dataProvider=new CActiveDataProvider('Estates');
 		$this->render('index',array(
-			'dataProvider'=>$dataProvider,
+			'dataProvider'=>$dataProvider
 		));
 	}
 
@@ -160,6 +155,24 @@ class EstatesController extends Controller
 			throw new CHttpException(404,'The requested page does not exist.');
 		return $model;
 	}
+	
+	/**
+	 * Returns the full data model based on the primary key given in the GET variable.
+	 * With the all relations
+	 * If the data model is not found, an HTTP exception will be raised.
+	 * @param integer the ID of the model to be loaded
+	 */
+	public function loadFullModel($id)
+	{
+		$model=Estates::model()
+				->with('category', 'condition', 'location', 'currency')
+				->findByPk($id);
+				
+		if($model===null)
+			throw new CHttpException(404,'The requested page does not exist.');
+			
+		return $model;
+	}
 
 	/**
 	 * Performs the AJAX validation.
@@ -173,4 +186,32 @@ class EstatesController extends Controller
 			Yii::app()->end();
 		}
 	}
+	
+	public function actionUpdateAjax()
+    {
+        $data = '';	
+		
+		if(isset($_GET['path_name']))
+			$data = substr(strrchr($_GET['path_name'],'\\'),1);
+			
+		if(isset($_GET['path_name']))
+			$description = $_GET['description'];
+			
+		/*if(isset($_GET['img'])) {
+			$img= $_GET['img'];
+			$index= count($img);
+			$img[$index]= array(0=>$data, 1=>$description);
+			$img[$index+1]= array(0=>'tt'); // agrego pq sino me queda desfazado
+		}*/
+		
+		$this->mod= $this->loadModel($_GET['id']);
+		
+		
+		$img= new Images;
+		$img->attributes= array('path_name'=>$data, 'estate_id'=>$_GET['id'], 'description'=>$description);
+		$img->save();
+ 
+        $this->renderPartial('_images', array('model'=>$this->mod), false, true);
+		$this->renderPartial('_test', array('id'=>$_GET['id']), false, true);
+    }
 }

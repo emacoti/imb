@@ -11,11 +11,14 @@ return array(
 
 	// preloading 'log' component
 	'preload'=>array('log'),
+	
+	'theme'=> 'citylights',
 
 	// autoloading model and component classes
 	'import'=>array(
 		'application.models.*',
 		'application.components.*',
+		'application.helpers.*',
 	),
 
 	'modules'=>array(
@@ -36,18 +39,28 @@ return array(
 			'allowAutoLogin'=>true,
 			// Uncoment this for custom user authentication
 			//'class' => 'UserIdentity',
-		),
+		),		
+		'image'=>array(
+          'class'=>'application.extensions.image.CImageComponent',
+            // GD or ImageMagick
+            'driver'=>'GD',
+            // ImageMagick setup path
+            //'params'=>array('directory'=>'/opt/local/bin'),
+        ),
 		// uncomment the following to enable URLs in path-format
-		/*
+		
 		'urlManager'=>array(
 			'urlFormat'=>'path',
-			'rules'=>array(
+			'showScriptName'=>false,
+			'caseSensitive'=>false,  
+			
+			/*'rules'=>array(
 				'<controller:\w+>/<id:\d+>'=>'<controller>/view',
 				'<controller:\w+>/<action:\w+>/<id:\d+>'=>'<controller>/<action>',
 				'<controller:\w+>/<action:\w+>'=>'<controller>/<action>',
-			),
+			),*/
 		),
-		*/
+		
 		'db'=>array(
 			'connectionString' => 'sqlite:'.dirname(__FILE__).'/../data/inmoDB.db',
 		),
@@ -87,5 +100,7 @@ return array(
 	'params'=>array(
 		// this is used in contact page
 		'adminEmail'=>'hlfteam@gmail.com',
+		'art-logo-name'=>'FILIPPONE INM',
+        'art-logo-text'=>'Servicios Inmobiliarios',
 	),
 );

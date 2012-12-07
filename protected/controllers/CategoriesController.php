@@ -1,6 +1,6 @@
 <?php
 
-class CategoriesController extends Controller
+class CategoriesController extends AbmController
 {
 	/**
 	 * @var string the default layout for the views. Defaults to '//layouts/column2', meaning

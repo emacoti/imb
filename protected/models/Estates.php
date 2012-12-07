@@ -8,6 +8,8 @@
  * @property integer $category_id
  * @property integer $condition_id
  * @property integer $location_id
+ * @property integer $currency_id
+ * @property integer $value
  * @property string $neighborhood
  * @property string $description
  *
@@ -16,9 +18,11 @@
  * @property Locations $location
  * @property Conditions $condition
  * @property Categories $category
+ * @property Images[] $images
  */
 class Estates extends CActiveRecord
 {
+	public $img= array();
 	/**
 	 * Returns the static model of the specified AR class.
 	 * @param string $className active record class name.
@@ -45,13 +49,16 @@ class Estates extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('category_id, condition_id, location_id, neighborhood', 'required'),
-			array('category_id, condition_id, location_id', 'numerical', 'integerOnly'=>true),
+			array('category_id, condition_id, location_id, currency_id, neighborhood', 'required'),
+			array('category_id, condition_id, location_id, currency_id, value',
+					'numerical', 'integerOnly'=>true),
 			array('neighborhood', 'length', 'max'=>50),
 			array('description', 'safe'),
+			array('value', 'default', 'value'=>0),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, category_id, condition_id, location_id, neighborhood, description', 'safe', 'on'=>'search'),
+			array('id, category_id, condition_id, location_id, currency_id, value, neighborhood, description',
+					'safe', 'on'=>'search'),
 		);
 	}
 
@@ -67,6 +74,8 @@ class Estates extends CActiveRecord
 			'location' => array(self::BELONGS_TO, 'Locations', 'location_id'),
 			'condition' => array(self::BELONGS_TO, 'Conditions', 'condition_id'),
 			'category' => array(self::BELONGS_TO, 'Categories', 'category_id'),
+			'currency' => array(self::BELONGS_TO, 'Currencies', 'currency_id'),
+			'images' => array(self::HAS_MANY, 'Images', 'estate_id'),
 		);
 	}
 
@@ -80,6 +89,8 @@ class Estates extends CActiveRecord
 			'category_id' => 'Rubro',
 			'condition_id' => 'Condicion',
 			'location_id' => 'Localidad',
+			'currency_id' => 'Moneda',
+			'value' => 'Valor',
 			'neighborhood' => 'Barrio',
 			'description' => 'Descripcion',
 		);
@@ -100,9 +111,14 @@ class Estates extends CActiveRecord
 		$criteria->compare('category_id',$this->category_id);
 		$criteria->compare('condition_id',$this->condition_id);
 		$criteria->compare('location_id',$this->location_id);
+		$criteria->compare('currency_id',$this->currency_id);		
 		$criteria->compare('neighborhood',$this->neighborhood,true);
 		$criteria->compare('description',$this->description,true);
-
+				
+		if ($this->value != null) {
+			$criteria->compare('value','<= ' . $this->value);
+		}
+		
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
 		));

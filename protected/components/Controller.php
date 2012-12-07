@@ -14,6 +14,13 @@ class Controller extends CController
 	 * @var array context menu items. This property will be assigned to {@link CMenu::items}.
 	 */
 	public $menu=array();
+	
+	/**
+	 * @var string indicando el primer link del breadcrumb.
+	 * inicalizado en null para indicar not set y que se utilice Home como default.
+	 */
+	public $homeLink= null;	
+	
 	/**
 	 * @var array the breadcrumbs of the current page. The value of this property will
 	 * be assigned to {@link CBreadcrumbs::links}. Please refer to {@link CBreadcrumbs::links}

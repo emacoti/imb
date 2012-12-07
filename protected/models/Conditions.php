@@ -65,7 +65,7 @@ class Conditions extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-			'name' => 'Name',
+			'name' => 'Condicion',
 		);
 	}
 
