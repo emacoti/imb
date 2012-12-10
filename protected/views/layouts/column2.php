@@ -20,7 +20,7 @@
 		<div id="sidebar">
 		<?php
 			$this->beginWidget('zii.widgets.CPortlet', array(
-				'title'=>'Operations',
+				'title'=>'Operaciones',
 			));
 			$this->widget('zii.widgets.CMenu', array(
 				'items'=>$this->menu,
