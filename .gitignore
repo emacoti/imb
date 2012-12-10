@@ -1,0 +1,2 @@
+*protected/data/*.db
+*protected/runtime/*.log

@@ -925,7 +925,7 @@ legend small {
   font-size: 15px;
   color: #999999;
 }
-
+/*
 label,
 input,
 button,
@@ -941,13 +941,13 @@ button,
 select,
 textarea {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-}
+}*/
 
 label {
   display: block;
   margin-bottom: 5px;
 }
-
+/*
 select,
 textarea,
 input[type="text"],
@@ -975,7 +975,7 @@ input[type="color"],
   -webkit-border-radius: 3px;
      -moz-border-radius: 3px;
           border-radius: 3px;
-}
+}*/
 
 input,
 textarea,
