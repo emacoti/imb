@@ -5606,3 +5606,199 @@ Stack trace:
 REQUEST_URI=/filipponeinmobiliaria/viewestates/index?Estates%5Bcategory_id%5D=&Estates%5Bcondition_id%5D=1&Estates%5Blocation_id%5D=&Estates%5Bneighborhood%5D=&Estates%5Bvalue%5D=&Estates%5Bvalue%5D=&Estates%5Bcurrency_id%5D=&yt0=Buscar
 HTTP_REFERER=http://localhost/filipponeinmobiliaria/viewEstates/index
 ---
+2012/12/10 19:19:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "propiedades/index".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('propiedades/ind...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\filipponeinmobiliaria\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/filipponeinmobiliaria/propiedades/index
+---
+2012/12/10 21:28:22 [error] [exception.CException] exception 'CException' with message 'Property "Images.image" is not defined.' in C:\xampp\htdocs\yii\framework\base\CComponent.php:131
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(144): CComponent->__get('image')
+#1 C:\xampp\htdocs\filipponeinmobiliaria\protected\views\images\view.php(38): CActiveRecord->__get('image')
+#2 C:\xampp\htdocs\yii\framework\web\CBaseController.php(127): require('C:\xampp\htdocs...')
+#3 C:\xampp\htdocs\yii\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(870): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(783): CController->renderPartial('view', Array, true)
+#6 C:\xampp\htdocs\filipponeinmobiliaria\protected\controllers\ImagesController.php(55): CController->render('view', Array)
+#7 [internal function]: ImagesController->actionView('1')
+#8 C:\xampp\htdocs\yii\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(ImagesController), Array)
+#9 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(ImagesController), Object(ReflectionMethod), Array)
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#11 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#12 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#13 C:\xampp\htdocs\yii\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#14 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#15 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#16 C:\xampp\htdocs\yii\framework\web\CController.php(292): CFilterChain->run()
+#17 C:\xampp\htdocs\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(283): CController->run('view')
+#19 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('images/view/id/...')
+#20 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#21 C:\xampp\htdocs\filipponeinmobiliaria\index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/filipponeinmobiliaria/images/view/id/1
+HTTP_REFERER=http://localhost/filipponeinmobiliaria/images/index
+---
+2012/12/10 21:28:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "path_name".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('path_name')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\filipponeinmobiliaria\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/filipponeinmobiliaria/path_name
+HTTP_REFERER=http://localhost/filipponeinmobiliaria/images/view/id/1
+---
+2012/12/10 21:28:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "path_name".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('path_name')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\filipponeinmobiliaria\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/filipponeinmobiliaria/path_name
+HTTP_REFERER=http://localhost/filipponeinmobiliaria/images/view/id/1
+---
+2012/12/10 21:28:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "path_name".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('path_name')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\filipponeinmobiliaria\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/filipponeinmobiliaria/path_name
+HTTP_REFERER=http://localhost/filipponeinmobiliaria/images/view/id/1
+---
+2012/12/10 21:28:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "path_name".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('path_name')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\filipponeinmobiliaria\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/filipponeinmobiliaria/path_name
+HTTP_REFERER=http://localhost/filipponeinmobiliaria/images/view/id/1
+---
+2012/12/10 21:29:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "1_m.jpg".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('1_m.jpg')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\filipponeinmobiliaria\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/filipponeinmobiliaria/1_m.jpg
+HTTP_REFERER=http://localhost/filipponeinmobiliaria/images/view/id/1
+---
+2012/12/10 21:29:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "1_m.jpg".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('1_m.jpg')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\filipponeinmobiliaria\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/filipponeinmobiliaria/1_m.jpg
+HTTP_REFERER=http://localhost/filipponeinmobiliaria/images/view/id/1
+---
+2012/12/10 21:29:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "1_m.jpg".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('1_m.jpg')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\filipponeinmobiliaria\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/filipponeinmobiliaria/1_m.jpg
+HTTP_REFERER=http://localhost/filipponeinmobiliaria/images/view/id/1
+---
+2012/12/10 21:29:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "1_m.jpg".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('1_m.jpg')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\filipponeinmobiliaria\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/filipponeinmobiliaria/1_m.jpg
+HTTP_REFERER=http://localhost/filipponeinmobiliaria/images/view/id/1
+---
+2012/12/10 21:29:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "1_m.jpg".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('1_m.jpg')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\filipponeinmobiliaria\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/filipponeinmobiliaria/1_m.jpg
+HTTP_REFERER=http://localhost/filipponeinmobiliaria/images/view/id/1
+---
+2012/12/10 21:29:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "1_m.jpg".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('1_m.jpg')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\filipponeinmobiliaria\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/filipponeinmobiliaria/1_m.jpg
+HTTP_REFERER=http://localhost/filipponeinmobiliaria/images/view/id/1
+---
+2012/12/10 21:29:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "1_m.jpg".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('1_m.jpg')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\filipponeinmobiliaria\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/filipponeinmobiliaria/1_m.jpg
+---
+2012/12/10 21:50:43 [error] [exception.CException] exception 'CException' with message 'Property "Images.Descripci&oacute;n" is not defined.' in C:\xampp\htdocs\yii\framework\base\CComponent.php:131
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(144): CComponent->__get('Descripci&oacut...')
+#1 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(1809): CActiveRecord->__get('Descripci&oacut...')
+#2 C:\xampp\htdocs\yii\framework\zii\widgets\CDetailView.php(212): CHtml::value(Object(Images), 'Descripci&oacut...')
+#3 C:\xampp\htdocs\yii\framework\web\CBaseController.php(174): CDetailView->run()
+#4 C:\xampp\htdocs\filipponeinmobiliaria\protected\views\images\view.php(40): CBaseController->widget('zii.widgets.CDe...', Array)
+#5 C:\xampp\htdocs\yii\framework\web\CBaseController.php(127): require('C:\xampp\htdocs...')
+#6 C:\xampp\htdocs\yii\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(870): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(783): CController->renderPartial('view', Array, true)
+#9 C:\xampp\htdocs\filipponeinmobiliaria\protected\controllers\ImagesController.php(55): CController->render('view', Array)
+#10 [internal function]: ImagesController->actionView('1')
+#11 C:\xampp\htdocs\yii\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(ImagesController), Array)
+#12 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(ImagesController), Object(ReflectionMethod), Array)
+#13 C:\xampp\htdocs\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#14 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#15 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#16 C:\xampp\htdocs\yii\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#17 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#18 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#19 C:\xampp\htdocs\yii\framework\web\CController.php(292): CFilterChain->run()
+#20 C:\xampp\htdocs\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#21 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(283): CController->run('view')
+#22 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('images/view/id/...')
+#23 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#24 C:\xampp\htdocs\filipponeinmobiliaria\index.php(13): CApplication->run()
+#25 {main}
+REQUEST_URI=/filipponeinmobiliaria/images/view/id/1
+HTTP_REFERER=http://localhost/filipponeinmobiliaria/images/index
+---
+2012/12/10 21:51:23 [error] [exception.CException] exception 'CException' with message 'Property "Images.Descripci&oacute;n" is not defined.' in C:\xampp\htdocs\yii\framework\base\CComponent.php:131
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(144): CComponent->__get('Descripci&oacut...')
+#1 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(1809): CActiveRecord->__get('Descripci&oacut...')
+#2 C:\xampp\htdocs\yii\framework\zii\widgets\CDetailView.php(212): CHtml::value(Object(Images), 'Descripci&oacut...')
+#3 C:\xampp\htdocs\yii\framework\web\CBaseController.php(174): CDetailView->run()
+#4 C:\xampp\htdocs\filipponeinmobiliaria\protected\views\images\view.php(40): CBaseController->widget('zii.widgets.CDe...', Array)
+#5 C:\xampp\htdocs\yii\framework\web\CBaseController.php(127): require('C:\xampp\htdocs...')
+#6 C:\xampp\htdocs\yii\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(870): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(783): CController->renderPartial('view', Array, true)
+#9 C:\xampp\htdocs\filipponeinmobiliaria\protected\controllers\ImagesController.php(55): CController->render('view', Array)
+#10 [internal function]: ImagesController->actionView('1')
+#11 C:\xampp\htdocs\yii\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(ImagesController), Array)
+#12 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(ImagesController), Object(ReflectionMethod), Array)
+#13 C:\xampp\htdocs\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#14 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#15 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#16 C:\xampp\htdocs\yii\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#17 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#18 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#19 C:\xampp\htdocs\yii\framework\web\CController.php(292): CFilterChain->run()
+#20 C:\xampp\htdocs\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#21 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(283): CController->run('view')
+#22 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('images/view/id/...')
+#23 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#24 C:\xampp\htdocs\filipponeinmobiliaria\index.php(13): CApplication->run()
+#25 {main}
+REQUEST_URI=/filipponeinmobiliaria/images/view/id/1
+HTTP_REFERER=http://localhost/filipponeinmobiliaria/images/index
+---
