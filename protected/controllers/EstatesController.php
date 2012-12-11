@@ -78,8 +78,26 @@ class EstatesController extends AbmController
 	 */
 	public function actionUpdate($id)
 	{
+	
+		$rutas = array();
+		for($i=0; $i<100; $i++)
+		{
+			$nombre = "file";
+			$nombre.= strval($i);
+			
+			if(isset($_POST[$nombre]))
+			{
+				$rutas[$i] = $_POST[$nombre];
+			}
+			else
+				continue;
+		}
+		
+		
+		//file_put_contents($_SERVER['DOCUMENT_ROOT']."/log.txt", print_r($rutas, true));
+		
 		$model=$this->loadModel($id);
-
+		
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
@@ -87,11 +105,20 @@ class EstatesController extends AbmController
 		{
 			$model->attributes=$_POST['Estates'];
 			if($model->save())
+			{
+				foreach ($rutas as $i => $v) 
+				{	
+					$img= new Images;
+					$img->attributes= array('path_name'=>$v, 'estate_id'=>$id, 'description'=>'descripcion');
+					$img->save();
+				}
 				$this->redirect(array('view','id'=>$model->id));
+			}
 		}
 		
 		$this->mod= $model;
 		$img= array(0=>array(0=>'tt')); // agrego pq sino falla el evento ajax
+
 		$this->render('update',array(
 			'model'=>$model,
 		));
@@ -195,8 +222,6 @@ class EstatesController extends AbmController
         $sizeLimit = 10 * 1024 * 1024;// maximum file size in bytes
         $uploader = new qqFileUploader($allowedExtensions, $sizeLimit);
         $result = $uploader->handleUpload($folder);
-		
-		file_put_contents($_SERVER['DOCUMENT_ROOT']."/log.txt", print_r($result, true));
 
         $return = htmlspecialchars(json_encode($result), ENT_NOQUOTES);
  

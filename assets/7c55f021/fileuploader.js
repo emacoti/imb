@@ -146,7 +146,9 @@ qq.setText = function(element, text){
 qq.setLink = function(element, text){
     element.href = './delete/' + text;
 };
-
+qq.setValue = function(element, text){
+    element.value = './delete/' + text;
+};
 //
 // Selecting elements
 
@@ -479,6 +481,7 @@ qq.FileUploaderBasic.prototype = {
  */
 qq.FileUploader = function(o){
     // call parent constructor
+	var i = 0;
     qq.FileUploaderBasic.apply(this, arguments);
 
     // additional options
@@ -501,6 +504,7 @@ qq.FileUploader = function(o){
                 '<a class="qq-upload-cancel" href="#">Cancel</a>' +
 				'<a class="deletelink" href="./delete/">Borrar</a>' +
                 '<span class="qq-upload-failed-text">Failed</span>' +
+				'<input type="hidden" value="" class="hiddeninput" name="file' + i++ + '" />' +
             '</li>',
 
         classes: {
@@ -515,6 +519,7 @@ qq.FileUploader = function(o){
 			borrar: 'deletelink',
             size: 'qq-upload-size',
             cancel: 'qq-upload-cancel',
+			input: 'hiddeninput',
 
             // added to list item when upload completes
             // used in css to hide progress spinner
@@ -636,6 +641,9 @@ qq.extend(qq.FileUploader.prototype, {
 
 		var fileElement = this._find(item, 'borrar');
         qq.setLink(fileElement, this._formatFileName(fileName));
+		
+		var fileElement = this._find(item, 'input');
+        qq.setValue(fileElement, this._formatFileName(fileName));
 		
         this._listElement.appendChild(item);
 		
