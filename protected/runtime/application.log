@@ -5802,3 +5802,890 @@ Stack trace:
 REQUEST_URI=/filipponeinmobiliaria/images/view/id/1
 HTTP_REFERER=http://localhost/filipponeinmobiliaria/images/index
 ---
+2012/12/11 00:07:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "controller/upload".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('controller/uplo...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\filipponeinmobiliaria\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/filipponeinmobiliaria/controller/upload?PHPSESSID=pat6ld5fij51bcajqqs486fmi4&YII_CSRF_TOKEN=cc4643c629ac9a6bbc7324bae4455af4d006a94c&qqfile=prode.png
+HTTP_REFERER=http://localhost/filipponeinmobiliaria/estates/create
+---
+2012/12/11 00:10:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "controller/upload".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('controller/uplo...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\filipponeinmobiliaria\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/filipponeinmobiliaria/controller/upload?PHPSESSID=pat6ld5fij51bcajqqs486fmi4&YII_CSRF_TOKEN=cc4643c629ac9a6bbc7324bae4455af4d006a94c&qqfile=prode.png
+HTTP_REFERER=http://localhost/filipponeinmobiliaria/estates/create
+---
+2012/12/11 00:12:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "controller/upload".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('controller/uplo...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\filipponeinmobiliaria\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/filipponeinmobiliaria/controller/upload?PHPSESSID=pat6ld5fij51bcajqqs486fmi4&YII_CSRF_TOKEN=cc4643c629ac9a6bbc7324bae4455af4d006a94c&qqfile=diagrama.png
+HTTP_REFERER=http://localhost/filipponeinmobiliaria/estates/create
+---
+2012/12/11 00:15:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "controller/upload".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('controller/uplo...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\filipponeinmobiliaria\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/filipponeinmobiliaria/controller/upload?PHPSESSID=pat6ld5fij51bcajqqs486fmi4&YII_CSRF_TOKEN=cc4643c629ac9a6bbc7324bae4455af4d006a94c&qqfile=Worms+Revolution+3.jpg
+HTTP_REFERER=http://localhost/filipponeinmobiliaria/estates/create
+---
+2012/12/11 00:16:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "controllers/upload".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('controllers/upl...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\filipponeinmobiliaria\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/filipponeinmobiliaria/controllers/upload?PHPSESSID=pat6ld5fij51bcajqqs486fmi4&YII_CSRF_TOKEN=cc4643c629ac9a6bbc7324bae4455af4d006a94c&qqfile=diagrama.png
+HTTP_REFERER=http://localhost/filipponeinmobiliaria/estates/create
+---
+2012/12/11 00:16:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "controllers/upload".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('controllers/upl...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\filipponeinmobiliaria\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/filipponeinmobiliaria/controllers/upload?PHPSESSID=pat6ld5fij51bcajqqs486fmi4&YII_CSRF_TOKEN=cc4643c629ac9a6bbc7324bae4455af4d006a94c&qqfile=tumblr_m63gbdaLrf1qhd9gyo1_1280.jpg
+HTTP_REFERER=http://localhost/filipponeinmobiliaria/estates/create
+---
+2012/12/11 00:18:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('upload')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\filipponeinmobiliaria\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/filipponeinmobiliaria/upload?PHPSESSID=pat6ld5fij51bcajqqs486fmi4&YII_CSRF_TOKEN=cc4643c629ac9a6bbc7324bae4455af4d006a94c&qqfile=prode.png
+HTTP_REFERER=http://localhost/filipponeinmobiliaria/estates/create
+---
+2012/12/11 01:12:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "controller/upload".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('controller/uplo...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\filipponeinmobiliaria\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/filipponeinmobiliaria/controller/upload?PHPSESSID=pat6ld5fij51bcajqqs486fmi4&YII_CSRF_TOKEN=cc4643c629ac9a6bbc7324bae4455af4d006a94c&qqfile=Sin+t%C3%ADtulo.png
+HTTP_REFERER=http://localhost/filipponeinmobiliaria/estates/create
+---
+2012/12/11 01:13:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "controller/upload".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('controller/uplo...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\filipponeinmobiliaria\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/filipponeinmobiliaria/controller/upload?PHPSESSID=pat6ld5fij51bcajqqs486fmi4&YII_CSRF_TOKEN=cc4643c629ac9a6bbc7324bae4455af4d006a94c&qqfile=prode.png
+HTTP_REFERER=http://localhost/filipponeinmobiliaria/estates/create
+---
+2012/12/11 01:14:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "controller/upload".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('controller/uplo...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\filipponeinmobiliaria\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/filipponeinmobiliaria/controller/upload?PHPSESSID=pat6ld5fij51bcajqqs486fmi4&YII_CSRF_TOKEN=cc4643c629ac9a6bbc7324bae4455af4d006a94c&qqfile=logitech+g27+settings.png
+HTTP_REFERER=http://localhost/filipponeinmobiliaria/estates/create
+---
+2012/12/11 01:15:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "controller/upload".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('controller/uplo...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\filipponeinmobiliaria\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/filipponeinmobiliaria/controller/upload?PHPSESSID=pat6ld5fij51bcajqqs486fmi4&YII_CSRF_TOKEN=cc4643c629ac9a6bbc7324bae4455af4d006a94c&qqfile=videlin.png
+HTTP_REFERER=http://localhost/filipponeinmobiliaria/estates/create
+---
+2012/12/11 01:20:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "controller/upload".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('controller/uplo...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\filipponeinmobiliaria\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/filipponeinmobiliaria/controller/upload?PHPSESSID=pat6ld5fij51bcajqqs486fmi4&YII_CSRF_TOKEN=cc4643c629ac9a6bbc7324bae4455af4d006a94c&qqfile=videlin.png
+HTTP_REFERER=http://localhost/filipponeinmobiliaria/estates/create
+---
+2012/12/11 01:20:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in C:\xampp\htdocs\filipponeinmobiliaria\protected\controllers\EstatesController.php:155
+Stack trace:
+#0 C:\xampp\htdocs\filipponeinmobiliaria\protected\controllers\EstatesController.php(224): EstatesController->loadModel('null')
+#1 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(50): EstatesController->actionUpdateAjax()
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#3 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#4 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#6 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#7 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(292): CFilterChain->run()
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(283): CController->run('updateajax')
+#11 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('estates/UpdateA...')
+#12 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\filipponeinmobiliaria\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/filipponeinmobiliaria/estates/UpdateAjax?path_name=&description=&id=null&_=1355185208485
+HTTP_REFERER=http://localhost/filipponeinmobiliaria/estates/create
+---
+2012/12/11 01:22:31 [error] [exception.CException] exception 'CException' with message 'EAjaxUpload: param "action" cannot be empty.' in C:\xampp\htdocs\filipponeinmobiliaria\protected\extensions\EAjaxUpload\EAjaxUpload.php:62
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CBaseController.php(174): EAjaxUpload->run()
+#1 C:\xampp\htdocs\filipponeinmobiliaria\protected\views\estates\_test.php(37): CBaseController->widget('ext.EAjaxUpload...', Array)
+#2 C:\xampp\htdocs\yii\framework\web\CBaseController.php(127): require('C:\xampp\htdocs...')
+#3 C:\xampp\htdocs\yii\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(870): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#5 C:\xampp\htdocs\filipponeinmobiliaria\protected\views\estates\_form.php(104): CController->renderPartial('_test', Array)
+#6 C:\xampp\htdocs\yii\framework\web\CBaseController.php(127): require('C:\xampp\htdocs...')
+#7 C:\xampp\htdocs\yii\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(870): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#9 C:\xampp\htdocs\filipponeinmobiliaria\protected\views\estates\create.php(15): CController->renderPartial('_form', Array)
+#10 C:\xampp\htdocs\yii\framework\web\CBaseController.php(127): require('C:\xampp\htdocs...')
+#11 C:\xampp\htdocs\yii\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#12 C:\xampp\htdocs\yii\framework\web\CController.php(870): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#13 C:\xampp\htdocs\yii\framework\web\CController.php(783): CController->renderPartial('create', Array, true)
+#14 C:\xampp\htdocs\filipponeinmobiliaria\protected\controllers\EstatesController.php(71): CController->render('create', Array)
+#15 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(50): EstatesController->actionCreate()
+#16 C:\xampp\htdocs\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#17 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#18 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#19 C:\xampp\htdocs\yii\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#20 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#21 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#22 C:\xampp\htdocs\yii\framework\web\CController.php(292): CFilterChain->run()
+#23 C:\xampp\htdocs\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#24 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(283): CController->run('create')
+#25 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('estates/create')
+#26 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#27 C:\xampp\htdocs\filipponeinmobiliaria\index.php(13): CApplication->run()
+#28 {main}
+REQUEST_URI=/filipponeinmobiliaria/estates/create
+---
+2012/12/11 01:22:32 [error] [exception.CException] exception 'CException' with message 'EAjaxUpload: param "action" cannot be empty.' in C:\xampp\htdocs\filipponeinmobiliaria\protected\extensions\EAjaxUpload\EAjaxUpload.php:62
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CBaseController.php(174): EAjaxUpload->run()
+#1 C:\xampp\htdocs\filipponeinmobiliaria\protected\views\estates\_test.php(37): CBaseController->widget('ext.EAjaxUpload...', Array)
+#2 C:\xampp\htdocs\yii\framework\web\CBaseController.php(127): require('C:\xampp\htdocs...')
+#3 C:\xampp\htdocs\yii\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(870): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#5 C:\xampp\htdocs\filipponeinmobiliaria\protected\views\estates\_form.php(104): CController->renderPartial('_test', Array)
+#6 C:\xampp\htdocs\yii\framework\web\CBaseController.php(127): require('C:\xampp\htdocs...')
+#7 C:\xampp\htdocs\yii\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(870): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#9 C:\xampp\htdocs\filipponeinmobiliaria\protected\views\estates\create.php(15): CController->renderPartial('_form', Array)
+#10 C:\xampp\htdocs\yii\framework\web\CBaseController.php(127): require('C:\xampp\htdocs...')
+#11 C:\xampp\htdocs\yii\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#12 C:\xampp\htdocs\yii\framework\web\CController.php(870): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#13 C:\xampp\htdocs\yii\framework\web\CController.php(783): CController->renderPartial('create', Array, true)
+#14 C:\xampp\htdocs\filipponeinmobiliaria\protected\controllers\EstatesController.php(71): CController->render('create', Array)
+#15 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(50): EstatesController->actionCreate()
+#16 C:\xampp\htdocs\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#17 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#18 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#19 C:\xampp\htdocs\yii\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#20 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#21 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#22 C:\xampp\htdocs\yii\framework\web\CController.php(292): CFilterChain->run()
+#23 C:\xampp\htdocs\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#24 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(283): CController->run('create')
+#25 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('estates/create')
+#26 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#27 C:\xampp\htdocs\filipponeinmobiliaria\index.php(13): CApplication->run()
+#28 {main}
+REQUEST_URI=/filipponeinmobiliaria/estates/create
+---
+2012/12/11 01:24:47 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\xampp\htdocs\yii\framework\web\auth\CAccessControlFilter.php:170
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\auth\CAccessControlFilter.php(133): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(292): CFilterChain->run()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(283): CController->run('upload')
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('estates/upload')
+#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\filipponeinmobiliaria\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/filipponeinmobiliaria/estates/upload?PHPSESSID=pat6ld5fij51bcajqqs486fmi4&YII_CSRF_TOKEN=cc4643c629ac9a6bbc7324bae4455af4d006a94c&qqfile=prode.png
+HTTP_REFERER=http://localhost/filipponeinmobiliaria/estates/create
+---
+2012/12/11 01:27:36 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\xampp\htdocs\yii\framework\web\auth\CAccessControlFilter.php:170
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\auth\CAccessControlFilter.php(133): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(292): CFilterChain->run()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(283): CController->run('upload')
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('estates/Upload')
+#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\filipponeinmobiliaria\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/filipponeinmobiliaria/estates/Upload?PHPSESSID=pat6ld5fij51bcajqqs486fmi4&YII_CSRF_TOKEN=cc4643c629ac9a6bbc7324bae4455af4d006a94c&qqfile=prode.png
+HTTP_REFERER=http://localhost/filipponeinmobiliaria/estates/create
+---
+2012/12/11 01:32:09 [error] [exception.CException] exception 'CException' with message 'Alias "application.components.EHttpRequest" is invalid. Make sure it points to an existing PHP file and the file is readable.' in C:\xampp\htdocs\yii\framework\YiiBase.php:318
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\YiiBase.php(198): YiiBase::import('application.com...', true)
+#1 C:\xampp\htdocs\yii\framework\base\CModule.php(387): YiiBase::createComponent(Array)
+#2 C:\xampp\htdocs\yii\framework\base\CApplication.php(494): CModule->getComponent('request')
+#3 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(546): CApplication->getRequest()
+#4 C:\xampp\htdocs\yii\framework\base\CApplication.php(148): CWebApplication->init()
+#5 C:\xampp\htdocs\yii\framework\YiiBase.php(127): CApplication->__construct('C:\xampp\htdocs...')
+#6 C:\xampp\htdocs\yii\framework\YiiBase.php(100): YiiBase::createApplication('CWebApplication', 'C:\xampp\htdocs...')
+#7 C:\xampp\htdocs\filipponeinmobiliaria\index.php(13): YiiBase::createWebApplication('C:\xampp\htdocs...')
+#8 {main}
+REQUEST_URI=/filipponeinmobiliaria/estates/create
+---
+2012/12/11 01:32:10 [error] [exception.CException] exception 'CException' with message 'Alias "application.components.EHttpRequest" is invalid. Make sure it points to an existing PHP file and the file is readable.' in C:\xampp\htdocs\yii\framework\YiiBase.php:318
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\YiiBase.php(198): YiiBase::import('application.com...', true)
+#1 C:\xampp\htdocs\yii\framework\base\CModule.php(387): YiiBase::createComponent(Array)
+#2 C:\xampp\htdocs\yii\framework\base\CApplication.php(494): CModule->getComponent('request')
+#3 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(546): CApplication->getRequest()
+#4 C:\xampp\htdocs\yii\framework\base\CApplication.php(148): CWebApplication->init()
+#5 C:\xampp\htdocs\yii\framework\YiiBase.php(127): CApplication->__construct('C:\xampp\htdocs...')
+#6 C:\xampp\htdocs\yii\framework\YiiBase.php(100): YiiBase::createApplication('CWebApplication', 'C:\xampp\htdocs...')
+#7 C:\xampp\htdocs\filipponeinmobiliaria\index.php(13): YiiBase::createWebApplication('C:\xampp\htdocs...')
+#8 {main}
+REQUEST_URI=/filipponeinmobiliaria/estates/create
+---
+2012/12/11 01:32:39 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\xampp\htdocs\yii\framework\web\auth\CAccessControlFilter.php:170
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\auth\CAccessControlFilter.php(133): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(292): CFilterChain->run()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(283): CController->run('upload')
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('estates/upload')
+#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\filipponeinmobiliaria\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/filipponeinmobiliaria/estates/upload?PHPSESSID=pat6ld5fij51bcajqqs486fmi4&YII_CSRF_TOKEN=cc4643c629ac9a6bbc7324bae4455af4d006a94c&qqfile=prode.png
+HTTP_REFERER=http://localhost/filipponeinmobiliaria/estates/create
+---
+2012/12/11 01:33:59 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\xampp\htdocs\yii\framework\web\auth\CAccessControlFilter.php:170
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\auth\CAccessControlFilter.php(133): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(292): CFilterChain->run()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(283): CController->run('upload')
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('estates/upload')
+#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\filipponeinmobiliaria\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/filipponeinmobiliaria/estates/upload?PHPSESSID=pat6ld5fij51bcajqqs486fmi4&YII_CSRF_TOKEN=cc4643c629ac9a6bbc7324bae4455af4d006a94c&qqfile=videlin.png
+HTTP_REFERER=http://localhost/filipponeinmobiliaria/estates/create
+---
+2012/12/11 01:34:51 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\xampp\htdocs\yii\framework\web\auth\CAccessControlFilter.php:170
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\auth\CAccessControlFilter.php(133): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(292): CFilterChain->run()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(283): CController->run('upload')
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('estates/upload')
+#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\filipponeinmobiliaria\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/filipponeinmobiliaria/estates/upload?PHPSESSID=pat6ld5fij51bcajqqs486fmi4&YII_CSRF_TOKEN=cc4643c629ac9a6bbc7324bae4455af4d006a94c&qqfile=diagrama.png
+HTTP_REFERER=http://localhost/filipponeinmobiliaria/estates/create
+---
+2012/12/11 01:39:38 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\xampp\htdocs\yii\framework\web\auth\CAccessControlFilter.php:170
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\auth\CAccessControlFilter.php(133): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(292): CFilterChain->run()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(283): CController->run('upload')
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('estates/upload')
+#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\filipponeinmobiliaria\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/filipponeinmobiliaria/estates/upload?PHPSESSID=pat6ld5fij51bcajqqs486fmi4&YII_CSRF_TOKEN=cc4643c629ac9a6bbc7324bae4455af4d006a94c&qqfile=Sin+t%C3%ADtulo.png
+HTTP_REFERER=http://localhost/filipponeinmobiliaria/estates/create
+---
+2012/12/11 01:41:31 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\xampp\htdocs\yii\framework\web\auth\CAccessControlFilter.php:170
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\auth\CAccessControlFilter.php(133): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(292): CFilterChain->run()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(283): CController->run('upload')
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('estates/upload')
+#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\filipponeinmobiliaria\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/filipponeinmobiliaria/estates/upload?PHPSESSID=pat6ld5fij51bcajqqs486fmi4&YII_CSRF_TOKEN=cc4643c629ac9a6bbc7324bae4455af4d006a94c&qqfile=Worms+Revolution+3.jpg
+HTTP_REFERER=http://localhost/filipponeinmobiliaria/estates/create
+---
+2012/12/11 01:43:53 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\xampp\htdocs\yii\framework\web\auth\CAccessControlFilter.php:170
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\auth\CAccessControlFilter.php(133): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(292): CFilterChain->run()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(283): CController->run('upload')
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('estates/upload')
+#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\filipponeinmobiliaria\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/filipponeinmobiliaria/estates/upload?PHPSESSID=pat6ld5fij51bcajqqs486fmi4&YII_CSRF_TOKEN=cc4643c629ac9a6bbc7324bae4455af4d006a94c&qqfile=diagrama.png
+HTTP_REFERER=http://localhost/filipponeinmobiliaria/estates/create
+---
+2012/12/11 01:45:52 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\xampp\htdocs\yii\framework\web\auth\CAccessControlFilter.php:170
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\auth\CAccessControlFilter.php(133): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(292): CFilterChain->run()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(283): CController->run('upload')
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('estates/upload')
+#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\filipponeinmobiliaria\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/filipponeinmobiliaria/estates/upload?PHPSESSID=pat6ld5fij51bcajqqs486fmi4&YII_CSRF_TOKEN=cc4643c629ac9a6bbc7324bae4455af4d006a94c&qqfile=diagrama.png
+HTTP_REFERER=http://localhost/filipponeinmobiliaria/estates/create
+---
+2012/12/11 01:47:41 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\xampp\htdocs\yii\framework\web\auth\CAccessControlFilter.php:170
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\auth\CAccessControlFilter.php(133): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(292): CFilterChain->run()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(283): CController->run('upload')
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('estates/upload')
+#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\filipponeinmobiliaria\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/filipponeinmobiliaria/estates/upload?PHPSESSID=pat6ld5fij51bcajqqs486fmi4&YII_CSRF_TOKEN=cc4643c629ac9a6bbc7324bae4455af4d006a94c&qqfile=diagrama.png
+HTTP_REFERER=http://localhost/filipponeinmobiliaria/estates/create
+---
+2012/12/11 01:48:37 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\xampp\htdocs\yii\framework\web\auth\CAccessControlFilter.php:170
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\auth\CAccessControlFilter.php(133): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(292): CFilterChain->run()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(283): CController->run('upload')
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('estates/upload')
+#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\filipponeinmobiliaria\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/filipponeinmobiliaria/estates/upload?PHPSESSID=pat6ld5fij51bcajqqs486fmi4&YII_CSRF_TOKEN=cc4643c629ac9a6bbc7324bae4455af4d006a94c&qqfile=diagrama.png
+HTTP_REFERER=http://localhost/filipponeinmobiliaria/estates/create
+---
+2012/12/11 01:50:10 [error] [php] Undefined index: id (C:\xampp\htdocs\filipponeinmobiliaria\protected\controllers\EstatesController.php:226)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(134): EstatesController->runAction()
+#1 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#3 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(59): EstatesController->filterAccessControl()
+#4 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(292): CFilterChain->run()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(266): EstatesController->runActionWithFilters()
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(283): EstatesController->run()
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\filipponeinmobiliaria\index.php(13): CWebApplication->run()
+REQUEST_URI=/filipponeinmobiliaria/estates/UpdateAjax?PHPSESSID=pat6ld5fij51bcajqqs486fmi4&YII_CSRF_TOKEN=cc4643c629ac9a6bbc7324bae4455af4d006a94c&qqfile=videlin.png
+in C:\xampp\htdocs\filipponeinmobiliaria\protected\controllers\EstatesController.php (226)
+in C:\xampp\htdocs\filipponeinmobiliaria\index.php (13)
+2012/12/11 01:50:23 [error] [php] Undefined index: id (C:\xampp\htdocs\filipponeinmobiliaria\protected\controllers\EstatesController.php:226)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(134): EstatesController->runAction()
+#1 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#3 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(59): EstatesController->filterAccessControl()
+#4 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(292): CFilterChain->run()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(266): EstatesController->runActionWithFilters()
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(283): EstatesController->run()
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\filipponeinmobiliaria\index.php(13): CWebApplication->run()
+REQUEST_URI=/filipponeinmobiliaria/estates/UpdateAjax?PHPSESSID=pat6ld5fij51bcajqqs486fmi4&YII_CSRF_TOKEN=cc4643c629ac9a6bbc7324bae4455af4d006a94c&qqfile=logitech+g27+settings.png
+in C:\xampp\htdocs\filipponeinmobiliaria\protected\controllers\EstatesController.php (226)
+in C:\xampp\htdocs\filipponeinmobiliaria\index.php (13)
+2012/12/11 01:51:08 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\xampp\htdocs\yii\framework\web\auth\CAccessControlFilter.php:170
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\auth\CAccessControlFilter.php(133): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(292): CFilterChain->run()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(283): CController->run('upload')
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('estates/upload')
+#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\filipponeinmobiliaria\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/filipponeinmobiliaria/estates/upload?PHPSESSID=pat6ld5fij51bcajqqs486fmi4&YII_CSRF_TOKEN=cc4643c629ac9a6bbc7324bae4455af4d006a94c&qqfile=diagrama.png
+HTTP_REFERER=http://localhost/filipponeinmobiliaria/estates/create
+---
+2012/12/11 01:51:31 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\xampp\htdocs\yii\framework\web\auth\CAccessControlFilter.php:170
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\auth\CAccessControlFilter.php(133): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(292): CFilterChain->run()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(283): CController->run('upload')
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('estates/upload')
+#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\filipponeinmobiliaria\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/filipponeinmobiliaria/estates/upload?PHPSESSID=pat6ld5fij51bcajqqs486fmi4&YII_CSRF_TOKEN=cc4643c629ac9a6bbc7324bae4455af4d006a94c&qqfile=Worms+Revolution+3.jpg
+HTTP_REFERER=http://localhost/filipponeinmobiliaria/estates/create
+---
+2012/12/11 01:53:16 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\xampp\htdocs\yii\framework\web\auth\CAccessControlFilter.php:170
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\auth\CAccessControlFilter.php(133): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(292): CFilterChain->run()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(283): CController->run('upload')
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('estates/upload')
+#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\filipponeinmobiliaria\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/filipponeinmobiliaria/estates/upload?PHPSESSID=pat6ld5fij51bcajqqs486fmi4&YII_CSRF_TOKEN=cc4643c629ac9a6bbc7324bae4455af4d006a94c&qqfile=diagrama.png
+HTTP_REFERER=http://localhost/filipponeinmobiliaria/estates/create
+---
+2012/12/11 01:57:20 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\xampp\htdocs\yii\framework\web\auth\CAccessControlFilter.php:170
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\auth\CAccessControlFilter.php(133): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(292): CFilterChain->run()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(283): CController->run('upload')
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('estates/upload')
+#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\filipponeinmobiliaria\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/filipponeinmobiliaria/estates/upload
+---
+2012/12/11 01:59:11 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\xampp\htdocs\yii\framework\web\auth\CAccessControlFilter.php:170
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\auth\CAccessControlFilter.php(133): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(292): CFilterChain->run()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(283): CController->run('upload')
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('estates/upload')
+#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\filipponeinmobiliaria\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/filipponeinmobiliaria/index.php/estates/upload
+---
+2012/12/11 02:07:26 [error] [php] Undefined index: filename (C:\xampp\htdocs\filipponeinmobiliaria\protected\controllers\EstatesController.php:203)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(134): EstatesController->runAction()
+#1 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#3 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(59): EstatesController->filterAccessControl()
+#4 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(292): CFilterChain->run()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(266): EstatesController->runActionWithFilters()
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(283): EstatesController->run()
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\filipponeinmobiliaria\index.php(13): CWebApplication->run()
+REQUEST_URI=/filipponeinmobiliaria/estates/upload
+in C:\xampp\htdocs\filipponeinmobiliaria\protected\controllers\EstatesController.php (203)
+in C:\xampp\htdocs\filipponeinmobiliaria\index.php (13)
+2012/12/11 02:07:33 [error] [php] Undefined index: filename (C:\xampp\htdocs\filipponeinmobiliaria\protected\controllers\EstatesController.php:203)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(134): EstatesController->runAction()
+#1 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#3 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(59): EstatesController->filterAccessControl()
+#4 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(292): CFilterChain->run()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(266): EstatesController->runActionWithFilters()
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(283): EstatesController->run()
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\filipponeinmobiliaria\index.php(13): CWebApplication->run()
+REQUEST_URI=/filipponeinmobiliaria/index.php/estates/upload
+in C:\xampp\htdocs\filipponeinmobiliaria\protected\controllers\EstatesController.php (203)
+in C:\xampp\htdocs\filipponeinmobiliaria\index.php (13)
+2012/12/11 02:26:46 [error] [php] Undefined index: filename (C:\xampp\htdocs\filipponeinmobiliaria\protected\controllers\EstatesController.php:205)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(134): EstatesController->runAction()
+#1 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#3 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(59): EstatesController->filterAccessControl()
+#4 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(292): CFilterChain->run()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(266): EstatesController->runActionWithFilters()
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(283): EstatesController->run()
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\filipponeinmobiliaria\index.php(13): CWebApplication->run()
+REQUEST_URI=/filipponeinmobiliaria/estates/upload
+in C:\xampp\htdocs\filipponeinmobiliaria\protected\controllers\EstatesController.php (205)
+in C:\xampp\htdocs\filipponeinmobiliaria\index.php (13)
+2012/12/11 02:27:37 [error] [php] Undefined index: filename (C:\xampp\htdocs\filipponeinmobiliaria\protected\controllers\EstatesController.php:205)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(134): EstatesController->runAction()
+#1 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#3 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(59): EstatesController->filterAccessControl()
+#4 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(292): CFilterChain->run()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(266): EstatesController->runActionWithFilters()
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(283): EstatesController->run()
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\filipponeinmobiliaria\index.php(13): CWebApplication->run()
+REQUEST_URI=/filipponeinmobiliaria/estates/upload?PHPSESSID=pat6ld5fij51bcajqqs486fmi4&YII_CSRF_TOKEN=cc4643c629ac9a6bbc7324bae4455af4d006a94c&qqfile=prode.png
+in C:\xampp\htdocs\filipponeinmobiliaria\protected\controllers\EstatesController.php (205)
+in C:\xampp\htdocs\filipponeinmobiliaria\index.php (13)
+2012/12/11 02:28:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "estates".' in C:\xampp\htdocs\yii\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(271): CController->missingAction('estates')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(283): CController->run('estates')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('estates/estates...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\filipponeinmobiliaria\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/filipponeinmobiliaria/estates/estates/upload?PHPSESSID=pat6ld5fij51bcajqqs486fmi4&YII_CSRF_TOKEN=cc4643c629ac9a6bbc7324bae4455af4d006a94c&qqfile=logitech+g27+settings.png
+HTTP_REFERER=http://localhost/filipponeinmobiliaria/estates/create
+---
+2012/12/11 02:42:20 [error] [php] Undefined index: filename (C:\xampp\htdocs\filipponeinmobiliaria\protected\controllers\EstatesController.php:205)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(134): EstatesController->runAction()
+#1 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#3 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(59): EstatesController->filterAccessControl()
+#4 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(292): CFilterChain->run()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(266): EstatesController->runActionWithFilters()
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(283): EstatesController->run()
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\filipponeinmobiliaria\index.php(13): CWebApplication->run()
+REQUEST_URI=/filipponeinmobiliaria/Estates/upload?PHPSESSID=pat6ld5fij51bcajqqs486fmi4&YII_CSRF_TOKEN=cc4643c629ac9a6bbc7324bae4455af4d006a94c&qqfile=diagrama.png
+in C:\xampp\htdocs\filipponeinmobiliaria\protected\controllers\EstatesController.php (205)
+in C:\xampp\htdocs\filipponeinmobiliaria\index.php (13)
+2012/12/11 02:44:30 [error] [php] Undefined index: filename (C:\xampp\htdocs\filipponeinmobiliaria\protected\controllers\EstatesController.php:205)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(134): EstatesController->runAction()
+#1 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#3 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(59): EstatesController->filterAccessControl()
+#4 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(292): CFilterChain->run()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(266): EstatesController->runActionWithFilters()
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(283): EstatesController->run()
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\filipponeinmobiliaria\index.php(13): CWebApplication->run()
+REQUEST_URI=/filipponeinmobiliaria/estates/upload?PHPSESSID=pat6ld5fij51bcajqqs486fmi4&YII_CSRF_TOKEN=cc4643c629ac9a6bbc7324bae4455af4d006a94c&qqfile=diagrama.png
+in C:\xampp\htdocs\filipponeinmobiliaria\protected\controllers\EstatesController.php (205)
+in C:\xampp\htdocs\filipponeinmobiliaria\index.php (13)
+2012/12/11 02:46:17 [error] [php] Undefined index: filename (C:\xampp\htdocs\filipponeinmobiliaria\protected\controllers\EstatesController.php:205)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(134): EstatesController->runAction()
+#1 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#3 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(59): EstatesController->filterAccessControl()
+#4 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(292): CFilterChain->run()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(266): EstatesController->runActionWithFilters()
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(283): EstatesController->run()
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\filipponeinmobiliaria\index.php(13): CWebApplication->run()
+REQUEST_URI=/filipponeinmobiliaria/estates/upload?PHPSESSID=pat6ld5fij51bcajqqs486fmi4&YII_CSRF_TOKEN=cc4643c629ac9a6bbc7324bae4455af4d006a94c&qqfile=diagrama.png
+in C:\xampp\htdocs\filipponeinmobiliaria\protected\controllers\EstatesController.php (205)
+in C:\xampp\htdocs\filipponeinmobiliaria\index.php (13)
+2012/12/11 02:47:27 [error] [php] Undefined index: filename (C:\xampp\htdocs\filipponeinmobiliaria\protected\controllers\EstatesController.php:205)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(134): EstatesController->runAction()
+#1 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#3 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(59): EstatesController->filterAccessControl()
+#4 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(292): CFilterChain->run()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(266): EstatesController->runActionWithFilters()
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(283): EstatesController->run()
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\filipponeinmobiliaria\index.php(13): CWebApplication->run()
+REQUEST_URI=/filipponeinmobiliaria/estates/upload?PHPSESSID=pat6ld5fij51bcajqqs486fmi4&YII_CSRF_TOKEN=cc4643c629ac9a6bbc7324bae4455af4d006a94c&qqfile=diagrama.png
+in C:\xampp\htdocs\filipponeinmobiliaria\protected\controllers\EstatesController.php (205)
+in C:\xampp\htdocs\filipponeinmobiliaria\index.php (13)
+2012/12/11 04:53:02 [error] [exception.CException] exception 'CException' with message 'Property "Estates.path_name" is not defined.' in C:\xampp\htdocs\yii\framework\base\CComponent.php:131
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(144): CComponent->__get('path_name')
+#1 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(2158): CActiveRecord->__get('path_name')
+#2 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(1887): CHtml::resolveValue(Object(Estates), 'path_name')
+#3 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(1217): CHtml::activeInputField('text', Object(Estates), 'path_name', Array)
+#4 C:\xampp\htdocs\yii\framework\web\widgets\CActiveForm.php(658): CHtml::activeTextField(Object(Estates), 'path_name', Array)
+#5 C:\xampp\htdocs\filipponeinmobiliaria\protected\views\estates\_form.php(101): CActiveForm->textField(Object(Estates), 'path_name', Array)
+#6 C:\xampp\htdocs\yii\framework\web\CBaseController.php(127): require('C:\xampp\htdocs...')
+#7 C:\xampp\htdocs\yii\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(870): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#9 C:\xampp\htdocs\filipponeinmobiliaria\protected\views\estates\update.php(18): CController->renderPartial('_form', Array)
+#10 C:\xampp\htdocs\yii\framework\web\CBaseController.php(127): require('C:\xampp\htdocs...')
+#11 C:\xampp\htdocs\yii\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#12 C:\xampp\htdocs\yii\framework\web\CController.php(870): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#13 C:\xampp\htdocs\yii\framework\web\CController.php(783): CController->renderPartial('update', Array, true)
+#14 C:\xampp\htdocs\filipponeinmobiliaria\protected\controllers\EstatesController.php(97): CController->render('update', Array)
+#15 [internal function]: EstatesController->actionUpdate('1')
+#16 C:\xampp\htdocs\yii\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(EstatesController), Array)
+#17 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(EstatesController), Object(ReflectionMethod), Array)
+#18 C:\xampp\htdocs\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#19 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#20 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#21 C:\xampp\htdocs\yii\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#22 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#23 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#24 C:\xampp\htdocs\yii\framework\web\CController.php(292): CFilterChain->run()
+#25 C:\xampp\htdocs\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#26 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(283): CController->run('update')
+#27 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('estates/update/...')
+#28 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#29 C:\xampp\htdocs\filipponeinmobiliaria\index.php(13): CApplication->run()
+#30 {main}
+REQUEST_URI=/filipponeinmobiliaria/estates/update/id/1
+HTTP_REFERER=http://localhost/filipponeinmobiliaria/estates/view/id/1
+---
+2012/12/11 04:55:43 [error] [exception.CException] exception 'CException' with message 'Property "Images.pathNameInput" is not defined.' in C:\xampp\htdocs\yii\framework\base\CComponent.php:131
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(144): CComponent->__get('pathNameInput')
+#1 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(2158): CActiveRecord->__get('pathNameInput')
+#2 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(1887): CHtml::resolveValue(Object(Images), 'pathNameInput')
+#3 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(1217): CHtml::activeInputField('text', Object(Images), 'pathNameInput', Array)
+#4 C:\xampp\htdocs\yii\framework\web\widgets\CActiveForm.php(658): CHtml::activeTextField(Object(Images), 'pathNameInput', Array)
+#5 C:\xampp\htdocs\filipponeinmobiliaria\protected\views\estates\_form.php(104): CActiveForm->textField(Object(Images), 'pathNameInput', Array)
+#6 C:\xampp\htdocs\yii\framework\web\CBaseController.php(127): require('C:\xampp\htdocs...')
+#7 C:\xampp\htdocs\yii\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(870): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#9 C:\xampp\htdocs\filipponeinmobiliaria\protected\views\estates\update.php(18): CController->renderPartial('_form', Array)
+#10 C:\xampp\htdocs\yii\framework\web\CBaseController.php(127): require('C:\xampp\htdocs...')
+#11 C:\xampp\htdocs\yii\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#12 C:\xampp\htdocs\yii\framework\web\CController.php(870): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#13 C:\xampp\htdocs\yii\framework\web\CController.php(783): CController->renderPartial('update', Array, true)
+#14 C:\xampp\htdocs\filipponeinmobiliaria\protected\controllers\EstatesController.php(97): CController->render('update', Array)
+#15 [internal function]: EstatesController->actionUpdate('1')
+#16 C:\xampp\htdocs\yii\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(EstatesController), Array)
+#17 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(EstatesController), Object(ReflectionMethod), Array)
+#18 C:\xampp\htdocs\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#19 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#20 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#21 C:\xampp\htdocs\yii\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#22 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#23 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#24 C:\xampp\htdocs\yii\framework\web\CController.php(292): CFilterChain->run()
+#25 C:\xampp\htdocs\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#26 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(283): CController->run('update')
+#27 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('estates/update/...')
+#28 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#29 C:\xampp\htdocs\filipponeinmobiliaria\index.php(13): CApplication->run()
+#30 {main}
+REQUEST_URI=/filipponeinmobiliaria/estates/update/id/1
+HTTP_REFERER=http://localhost/filipponeinmobiliaria/estates/view/id/1
+---
+2012/12/11 05:15:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in C:\xampp\htdocs\filipponeinmobiliaria\protected\controllers\EstatesController.php:155
+Stack trace:
+#0 C:\xampp\htdocs\filipponeinmobiliaria\protected\controllers\EstatesController.php(81): EstatesController->loadModel('upload')
+#1 [internal function]: EstatesController->actionUpdate('upload')
+#2 C:\xampp\htdocs\yii\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(EstatesController), Array)
+#3 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(EstatesController), Object(ReflectionMethod), Array)
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#8 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(292): CFilterChain->run()
+#11 C:\xampp\htdocs\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(283): CController->run('update')
+#13 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('estates/update/...')
+#14 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\filipponeinmobiliaria\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/filipponeinmobiliaria/estates/update/id/upload?PHPSESSID=pat6ld5fij51bcajqqs486fmi4&YII_CSRF_TOKEN=cc4643c629ac9a6bbc7324bae4455af4d006a94c&qqfile=diagrama.png
+HTTP_REFERER=http://localhost/filipponeinmobiliaria/estates/update/id/2
+---
+2012/12/11 05:16:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in C:\xampp\htdocs\filipponeinmobiliaria\protected\controllers\EstatesController.php:155
+Stack trace:
+#0 C:\xampp\htdocs\filipponeinmobiliaria\protected\controllers\EstatesController.php(81): EstatesController->loadModel('upload')
+#1 [internal function]: EstatesController->actionUpdate('upload')
+#2 C:\xampp\htdocs\yii\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(EstatesController), Array)
+#3 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(EstatesController), Object(ReflectionMethod), Array)
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#8 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(292): CFilterChain->run()
+#11 C:\xampp\htdocs\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(283): CController->run('update')
+#13 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('estates/update/...')
+#14 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\filipponeinmobiliaria\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/filipponeinmobiliaria/estates/update/id/upload?PHPSESSID=pat6ld5fij51bcajqqs486fmi4&YII_CSRF_TOKEN=cc4643c629ac9a6bbc7324bae4455af4d006a94c&qqfile=videlin.png
+HTTP_REFERER=http://localhost/filipponeinmobiliaria/estates/update/id/2
+---
+2012/12/11 05:19:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in C:\xampp\htdocs\filipponeinmobiliaria\protected\controllers\EstatesController.php:155
+Stack trace:
+#0 C:\xampp\htdocs\filipponeinmobiliaria\protected\controllers\EstatesController.php(81): EstatesController->loadModel('upload')
+#1 [internal function]: EstatesController->actionUpdate('upload')
+#2 C:\xampp\htdocs\yii\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(EstatesController), Array)
+#3 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(EstatesController), Object(ReflectionMethod), Array)
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#8 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(292): CFilterChain->run()
+#11 C:\xampp\htdocs\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(283): CController->run('update')
+#13 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('estates/update/...')
+#14 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\filipponeinmobiliaria\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/filipponeinmobiliaria/estates/update/id/upload?PHPSESSID=pat6ld5fij51bcajqqs486fmi4&YII_CSRF_TOKEN=cc4643c629ac9a6bbc7324bae4455af4d006a94c&qqfile=diagrama.png
+HTTP_REFERER=http://localhost/filipponeinmobiliaria/estates/update/id/2
+---
+2012/12/11 05:20:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in C:\xampp\htdocs\filipponeinmobiliaria\protected\controllers\EstatesController.php:155
+Stack trace:
+#0 C:\xampp\htdocs\filipponeinmobiliaria\protected\controllers\EstatesController.php(81): EstatesController->loadModel('upload')
+#1 [internal function]: EstatesController->actionUpdate('upload')
+#2 C:\xampp\htdocs\yii\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(EstatesController), Array)
+#3 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(EstatesController), Object(ReflectionMethod), Array)
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#8 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(292): CFilterChain->run()
+#11 C:\xampp\htdocs\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(283): CController->run('update')
+#13 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('estates/update/...')
+#14 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\filipponeinmobiliaria\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/filipponeinmobiliaria/estates/update/id/upload?PHPSESSID=pat6ld5fij51bcajqqs486fmi4&YII_CSRF_TOKEN=cc4643c629ac9a6bbc7324bae4455af4d006a94c&qqfile=tumblr_m63gbdaLrf1qhd9gyo1_1280.jpg
+HTTP_REFERER=http://localhost/filipponeinmobiliaria/estates/update/id/2
+---
+2012/12/11 05:21:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in C:\xampp\htdocs\filipponeinmobiliaria\protected\controllers\EstatesController.php:155
+Stack trace:
+#0 C:\xampp\htdocs\filipponeinmobiliaria\protected\controllers\EstatesController.php(81): EstatesController->loadModel('upload')
+#1 [internal function]: EstatesController->actionUpdate('upload')
+#2 C:\xampp\htdocs\yii\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(EstatesController), Array)
+#3 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(EstatesController), Object(ReflectionMethod), Array)
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#8 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(292): CFilterChain->run()
+#11 C:\xampp\htdocs\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(283): CController->run('update')
+#13 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('estates/update/...')
+#14 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\filipponeinmobiliaria\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/filipponeinmobiliaria/estates/update/id/upload?PHPSESSID=pat6ld5fij51bcajqqs486fmi4&YII_CSRF_TOKEN=cc4643c629ac9a6bbc7324bae4455af4d006a94c&qqfile=diagrama.png
+HTTP_REFERER=http://localhost/filipponeinmobiliaria/estates/update/id/2
+---
+2012/12/11 05:21:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in C:\xampp\htdocs\filipponeinmobiliaria\protected\controllers\EstatesController.php:155
+Stack trace:
+#0 C:\xampp\htdocs\filipponeinmobiliaria\protected\controllers\EstatesController.php(81): EstatesController->loadModel('upload')
+#1 [internal function]: EstatesController->actionUpdate('upload')
+#2 C:\xampp\htdocs\yii\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(EstatesController), Array)
+#3 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(EstatesController), Object(ReflectionMethod), Array)
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#8 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(292): CFilterChain->run()
+#11 C:\xampp\htdocs\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(283): CController->run('update')
+#13 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('estates/update/...')
+#14 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\filipponeinmobiliaria\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/filipponeinmobiliaria/estates/update/id/upload?PHPSESSID=pat6ld5fij51bcajqqs486fmi4&YII_CSRF_TOKEN=cc4643c629ac9a6bbc7324bae4455af4d006a94c&qqfile=Worms+Revolution+3.jpg
+HTTP_REFERER=http://localhost/filipponeinmobiliaria/estates/update/id/2
+---
+2012/12/11 05:22:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in C:\xampp\htdocs\filipponeinmobiliaria\protected\controllers\EstatesController.php:155
+Stack trace:
+#0 C:\xampp\htdocs\filipponeinmobiliaria\protected\controllers\EstatesController.php(81): EstatesController->loadModel('upload')
+#1 [internal function]: EstatesController->actionUpdate('upload')
+#2 C:\xampp\htdocs\yii\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(EstatesController), Array)
+#3 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(EstatesController), Object(ReflectionMethod), Array)
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#8 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(292): CFilterChain->run()
+#11 C:\xampp\htdocs\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(283): CController->run('update')
+#13 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('estates/update/...')
+#14 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\filipponeinmobiliaria\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/filipponeinmobiliaria/estates/update/id/upload?PHPSESSID=pat6ld5fij51bcajqqs486fmi4&YII_CSRF_TOKEN=cc4643c629ac9a6bbc7324bae4455af4d006a94c&qqfile=Worms+Revolution+3.jpg
+HTTP_REFERER=http://localhost/filipponeinmobiliaria/estates/update/id/2
+---

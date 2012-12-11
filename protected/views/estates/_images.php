@@ -1,14 +1,22 @@
 
 <?php
 	$aux= array();
+	$titulo = true;
 	foreach ($model->images as $i => $img) {
-	
-		echo '<div class="row">';
-		echo '<h4>Imagen ' . ($i+1) . '</h1>';
-		echo Chtml::label('Nombre', false);
-		echo Chtml::label($img->path_name,false);
-		echo '</div>';
-		$aux[$i]= array('label'=>'Nombre', 'value'=>$img->path_name);
+		if($titulo)
+		{
+			$titulo = false;
+			echo 'Cargadas anteriormente:';
+		}
+		echo '<li class=" qq-upload-success">';
+		echo '<span class="qq-upload-file">';
+		//echo Chtml::label('Nombre', false);
+		echo $img->path_name;
+		echo '</span>';
+		echo '<a class="deletelink" href="../../delete/'.$img->path_name.'">Borrar</a>';
+		echo '</li>';
+		//echo '</div>';
+		//$aux[$i]= array('label'=>'Nombre', 'value'=>$img->path_name);
 	}
 ?>
 

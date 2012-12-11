@@ -8,7 +8,6 @@
 <div class="form">
 	<p class="note">Campos con <span class="required">*</span> son requeridos.</p>
 </div>
-	
 
 <div class="accordion" id="estate">
 
@@ -95,18 +94,33 @@
 		<div id="images" class="accordion-body collapse">
 			<div class="accordion-inner">
 				
-				<a href="#myModal" role="button" class="btn" data-toggle="modal">Agregar Imagen</a>
 				<div id="imgf" class="form">					
-					
+				<?	
+				$this->widget('ext.EAjaxUpload.EAjaxUpload',
+					array(
+						'id'=>'uploadFile',
+						'config'=>array(
+						   'action'=>Yii::app()->getBaseUrl(true) . '/estates/upload/',
+						   'allowedExtensions'=>array("jpg", "png"),//array("jpg","jpeg","gif","exe","mov" and etc...
+						   'sizeLimit'=>10*1024*1024,// maximum file size in bytes
+						   'minSizeLimit'=>1*1024,// minimum file size in bytes
+						   'multiple'=>true,
+						   'messages'=>array(
+											 'typeError'=>"{file} has invalid extension. Only {extensions} are allowed.",
+											 'sizeError'=>"{file} is too large, maximum file size is {sizeLimit}.",
+											 'minSizeError'=>"{file} is too small, minimum file size is {minSizeLimit}.",
+											 'emptyError'=>"{file} is empty, please select files again without it.",
+											 'onLeave'=>"The files are being uploaded, if you leave now the upload will be cancelled."
+											),
+						   'showMessage'=>"js:function(message){ alert(message); }"
+						)
+					));
+					?>
+					<div id="uploadFile"><div class="qq-uploader">
+					<ul class="qq-upload-list">
 					<?php $this->renderPartial('_images', array('model'=>$model)); ?>
-					
-					<div id="divMod">
-						<?php $this->renderPartial('_test', array('id'=>$model->id)); ?>
-					</div>
-					<script>
-					$('#divMod .modal').appendTo($("body"));
-					</script>
-					
+					</ul>
+					</div></div>
 				</div>
 			</div>
 		</div>
