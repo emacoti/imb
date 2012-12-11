@@ -172,7 +172,8 @@ qq.setText = function(element, text){
     element.textContent = text;
 };
 qq.setLink = function(element, text){
-	element.href = 'javascript: if(confirm(\"¿Está seguro?\")){ deleteimg2(\"'+text+'\"); borrarli(\"li'+randomid+'\");}';
+	element.setAttribute('onclick', 'if(confirm(\"¿Está seguro?\")){ deleteimg2(\"'+text+'\"); borrarli(\"li'+randomid+'\");}');
+	element.href = "#";
 };
 qq.setValue = function(element, text){
 	element.name = 'file' + randomid++;
