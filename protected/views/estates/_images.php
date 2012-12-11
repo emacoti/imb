@@ -2,18 +2,22 @@
 <?php
 	$aux= array();
 	$titulo = true;
+	$i = 0;
 	foreach ($model->images as $i => $img) {
 		if($titulo)
 		{
 			$titulo = false;
 			echo 'Cargadas anteriormente:';
 		}
-		echo '<li class=" qq-upload-success">';
+		$i++;
+		echo "<li id='img$i' class=' qq-upload-success'>";
 		echo '<span class="qq-upload-file">';
 		//echo Chtml::label('Nombre', false);
-		echo $img->path_name;
+		$var = explode("/",$img->path_name, 2);
+		echo $var[1];
 		echo '</span>';
-		echo '<a class="deletelink" href="../../delete/'.$img->path_name.'">Borrar</a>';
+		$var = "\"../../../images/delete/id/$img->id\"";
+		echo "<a class='deletelink' href='#' onclick='if(confirm(\"&iquest;Est&aacute; seguro?\")){deleteimg($var);deleteli(\"img$i\")}'>Borrar</a>";
 		echo '</li>';
 		//echo '</div>';
 		//$aux[$i]= array('label'=>'Nombre', 'value'=>$img->path_name);

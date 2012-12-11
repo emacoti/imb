@@ -6725,3 +6725,698 @@ Stack trace:
 REQUEST_URI=/filipponeinmobiliaria/estates/update/id/1
 in C:\xampp\htdocs\filipponeinmobiliaria\protected\controllers\EstatesController.php (116)
 in C:\xampp\htdocs\filipponeinmobiliaria\index.php (13)
+2012/12/11 20:23:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "estates".' in C:\xampp\htdocs\yii\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(271): CController->missingAction('estates')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(283): CController->run('estates')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('images/estates/...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\filipponeinmobiliaria\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/filipponeinmobiliaria/images/estates/videlin.png
+HTTP_REFERER=http://localhost/filipponeinmobiliaria/images/view/id/12
+---
+2012/12/11 20:23:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "estates".' in C:\xampp\htdocs\yii\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(271): CController->missingAction('estates')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(283): CController->run('estates')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('images/estates/...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\filipponeinmobiliaria\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/filipponeinmobiliaria/images/estates/videlin.png
+HTTP_REFERER=http://localhost/filipponeinmobiliaria/images/view/id/12
+---
+2012/12/11 20:23:55 [error] [php] unlink(./images/estates/1/logitech%20g27%20settings.png) [<a href='function.unlink'>function.unlink</a>]: No such file or directory (C:\xampp\htdocs\filipponeinmobiliaria\protected\controllers\ImagesController.php:115)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs()
+#1 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#2 C:\xampp\htdocs\yii\framework\web\CController.php(309): CInlineAction->runWithParams()
+#3 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(134): ImagesController->runAction()
+#4 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#6 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(59): ImagesController->filterAccessControl()
+#7 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(292): CFilterChain->run()
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(266): ImagesController->runActionWithFilters()
+#10 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(283): ImagesController->run()
+#11 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#12 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\filipponeinmobiliaria\index.php(13): CWebApplication->run()
+REQUEST_URI=/filipponeinmobiliaria/images/delete/id/11?ajax=images-grid
+in C:\xampp\htdocs\filipponeinmobiliaria\protected\controllers\ImagesController.php (115)
+in C:\xampp\htdocs\filipponeinmobiliaria\index.php (13)
+2012/12/11 20:52:13 [error] [php] Function split() is deprecated (C:\xampp\htdocs\filipponeinmobiliaria\protected\views\estates\_images.php:14)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CBaseController.php(96): EstatesController->renderInternal()
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(870): EstatesController->renderFile()
+#2 C:\xampp\htdocs\filipponeinmobiliaria\protected\views\estates\_form.php(121): EstatesController->renderPartial()
+#3 C:\xampp\htdocs\yii\framework\web\CBaseController.php(127): require()
+#4 C:\xampp\htdocs\yii\framework\web\CBaseController.php(96): EstatesController->renderInternal()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(870): EstatesController->renderFile()
+#6 C:\xampp\htdocs\filipponeinmobiliaria\protected\views\estates\update.php(18): EstatesController->renderPartial()
+#7 C:\xampp\htdocs\yii\framework\web\CBaseController.php(127): require()
+#8 C:\xampp\htdocs\yii\framework\web\CBaseController.php(96): EstatesController->renderInternal()
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(870): EstatesController->renderFile()
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(783): EstatesController->renderPartial()
+#11 C:\xampp\htdocs\filipponeinmobiliaria\protected\controllers\EstatesController.php(162): EstatesController->render()
+#12 unknown(0): EstatesController->actionUpdate()
+#13 C:\xampp\htdocs\yii\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs()
+#14 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#15 C:\xampp\htdocs\yii\framework\web\CController.php(309): CInlineAction->runWithParams()
+#16 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(134): EstatesController->runAction()
+#17 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#18 C:\xampp\htdocs\yii\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#19 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(59): EstatesController->filterAccessControl()
+#20 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#21 C:\xampp\htdocs\yii\framework\web\CController.php(292): CFilterChain->run()
+#22 C:\xampp\htdocs\yii\framework\web\CController.php(266): EstatesController->runActionWithFilters()
+#23 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(283): EstatesController->run()
+#24 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#25 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#26 C:\xampp\htdocs\filipponeinmobiliaria\index.php(13): CWebApplication->run()
+REQUEST_URI=/filipponeinmobiliaria/estates/update/id/1
+in C:\xampp\htdocs\filipponeinmobiliaria\protected\views\estates\_images.php (14)
+in C:\xampp\htdocs\filipponeinmobiliaria\protected\views\estates\_form.php (121)
+in C:\xampp\htdocs\filipponeinmobiliaria\protected\views\estates\update.php (18)
+2012/12/11 20:52:14 [error] [php] Function split() is deprecated (C:\xampp\htdocs\filipponeinmobiliaria\protected\views\estates\_images.php:14)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CBaseController.php(96): EstatesController->renderInternal()
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(870): EstatesController->renderFile()
+#2 C:\xampp\htdocs\filipponeinmobiliaria\protected\views\estates\_form.php(121): EstatesController->renderPartial()
+#3 C:\xampp\htdocs\yii\framework\web\CBaseController.php(127): require()
+#4 C:\xampp\htdocs\yii\framework\web\CBaseController.php(96): EstatesController->renderInternal()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(870): EstatesController->renderFile()
+#6 C:\xampp\htdocs\filipponeinmobiliaria\protected\views\estates\update.php(18): EstatesController->renderPartial()
+#7 C:\xampp\htdocs\yii\framework\web\CBaseController.php(127): require()
+#8 C:\xampp\htdocs\yii\framework\web\CBaseController.php(96): EstatesController->renderInternal()
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(870): EstatesController->renderFile()
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(783): EstatesController->renderPartial()
+#11 C:\xampp\htdocs\filipponeinmobiliaria\protected\controllers\EstatesController.php(162): EstatesController->render()
+#12 unknown(0): EstatesController->actionUpdate()
+#13 C:\xampp\htdocs\yii\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs()
+#14 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#15 C:\xampp\htdocs\yii\framework\web\CController.php(309): CInlineAction->runWithParams()
+#16 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(134): EstatesController->runAction()
+#17 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#18 C:\xampp\htdocs\yii\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#19 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(59): EstatesController->filterAccessControl()
+#20 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#21 C:\xampp\htdocs\yii\framework\web\CController.php(292): CFilterChain->run()
+#22 C:\xampp\htdocs\yii\framework\web\CController.php(266): EstatesController->runActionWithFilters()
+#23 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(283): EstatesController->run()
+#24 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#25 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#26 C:\xampp\htdocs\filipponeinmobiliaria\index.php(13): CWebApplication->run()
+REQUEST_URI=/filipponeinmobiliaria/estates/update/id/1
+in C:\xampp\htdocs\filipponeinmobiliaria\protected\views\estates\_images.php (14)
+in C:\xampp\htdocs\filipponeinmobiliaria\protected\views\estates\_form.php (121)
+in C:\xampp\htdocs\filipponeinmobiliaria\protected\views\estates\update.php (18)
+2012/12/11 20:52:15 [error] [php] Function split() is deprecated (C:\xampp\htdocs\filipponeinmobiliaria\protected\views\estates\_images.php:14)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CBaseController.php(96): EstatesController->renderInternal()
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(870): EstatesController->renderFile()
+#2 C:\xampp\htdocs\filipponeinmobiliaria\protected\views\estates\_form.php(121): EstatesController->renderPartial()
+#3 C:\xampp\htdocs\yii\framework\web\CBaseController.php(127): require()
+#4 C:\xampp\htdocs\yii\framework\web\CBaseController.php(96): EstatesController->renderInternal()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(870): EstatesController->renderFile()
+#6 C:\xampp\htdocs\filipponeinmobiliaria\protected\views\estates\update.php(18): EstatesController->renderPartial()
+#7 C:\xampp\htdocs\yii\framework\web\CBaseController.php(127): require()
+#8 C:\xampp\htdocs\yii\framework\web\CBaseController.php(96): EstatesController->renderInternal()
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(870): EstatesController->renderFile()
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(783): EstatesController->renderPartial()
+#11 C:\xampp\htdocs\filipponeinmobiliaria\protected\controllers\EstatesController.php(162): EstatesController->render()
+#12 unknown(0): EstatesController->actionUpdate()
+#13 C:\xampp\htdocs\yii\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs()
+#14 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#15 C:\xampp\htdocs\yii\framework\web\CController.php(309): CInlineAction->runWithParams()
+#16 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(134): EstatesController->runAction()
+#17 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#18 C:\xampp\htdocs\yii\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#19 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(59): EstatesController->filterAccessControl()
+#20 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#21 C:\xampp\htdocs\yii\framework\web\CController.php(292): CFilterChain->run()
+#22 C:\xampp\htdocs\yii\framework\web\CController.php(266): EstatesController->runActionWithFilters()
+#23 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(283): EstatesController->run()
+#24 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#25 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#26 C:\xampp\htdocs\filipponeinmobiliaria\index.php(13): CWebApplication->run()
+REQUEST_URI=/filipponeinmobiliaria/estates/update/id/1
+in C:\xampp\htdocs\filipponeinmobiliaria\protected\views\estates\_images.php (14)
+in C:\xampp\htdocs\filipponeinmobiliaria\protected\views\estates\_form.php (121)
+in C:\xampp\htdocs\filipponeinmobiliaria\protected\views\estates\update.php (18)
+2012/12/11 20:52:16 [error] [php] Function split() is deprecated (C:\xampp\htdocs\filipponeinmobiliaria\protected\views\estates\_images.php:14)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CBaseController.php(96): EstatesController->renderInternal()
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(870): EstatesController->renderFile()
+#2 C:\xampp\htdocs\filipponeinmobiliaria\protected\views\estates\_form.php(121): EstatesController->renderPartial()
+#3 C:\xampp\htdocs\yii\framework\web\CBaseController.php(127): require()
+#4 C:\xampp\htdocs\yii\framework\web\CBaseController.php(96): EstatesController->renderInternal()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(870): EstatesController->renderFile()
+#6 C:\xampp\htdocs\filipponeinmobiliaria\protected\views\estates\update.php(18): EstatesController->renderPartial()
+#7 C:\xampp\htdocs\yii\framework\web\CBaseController.php(127): require()
+#8 C:\xampp\htdocs\yii\framework\web\CBaseController.php(96): EstatesController->renderInternal()
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(870): EstatesController->renderFile()
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(783): EstatesController->renderPartial()
+#11 C:\xampp\htdocs\filipponeinmobiliaria\protected\controllers\EstatesController.php(162): EstatesController->render()
+#12 unknown(0): EstatesController->actionUpdate()
+#13 C:\xampp\htdocs\yii\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs()
+#14 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#15 C:\xampp\htdocs\yii\framework\web\CController.php(309): CInlineAction->runWithParams()
+#16 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(134): EstatesController->runAction()
+#17 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#18 C:\xampp\htdocs\yii\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#19 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(59): EstatesController->filterAccessControl()
+#20 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#21 C:\xampp\htdocs\yii\framework\web\CController.php(292): CFilterChain->run()
+#22 C:\xampp\htdocs\yii\framework\web\CController.php(266): EstatesController->runActionWithFilters()
+#23 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(283): EstatesController->run()
+#24 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#25 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#26 C:\xampp\htdocs\filipponeinmobiliaria\index.php(13): CWebApplication->run()
+REQUEST_URI=/filipponeinmobiliaria/estates/update/id/1
+in C:\xampp\htdocs\filipponeinmobiliaria\protected\views\estates\_images.php (14)
+in C:\xampp\htdocs\filipponeinmobiliaria\protected\views\estates\_form.php (121)
+in C:\xampp\htdocs\filipponeinmobiliaria\protected\views\estates\update.php (18)
+2012/12/11 20:52:16 [error] [php] Function split() is deprecated (C:\xampp\htdocs\filipponeinmobiliaria\protected\views\estates\_images.php:14)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CBaseController.php(96): EstatesController->renderInternal()
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(870): EstatesController->renderFile()
+#2 C:\xampp\htdocs\filipponeinmobiliaria\protected\views\estates\_form.php(121): EstatesController->renderPartial()
+#3 C:\xampp\htdocs\yii\framework\web\CBaseController.php(127): require()
+#4 C:\xampp\htdocs\yii\framework\web\CBaseController.php(96): EstatesController->renderInternal()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(870): EstatesController->renderFile()
+#6 C:\xampp\htdocs\filipponeinmobiliaria\protected\views\estates\update.php(18): EstatesController->renderPartial()
+#7 C:\xampp\htdocs\yii\framework\web\CBaseController.php(127): require()
+#8 C:\xampp\htdocs\yii\framework\web\CBaseController.php(96): EstatesController->renderInternal()
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(870): EstatesController->renderFile()
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(783): EstatesController->renderPartial()
+#11 C:\xampp\htdocs\filipponeinmobiliaria\protected\controllers\EstatesController.php(162): EstatesController->render()
+#12 unknown(0): EstatesController->actionUpdate()
+#13 C:\xampp\htdocs\yii\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs()
+#14 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#15 C:\xampp\htdocs\yii\framework\web\CController.php(309): CInlineAction->runWithParams()
+#16 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(134): EstatesController->runAction()
+#17 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#18 C:\xampp\htdocs\yii\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#19 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(59): EstatesController->filterAccessControl()
+#20 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#21 C:\xampp\htdocs\yii\framework\web\CController.php(292): CFilterChain->run()
+#22 C:\xampp\htdocs\yii\framework\web\CController.php(266): EstatesController->runActionWithFilters()
+#23 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(283): EstatesController->run()
+#24 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#25 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#26 C:\xampp\htdocs\filipponeinmobiliaria\index.php(13): CWebApplication->run()
+REQUEST_URI=/filipponeinmobiliaria/estates/update/id/1
+in C:\xampp\htdocs\filipponeinmobiliaria\protected\views\estates\_images.php (14)
+in C:\xampp\htdocs\filipponeinmobiliaria\protected\views\estates\_form.php (121)
+in C:\xampp\htdocs\filipponeinmobiliaria\protected\views\estates\update.php (18)
+2012/12/11 20:52:23 [error] [php] Undefined offset: 1 (C:\xampp\htdocs\filipponeinmobiliaria\protected\views\estates\_images.php:15)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(870): EstatesController->renderFile()
+#1 C:\xampp\htdocs\filipponeinmobiliaria\protected\views\estates\_form.php(121): EstatesController->renderPartial()
+#2 C:\xampp\htdocs\yii\framework\web\CBaseController.php(127): require()
+#3 C:\xampp\htdocs\yii\framework\web\CBaseController.php(96): EstatesController->renderInternal()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(870): EstatesController->renderFile()
+#5 C:\xampp\htdocs\filipponeinmobiliaria\protected\views\estates\update.php(18): EstatesController->renderPartial()
+#6 C:\xampp\htdocs\yii\framework\web\CBaseController.php(127): require()
+#7 C:\xampp\htdocs\yii\framework\web\CBaseController.php(96): EstatesController->renderInternal()
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(870): EstatesController->renderFile()
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(783): EstatesController->renderPartial()
+#10 C:\xampp\htdocs\filipponeinmobiliaria\protected\controllers\EstatesController.php(162): EstatesController->render()
+#11 unknown(0): EstatesController->actionUpdate()
+#12 C:\xampp\htdocs\yii\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs()
+#13 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#14 C:\xampp\htdocs\yii\framework\web\CController.php(309): CInlineAction->runWithParams()
+#15 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(134): EstatesController->runAction()
+#16 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#17 C:\xampp\htdocs\yii\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#18 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(59): EstatesController->filterAccessControl()
+#19 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#20 C:\xampp\htdocs\yii\framework\web\CController.php(292): CFilterChain->run()
+#21 C:\xampp\htdocs\yii\framework\web\CController.php(266): EstatesController->runActionWithFilters()
+#22 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(283): EstatesController->run()
+#23 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#24 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#25 C:\xampp\htdocs\filipponeinmobiliaria\index.php(13): CWebApplication->run()
+REQUEST_URI=/filipponeinmobiliaria/estates/update/id/1
+in C:\xampp\htdocs\filipponeinmobiliaria\protected\views\estates\_images.php (15)
+in C:\xampp\htdocs\filipponeinmobiliaria\protected\views\estates\_form.php (121)
+in C:\xampp\htdocs\filipponeinmobiliaria\protected\views\estates\update.php (18)
+2012/12/11 20:52:24 [error] [php] Undefined offset: 1 (C:\xampp\htdocs\filipponeinmobiliaria\protected\views\estates\_images.php:15)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(870): EstatesController->renderFile()
+#1 C:\xampp\htdocs\filipponeinmobiliaria\protected\views\estates\_form.php(121): EstatesController->renderPartial()
+#2 C:\xampp\htdocs\yii\framework\web\CBaseController.php(127): require()
+#3 C:\xampp\htdocs\yii\framework\web\CBaseController.php(96): EstatesController->renderInternal()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(870): EstatesController->renderFile()
+#5 C:\xampp\htdocs\filipponeinmobiliaria\protected\views\estates\update.php(18): EstatesController->renderPartial()
+#6 C:\xampp\htdocs\yii\framework\web\CBaseController.php(127): require()
+#7 C:\xampp\htdocs\yii\framework\web\CBaseController.php(96): EstatesController->renderInternal()
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(870): EstatesController->renderFile()
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(783): EstatesController->renderPartial()
+#10 C:\xampp\htdocs\filipponeinmobiliaria\protected\controllers\EstatesController.php(162): EstatesController->render()
+#11 unknown(0): EstatesController->actionUpdate()
+#12 C:\xampp\htdocs\yii\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs()
+#13 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#14 C:\xampp\htdocs\yii\framework\web\CController.php(309): CInlineAction->runWithParams()
+#15 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(134): EstatesController->runAction()
+#16 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#17 C:\xampp\htdocs\yii\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#18 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(59): EstatesController->filterAccessControl()
+#19 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#20 C:\xampp\htdocs\yii\framework\web\CController.php(292): CFilterChain->run()
+#21 C:\xampp\htdocs\yii\framework\web\CController.php(266): EstatesController->runActionWithFilters()
+#22 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(283): EstatesController->run()
+#23 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#24 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#25 C:\xampp\htdocs\filipponeinmobiliaria\index.php(13): CWebApplication->run()
+REQUEST_URI=/filipponeinmobiliaria/estates/update/id/1
+in C:\xampp\htdocs\filipponeinmobiliaria\protected\views\estates\_images.php (15)
+in C:\xampp\htdocs\filipponeinmobiliaria\protected\views\estates\_form.php (121)
+in C:\xampp\htdocs\filipponeinmobiliaria\protected\views\estates\update.php (18)
+2012/12/11 20:52:46 [error] [php] Undefined offset: 1 (C:\xampp\htdocs\filipponeinmobiliaria\protected\views\estates\_images.php:15)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(870): EstatesController->renderFile()
+#1 C:\xampp\htdocs\filipponeinmobiliaria\protected\views\estates\_form.php(121): EstatesController->renderPartial()
+#2 C:\xampp\htdocs\yii\framework\web\CBaseController.php(127): require()
+#3 C:\xampp\htdocs\yii\framework\web\CBaseController.php(96): EstatesController->renderInternal()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(870): EstatesController->renderFile()
+#5 C:\xampp\htdocs\filipponeinmobiliaria\protected\views\estates\update.php(18): EstatesController->renderPartial()
+#6 C:\xampp\htdocs\yii\framework\web\CBaseController.php(127): require()
+#7 C:\xampp\htdocs\yii\framework\web\CBaseController.php(96): EstatesController->renderInternal()
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(870): EstatesController->renderFile()
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(783): EstatesController->renderPartial()
+#10 C:\xampp\htdocs\filipponeinmobiliaria\protected\controllers\EstatesController.php(162): EstatesController->render()
+#11 unknown(0): EstatesController->actionUpdate()
+#12 C:\xampp\htdocs\yii\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs()
+#13 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#14 C:\xampp\htdocs\yii\framework\web\CController.php(309): CInlineAction->runWithParams()
+#15 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(134): EstatesController->runAction()
+#16 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#17 C:\xampp\htdocs\yii\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#18 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(59): EstatesController->filterAccessControl()
+#19 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#20 C:\xampp\htdocs\yii\framework\web\CController.php(292): CFilterChain->run()
+#21 C:\xampp\htdocs\yii\framework\web\CController.php(266): EstatesController->runActionWithFilters()
+#22 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(283): EstatesController->run()
+#23 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#24 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#25 C:\xampp\htdocs\filipponeinmobiliaria\index.php(13): CWebApplication->run()
+REQUEST_URI=/filipponeinmobiliaria/estates/update/id/1
+in C:\xampp\htdocs\filipponeinmobiliaria\protected\views\estates\_images.php (15)
+in C:\xampp\htdocs\filipponeinmobiliaria\protected\views\estates\_form.php (121)
+in C:\xampp\htdocs\filipponeinmobiliaria\protected\views\estates\update.php (18)
+2012/12/11 20:54:22 [error] [php] Undefined offset: 1 (C:\xampp\htdocs\filipponeinmobiliaria\protected\views\estates\_images.php:15)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(870): EstatesController->renderFile()
+#1 C:\xampp\htdocs\filipponeinmobiliaria\protected\views\estates\_form.php(121): EstatesController->renderPartial()
+#2 C:\xampp\htdocs\yii\framework\web\CBaseController.php(127): require()
+#3 C:\xampp\htdocs\yii\framework\web\CBaseController.php(96): EstatesController->renderInternal()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(870): EstatesController->renderFile()
+#5 C:\xampp\htdocs\filipponeinmobiliaria\protected\views\estates\update.php(18): EstatesController->renderPartial()
+#6 C:\xampp\htdocs\yii\framework\web\CBaseController.php(127): require()
+#7 C:\xampp\htdocs\yii\framework\web\CBaseController.php(96): EstatesController->renderInternal()
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(870): EstatesController->renderFile()
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(783): EstatesController->renderPartial()
+#10 C:\xampp\htdocs\filipponeinmobiliaria\protected\controllers\EstatesController.php(162): EstatesController->render()
+#11 unknown(0): EstatesController->actionUpdate()
+#12 C:\xampp\htdocs\yii\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs()
+#13 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#14 C:\xampp\htdocs\yii\framework\web\CController.php(309): CInlineAction->runWithParams()
+#15 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(134): EstatesController->runAction()
+#16 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#17 C:\xampp\htdocs\yii\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#18 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(59): EstatesController->filterAccessControl()
+#19 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#20 C:\xampp\htdocs\yii\framework\web\CController.php(292): CFilterChain->run()
+#21 C:\xampp\htdocs\yii\framework\web\CController.php(266): EstatesController->runActionWithFilters()
+#22 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(283): EstatesController->run()
+#23 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#24 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#25 C:\xampp\htdocs\filipponeinmobiliaria\index.php(13): CWebApplication->run()
+REQUEST_URI=/filipponeinmobiliaria/estates/update/id/1
+in C:\xampp\htdocs\filipponeinmobiliaria\protected\views\estates\_images.php (15)
+in C:\xampp\htdocs\filipponeinmobiliaria\protected\views\estates\_form.php (121)
+in C:\xampp\htdocs\filipponeinmobiliaria\protected\views\estates\update.php (18)
+2012/12/11 20:56:09 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\xampp\htdocs\yii\framework\web\CController.php:337
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(310): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#2 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#3 C:\xampp\htdocs\yii\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#4 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(292): CFilterChain->run()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(283): CController->run('delete')
+#9 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('images/delete/1...')
+#10 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\filipponeinmobiliaria\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/filipponeinmobiliaria/images/delete/1/videlin.png
+HTTP_REFERER=http://localhost/filipponeinmobiliaria/estates/update/id/1
+---
+2012/12/11 20:57:35 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\xampp\htdocs\yii\framework\web\CController.php:337
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(310): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#2 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#3 C:\xampp\htdocs\yii\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#4 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(292): CFilterChain->run()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(283): CController->run('delete')
+#9 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('images/delete/1...')
+#10 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\filipponeinmobiliaria\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/filipponeinmobiliaria/images/delete/1/videlin.png
+---
+2012/12/11 20:57:36 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\xampp\htdocs\yii\framework\web\CController.php:337
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(310): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#2 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#3 C:\xampp\htdocs\yii\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#4 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(292): CFilterChain->run()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(283): CController->run('delete')
+#9 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('images/delete/1...')
+#10 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\filipponeinmobiliaria\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/filipponeinmobiliaria/images/delete/1/videlin.png
+---
+2012/12/11 20:57:37 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\xampp\htdocs\yii\framework\web\CController.php:337
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(310): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#2 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#3 C:\xampp\htdocs\yii\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#4 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(292): CFilterChain->run()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(283): CController->run('delete')
+#9 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('images/delete/1...')
+#10 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\filipponeinmobiliaria\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/filipponeinmobiliaria/images/delete/1/videlin.png
+---
+2012/12/11 20:57:38 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\xampp\htdocs\yii\framework\web\CController.php:337
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(310): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#2 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#3 C:\xampp\htdocs\yii\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#4 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(292): CFilterChain->run()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(283): CController->run('delete')
+#9 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('images/delete/1...')
+#10 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\filipponeinmobiliaria\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/filipponeinmobiliaria/images/delete/1/videlin.png
+---
+2012/12/11 20:57:38 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\xampp\htdocs\yii\framework\web\CController.php:337
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(310): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#2 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#3 C:\xampp\htdocs\yii\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#4 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(292): CFilterChain->run()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(283): CController->run('delete')
+#9 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('images/delete/1...')
+#10 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\filipponeinmobiliaria\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/filipponeinmobiliaria/images/delete/1/videlin.png
+---
+2012/12/11 20:58:39 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\xampp\htdocs\yii\framework\web\CController.php:337
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(310): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#2 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#3 C:\xampp\htdocs\yii\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#4 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(292): CFilterChain->run()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(283): CController->run('delete')
+#9 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('images/delete/1...')
+#10 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\filipponeinmobiliaria\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/filipponeinmobiliaria/images/delete/1/videlin.png
+---
+2012/12/11 21:01:29 [error] [exception.CException] exception 'CException' with message 'Property "EHttpRequest.isGetRequest" is not defined.' in C:\xampp\htdocs\yii\framework\base\CComponent.php:131
+Stack trace:
+#0 C:\xampp\htdocs\filipponeinmobiliaria\protected\controllers\ImagesController.php(113): CComponent->__get('isGetRequest')
+#1 [internal function]: ImagesController->actionDelete('7')
+#2 C:\xampp\htdocs\yii\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(ImagesController), Array)
+#3 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(ImagesController), Object(ReflectionMethod), Array)
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#8 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(292): CFilterChain->run()
+#11 C:\xampp\htdocs\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(283): CController->run('delete')
+#13 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('images/delete/i...')
+#14 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\filipponeinmobiliaria\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/filipponeinmobiliaria/images/delete/id/7
+---
+2012/12/11 21:32:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in C:\xampp\htdocs\filipponeinmobiliaria\protected\controllers\EstatesController.php:220
+Stack trace:
+#0 C:\xampp\htdocs\filipponeinmobiliaria\protected\controllers\EstatesController.php(131): EstatesController->loadModel('3"')
+#1 [internal function]: EstatesController->actionUpdate('3"')
+#2 C:\xampp\htdocs\yii\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(EstatesController), Array)
+#3 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(EstatesController), Object(ReflectionMethod), Array)
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#8 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(292): CFilterChain->run()
+#11 C:\xampp\htdocs\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(283): CController->run('update')
+#13 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('estates/update/...')
+#14 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\filipponeinmobiliaria\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/filipponeinmobiliaria/estates/update/images/delete/id/3%22
+HTTP_REFERER=http://localhost/filipponeinmobiliaria/estates/update/id/1
+---
+2012/12/11 21:32:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in C:\xampp\htdocs\filipponeinmobiliaria\protected\controllers\EstatesController.php:220
+Stack trace:
+#0 C:\xampp\htdocs\filipponeinmobiliaria\protected\controllers\EstatesController.php(131): EstatesController->loadModel('7"')
+#1 [internal function]: EstatesController->actionUpdate('7"')
+#2 C:\xampp\htdocs\yii\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(EstatesController), Array)
+#3 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(EstatesController), Object(ReflectionMethod), Array)
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#8 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(292): CFilterChain->run()
+#11 C:\xampp\htdocs\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(283): CController->run('update')
+#13 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('estates/update/...')
+#14 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\filipponeinmobiliaria\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/filipponeinmobiliaria/estates/update/images/delete/id/7%22
+HTTP_REFERER=http://localhost/filipponeinmobiliaria/estates/update/id/1
+---
+2012/12/11 21:32:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in C:\xampp\htdocs\filipponeinmobiliaria\protected\controllers\EstatesController.php:220
+Stack trace:
+#0 C:\xampp\htdocs\filipponeinmobiliaria\protected\controllers\EstatesController.php(131): EstatesController->loadModel('3"')
+#1 [internal function]: EstatesController->actionUpdate('3"')
+#2 C:\xampp\htdocs\yii\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(EstatesController), Array)
+#3 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(EstatesController), Object(ReflectionMethod), Array)
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#8 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(292): CFilterChain->run()
+#11 C:\xampp\htdocs\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(283): CController->run('update')
+#13 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('estates/update/...')
+#14 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\filipponeinmobiliaria\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/filipponeinmobiliaria/estates/update/images/delete/id/3%22
+HTTP_REFERER=http://localhost/filipponeinmobiliaria/estates/update/id/1
+---
+2012/12/11 21:34:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in C:\xampp\htdocs\yii\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(271): CController->missingAction('images')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(283): CController->run('images')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('estates/images/...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\filipponeinmobiliaria\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/filipponeinmobiliaria/estates/images/delete/id/7
+HTTP_REFERER=http://localhost/filipponeinmobiliaria/estates/update/id/1
+---
+2012/12/11 21:34:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in C:\xampp\htdocs\yii\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(271): CController->missingAction('images')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(283): CController->run('images')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('estates/images/...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\filipponeinmobiliaria\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/filipponeinmobiliaria/estates/images/delete/id/2
+HTTP_REFERER=http://localhost/filipponeinmobiliaria/estates/update/id/1
+---
+2012/12/11 21:34:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in C:\xampp\htdocs\yii\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(271): CController->missingAction('images')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(283): CController->run('images')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('estates/images/...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\filipponeinmobiliaria\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/filipponeinmobiliaria/estates/images/delete/id/7
+HTTP_REFERER=http://localhost/filipponeinmobiliaria/estates/update/id/1
+---
+2012/12/11 21:34:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in C:\xampp\htdocs\yii\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(271): CController->missingAction('images')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(283): CController->run('images')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('estates/images/...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\filipponeinmobiliaria\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/filipponeinmobiliaria/estates/images/delete/id/3
+HTTP_REFERER=http://localhost/filipponeinmobiliaria/estates/update/id/1
+---
+2012/12/11 21:34:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in C:\xampp\htdocs\yii\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(271): CController->missingAction('images')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(283): CController->run('images')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('estates/images/...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\filipponeinmobiliaria\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/filipponeinmobiliaria/estates/images/delete/id/7
+HTTP_REFERER=http://localhost/filipponeinmobiliaria/estates/update/id/1
+---
+2012/12/11 21:34:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in C:\xampp\htdocs\yii\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(271): CController->missingAction('images')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(283): CController->run('images')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('estates/images/...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\filipponeinmobiliaria\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/filipponeinmobiliaria/estates/images/delete/id/7
+HTTP_REFERER=http://localhost/filipponeinmobiliaria/estates/update/id/1
+---
+2012/12/11 21:34:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in C:\xampp\htdocs\filipponeinmobiliaria\protected\controllers\EstatesController.php:220
+Stack trace:
+#0 C:\xampp\htdocs\filipponeinmobiliaria\protected\controllers\EstatesController.php(131): EstatesController->loadModel('7')
+#1 [internal function]: EstatesController->actionUpdate('7')
+#2 C:\xampp\htdocs\yii\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(EstatesController), Array)
+#3 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(EstatesController), Object(ReflectionMethod), Array)
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#8 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(292): CFilterChain->run()
+#11 C:\xampp\htdocs\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(283): CController->run('update')
+#13 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('estates/update/...')
+#14 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\filipponeinmobiliaria\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/filipponeinmobiliaria/estates/update/images/delete/id/7
+HTTP_REFERER=http://localhost/filipponeinmobiliaria/estates/update/id/1
+---
+2012/12/11 21:34:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in C:\xampp\htdocs\filipponeinmobiliaria\protected\controllers\EstatesController.php:220
+Stack trace:
+#0 C:\xampp\htdocs\filipponeinmobiliaria\protected\controllers\EstatesController.php(131): EstatesController->loadModel('3')
+#1 [internal function]: EstatesController->actionUpdate('3')
+#2 C:\xampp\htdocs\yii\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(EstatesController), Array)
+#3 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(EstatesController), Object(ReflectionMethod), Array)
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#8 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(292): CFilterChain->run()
+#11 C:\xampp\htdocs\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(283): CController->run('update')
+#13 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('estates/update/...')
+#14 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\filipponeinmobiliaria\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/filipponeinmobiliaria/estates/update/images/delete/id/3
+HTTP_REFERER=http://localhost/filipponeinmobiliaria/estates/update/id/1
+---
+2012/12/11 21:34:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in C:\xampp\htdocs\filipponeinmobiliaria\protected\controllers\EstatesController.php:220
+Stack trace:
+#0 C:\xampp\htdocs\filipponeinmobiliaria\protected\controllers\EstatesController.php(131): EstatesController->loadModel('3')
+#1 [internal function]: EstatesController->actionUpdate('3')
+#2 C:\xampp\htdocs\yii\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(EstatesController), Array)
+#3 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(EstatesController), Object(ReflectionMethod), Array)
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#8 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(292): CFilterChain->run()
+#11 C:\xampp\htdocs\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(283): CController->run('update')
+#13 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('estates/update/...')
+#14 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\filipponeinmobiliaria\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/filipponeinmobiliaria/estates/update/images/delete/id/3
+HTTP_REFERER=http://localhost/filipponeinmobiliaria/estates/update/id/1
+---
+2012/12/11 21:34:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in C:\xampp\htdocs\filipponeinmobiliaria\protected\controllers\EstatesController.php:220
+Stack trace:
+#0 C:\xampp\htdocs\filipponeinmobiliaria\protected\controllers\EstatesController.php(131): EstatesController->loadModel('7')
+#1 [internal function]: EstatesController->actionUpdate('7')
+#2 C:\xampp\htdocs\yii\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(EstatesController), Array)
+#3 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(EstatesController), Object(ReflectionMethod), Array)
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#8 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(292): CFilterChain->run()
+#11 C:\xampp\htdocs\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(283): CController->run('update')
+#13 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('estates/update/...')
+#14 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\filipponeinmobiliaria\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/filipponeinmobiliaria/estates/update/images/delete/id/7
+HTTP_REFERER=http://localhost/filipponeinmobiliaria/estates/update/id/1
+---

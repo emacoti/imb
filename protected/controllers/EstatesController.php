@@ -28,7 +28,7 @@ class EstatesController extends AbmController
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view','create','update','admin','delete','updateAjax','upload'),
+				'actions'=>array('index','view','create','update','admin','delete','updateAjax','upload', 'borrarArchivo'),
 				'users'=>array('admin'),
 			),
 			array('deny',  // deny all users
@@ -54,6 +54,20 @@ class EstatesController extends AbmController
 	 */
 	public function actionCreate()
 	{
+		$rutas = array();
+		for($i=0; $i<100; $i++)
+		{
+			$nombre = "file";
+			$nombre.= strval($i);
+			
+			if(isset($_POST[$nombre]))
+			{
+				$rutas[$i] = $_POST[$nombre];
+			}
+			else
+				continue;
+		}
+		
 		$model=new Estates;
 
 		// Uncomment the following line if AJAX validation is needed
@@ -63,7 +77,25 @@ class EstatesController extends AbmController
 		{
 			$model->attributes=$_POST['Estates'];
 			if($model->save())
+			{
+				foreach ($rutas as $i => $v) 
+				{	
+					$id = $model->id;
+					if (!is_dir('./upload/'.$id)) 
+					{
+						mkdir('./upload/'.$id);
+					}
+					$old = "./upload/" . $v;
+					$new = "./images/estates/".$id."/".$v;
+					rename($old, $new) or die("No se puede mover $old a $new.");
+					
+					$img= new Images;
+					$img->attributes= array('path_name'=>$id.$v, 'estate_id'=>$id, 'description'=>'descripcion');
+					$img->save();
+				}
+				
 				$this->redirect(array('view','id'=>$model->id));
+			}
 		}
 
 		$this->render('create',array(
@@ -108,10 +140,16 @@ class EstatesController extends AbmController
 			{
 				foreach ($rutas as $i => $v) 
 				{	
+					//$v = str_replace(" ", "%20", $v);
+					$old = "./upload/" . $v;
+					$new = "./images/estates/".$id."/".$v;
+					rename($old, $new) or die("No se puede mover $old a $new.");
+					
 					$img= new Images;
-					$img->attributes= array('path_name'=>$v, 'estate_id'=>$id, 'description'=>'descripcion');
+					$img->attributes= array('path_name'=>$id."/".$v, 'estate_id'=>$id, 'description'=>'descripcion');
 					$img->save();
 				}
+				//print_r($v);
 				$this->redirect(array('view','id'=>$model->id));
 			}
 		}
@@ -124,6 +162,18 @@ class EstatesController extends AbmController
 		));
 	}
 
+	
+	public function actionBorrarArchivo($nombre)
+	{
+		if(!Yii::app()->request->isPostRequest)
+		{
+			if(file_exists("./upload/" . $nombre))
+				unlink("./upload/" . $nombre);
+		}
+		else
+			throw new CHttpException(400,'Invalid request. Please do not repeat this request again.');
+	}
+	
 	/**
 	 * Deletes a particular model.
 	 * If deletion is successful, the browser will be redirected to the 'admin' page.
@@ -218,7 +268,7 @@ class EstatesController extends AbmController
 	{
         Yii::import("ext.EAjaxUpload.qqFileUploader");
 		$folder="./upload/";
-        $allowedExtensions = array("jpg", "png");//array("jpg","jpeg","gif","exe","mov" and etc...
+        $allowedExtensions = array("jpg", "png", "jpeg");//array("jpg","jpeg","gif","exe","mov" and etc...
         $sizeLimit = 10 * 1024 * 1024;// maximum file size in bytes
         $uploader = new qqFileUploader($allowedExtensions, $sizeLimit);
         $result = $uploader->handleUpload($folder);

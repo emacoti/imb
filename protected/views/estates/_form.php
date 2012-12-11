@@ -101,7 +101,7 @@
 						'id'=>'uploadFile',
 						'config'=>array(
 						   'action'=>Yii::app()->getBaseUrl(true) . '/estates/upload/',
-						   'allowedExtensions'=>array("jpg", "png"),//array("jpg","jpeg","gif","exe","mov" and etc...
+						   'allowedExtensions'=>array("jpg", "png","jpeg"),//array("jpg","jpeg","gif","exe","mov" and etc...
 						   'sizeLimit'=>10*1024*1024,// maximum file size in bytes
 						   'minSizeLimit'=>1*1024,// minimum file size in bytes
 						   'multiple'=>true,

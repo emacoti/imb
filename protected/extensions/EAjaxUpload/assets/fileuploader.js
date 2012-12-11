@@ -12,6 +12,34 @@
 //
 
 var qq = qq || {};
+var randomid = 0;
+
+function deleteimg(url)
+{
+	var requestEmi = new XMLHttpRequest();
+	requestEmi.open("GET", url, true);
+	requestEmi.send();
+}
+
+function deleteimg2(nombre)
+{
+	var url = "../../borrarArchivo/nombre/" + nombre;
+	var requestEmi = new XMLHttpRequest();
+	requestEmi.open("GET", url, true);
+	requestEmi.send();
+}
+
+function deleteli(id)
+{
+	var elem = document.getElementById(id);
+	elem.parentNode.removeChild(elem);
+}
+
+function borrarli(id)
+{
+	var elem = document.getElementsByName(id)[0];
+	elem.parentNode.removeChild(elem);
+}
 
 /**
  * Adds all missing properties from second obj to first obj
@@ -144,10 +172,14 @@ qq.setText = function(element, text){
     element.textContent = text;
 };
 qq.setLink = function(element, text){
-    element.href = './delete/' + text;
+	element.href = 'javascript: if(confirm(\"¿Está seguro?\")){ deleteimg2(\"'+text+'\"); borrarli(\"li'+randomid+'\");}';
 };
 qq.setValue = function(element, text){
-    element.value = './delete/' + text;
+	element.name = 'file' + randomid++;
+    element.value = text;
+};
+qq.setName = function(element){
+	element.name = randomid;
 };
 //
 // Selecting elements
@@ -475,13 +507,16 @@ qq.FileUploaderBasic.prototype = {
 };
 
 
+
 /**
  * Class that creates upload widget with drag-and-drop and file list
  * @inherits qq.FileUploaderBasic
  */
 qq.FileUploader = function(o){
     // call parent constructor
-	var i = 0;
+	
+	
+	
     qq.FileUploaderBasic.apply(this, arguments);
 
     // additional options
@@ -497,14 +532,14 @@ qq.FileUploader = function(o){
              '</div>',
 
         // template for one item in file list
-        fileTemplate: '<li>' +
+        fileTemplate: '<li name="carlitos">' +
                 '<span class="qq-upload-file"></span>' +
                 '<span class="qq-upload-spinner"></span>' +
                 '<span class="qq-upload-size"></span>' +
                 '<a class="qq-upload-cancel" href="#">Cancel</a>' +
-				'<a class="deletelink" href="./delete/">Borrar</a>' +
+				'<a class="deletelink" href="" onclick="">Borrar</a>' +
                 '<span class="qq-upload-failed-text">Failed</span>' +
-				'<input type="hidden" value="" class="hiddeninput" name="file' + i++ + '" />' +
+				'<input type="hidden" value="" class="hiddeninput" name="" />' +
             '</li>',
 
         classes: {
@@ -632,9 +667,11 @@ qq.extend(qq.FileUploader.prototype, {
         }
     },
     _addToList: function(id, fileName){
-        var item = qq.toElement(this._options.fileTemplate);
-        item.qqFileId = id;
-
+		var nuevotemplate = (this._options.fileTemplate).replace("carlitos", "li" + randomid);
+        var item = qq.toElement(nuevotemplate);
+        
+		item.qqFileId = id;
+		
         var fileElement = this._find(item, 'file');
         qq.setText(fileElement, this._formatFileName(fileName));
         this._find(item, 'size').style.display = 'none';
@@ -643,12 +680,9 @@ qq.extend(qq.FileUploader.prototype, {
         qq.setLink(fileElement, this._formatFileName(fileName));
 		
 		var fileElement = this._find(item, 'input');
-        qq.setValue(fileElement, this._formatFileName(fileName));
+        qq.setValue(fileElement, this._formatFileName(fileName));		
 		
         this._listElement.appendChild(item);
-		
-		
-
     },
     _getItemByFileId: function(id){
         var item = this._listElement.firstChild;
