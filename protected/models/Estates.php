@@ -12,6 +12,7 @@
  * @property integer $value
  * @property string $neighborhood
  * @property string $description
+ * @property integer $destacado
  *
  * The followings are the available model relations:
  * @property Data[] $datas
@@ -49,8 +50,8 @@ class Estates extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('category_id, condition_id, location_id, currency_id, neighborhood', 'required'),
-			array('category_id, condition_id, location_id, currency_id, value',
+			array('category_id, condition_id, location_id, currency_id, neighborhood, destacado', 'required'),
+			array('category_id, condition_id, location_id, currency_id, value, destacado',
 					'numerical', 'integerOnly'=>true),
 			array('neighborhood', 'length', 'max'=>50),
 			array('description', 'safe'),
@@ -93,6 +94,7 @@ class Estates extends CActiveRecord
 			'value' => 'Valor',
 			'neighborhood' => 'Barrio',
 			'description' => 'Descripcion',
+			'destacado' => 'Destacado',
 		);
 	}
 
@@ -108,6 +110,7 @@ class Estates extends CActiveRecord
 		$criteria=new CDbCriteria;
 
 		$criteria->compare('id',$this->id);
+		$criteria->compare('destacado',$this->id);
 		$criteria->compare('category_id',$this->category_id);
 		$criteria->compare('condition_id',$this->condition_id);
 		$criteria->compare('location_id',$this->location_id);

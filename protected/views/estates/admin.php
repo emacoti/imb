@@ -5,8 +5,7 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'Listar Propiedades', 'url'=>array('index')),
-	array('label'=>'Crear Propiedad', 'url'=>array('create')),
+	array('label'=>'Crear propiedad', 'url'=>array('create')),
 );
 
 Yii::app()->clientScript->registerScript('search', "
@@ -23,11 +22,11 @@ $('.search-form form').submit(function(){
 ");
 ?>
 
-<h1>Manage Propiedades</h1>
+<h1>Administrar propiedades</h1>
 
 <p>
-You may optionally enter a comparison operator (<b>&lt;</b>, <b>&lt;=</b>, <b>&gt;</b>, <b>&gt;=</b>, <b>&lt;&gt;</b>
-or <b>=</b>) at the beginning of each of your search values to specify how the comparison should be done.
+Puede ingresar, si lo desea, operadores de comparac&oacute;n (<b>&lt;</b>, <b>&lt;=</b>, <b>&gt;</b>, <b>&gt;=</b>, <b>&lt;&gt;</b>
+or <b>=</b>) al principio de cada uno de los cuadros de busqueda.
 </p>
 
 <?php echo CHtml::link('Busqueda Avanzada','#',array('class'=>'search-button')); ?>
@@ -41,6 +40,8 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 	'id'=>'estates-grid',
 	'dataProvider'=>$model->search(),
 	'filter'=>$model,
+	'emptyText'=>'La busqueda no arrojo resultados.',
+	'summaryText'=>Yii::t('zii','Mostrando {start}-{end} de {count} resultados.'),
 	'columns'=>array(
 		'id',
 		'category_id',

@@ -6,13 +6,11 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'List Data', 'url'=>array('index')),
-	array('label'=>'Create Data', 'url'=>array('create')),
-	array('label'=>'View Data', 'url'=>array('view', 'id'=>$model->id)),
-	array('label'=>'Manage Data', 'url'=>array('admin')),
+	array('label'=>'Crear dato', 'url'=>array('create')),
+	array('label'=>'Administrar datos', 'url'=>array('admin')),
 );
 ?>
 
-<h1>Update Data <?php echo $model->id; ?></h1>
+<h1>Actualizando dato #<?php echo $model->id; ?></h1>
 
 <?php echo $this->renderPartial('_form', array('model'=>$model)); ?>

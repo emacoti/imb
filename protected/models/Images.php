@@ -69,9 +69,9 @@ class Images extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-			'estate_id' => 'Estate',
-			'path_name' => 'Path Name',
-			'description' => 'Description',
+			'estate_id' => 'ID de la propiedad',
+			'path_name' => 'Ruta de la imagen',
+			'description' => 'Descripcion',
 		);
 	}
 

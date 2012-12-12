@@ -4,8 +4,8 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'Crear Propiedad', 'url'=>array('create')),
-	array('label'=>'Manage Propiedades', 'url'=>array('admin')),
+	array('label'=>'Crear propiedad', 'url'=>array('create')),
+	array('label'=>'Administrar propiedades', 'url'=>array('admin')),
 );
 ?>
 

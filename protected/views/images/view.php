@@ -5,10 +5,7 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'Listar imagenes', 'url'=>array('index')),
-	array('label'=>'Subir imagenes', 'url'=>array('create')),
-	array('label'=>'Actualizar imagenes', 'url'=>array('update', 'id'=>$model->id)),
-	array('label'=>'Borrar imagenes', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id),'confirm'=>'¿Está seguro que desea borrar la imagen?')),
+	array('label'=>'Crear imagen', 'url'=>array('create')),
 	array('label'=>'Administrar imagenes', 'url'=>array('admin')),
 );
 ?>

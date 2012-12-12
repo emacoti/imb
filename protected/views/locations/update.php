@@ -6,13 +6,11 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'List Locations', 'url'=>array('index')),
-	array('label'=>'Create Locations', 'url'=>array('create')),
-	array('label'=>'View Locations', 'url'=>array('view', 'id'=>$model->id)),
-	array('label'=>'Manage Locations', 'url'=>array('admin')),
+	array('label'=>'Crear localidad', 'url'=>array('create')),
+	array('label'=>'Administrar localidades', 'url'=>array('admin')),
 );
 ?>
 
-<h1>Update Locations <?php echo $model->id; ?></h1>
+<h1>Actualizando localidad #<?php echo $model->id; ?></h1>
 
 <?php echo $this->renderPartial('_form', array('model'=>$model)); ?>

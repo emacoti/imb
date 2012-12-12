@@ -112,17 +112,38 @@ class EstatesController extends AbmController
 	{
 	
 		$rutas = array();
+		$att = array();
+		$ids = array();
+		
 		for($i=0; $i<100; $i++)
 		{
 			$nombre = "file";
 			$nombre.= strval($i);
 			
+			$nomatt = strval($i).'nombre';
+			$valatt = strval($i).'valor';
+			
+			$nomatt2 = 'nombre'.strval($i);
+			$valatt2 = 'valor'.strval($i);
+			
+			$valid = strval($i).'id';
+			
 			if(isset($_POST[$nombre]))
 			{
 				$rutas[$i] = $_POST[$nombre];
 			}
-			else
-				continue;
+			if(isset($_POST[$nomatt]) && isset($_POST[$valatt]))
+			{
+				$att[$_POST[$nomatt]] = $_POST[$valatt];
+			}
+			if(isset($_POST[$nomatt2]) && isset($_POST[$valatt2]))
+			{
+				$att[$_POST[$nomatt2]] = $_POST[$valatt2];
+			}
+			if(isset($_POST[$valid]))
+			{
+				$ids[$i] = $_POST[$valid];
+			}
 		}
 		
 		
@@ -137,7 +158,20 @@ class EstatesController extends AbmController
 		{
 			$model->attributes=$_POST['Estates'];
 			if($model->save())
-			{
+			{				
+				foreach ($ids as $k => $v)
+				{
+					$dato = Data::model()->findByPk($v);
+					$dato->delete();
+				}
+				
+				foreach ($att as $k => $v)
+				{
+					$da= new Data;
+					$da->attributes= array('estate_id'=>$id, 'name'=>$k, 'data_type'=>'-', 'value'=>$v);
+					$da->save();
+				}
+				
 				foreach ($rutas as $i => $v) 
 				{	
 					//$v = str_replace(" ", "%20", $v);

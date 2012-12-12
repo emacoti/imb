@@ -6,7 +6,7 @@
 
 <div>
 <div class="form">
-	<p class="note">Campos con <span class="required">*</span> son requeridos.</p>
+	<p class="note">Los campos con <span class="required">*</span> son requeridos.</p>
 </div>
 
 <div class="accordion" id="estate">
@@ -32,7 +32,13 @@
 														array('empty'=>'Seleccionar..', 'class'=>'input-medium')); ?>
 						<?php echo $form->error($model,'category_id'); ?>
 					</div>
-
+					
+					<div class="row">
+						<?php echo $form->labelEx($model,'destacado'); ?>
+						<?php echo $form->checkBox($model,'destacado', array('value'=>1, 'uncheckValue'=>0)); ?>
+						<?php echo $form->error($model,'destacado'); ?>
+					</div>
+					
 					<div class="row">
 						<?php echo $form->labelEx($model,'condition_id'); ?>
 						<?php echo $form->dropDownList($model,'condition_id',
@@ -93,7 +99,12 @@
 		</div>
 		<div id="images" class="accordion-body collapse">
 			<div class="accordion-inner">
-				
+				<?php
+				if($model->isNewRecord)
+					echo("<input type='hidden' id='accion' value='new'/>");
+				else
+					echo("<input type='hidden' id='accion' value='update'/>");
+				?>
 				<div id="imgf" class="form">					
 				<?	
 				$this->widget('ext.EAjaxUpload.EAjaxUpload',
@@ -138,15 +149,38 @@
 				<div class="form">
 					
 					<?php
-						foreach ($model->datas as $i => $data) {
-						
-							echo '<div class="row">';
-							echo '<h4>Atributo ' . ($i+1) . '</h1>';
-							echo $form->labelEx($data,'name');
-							echo $form->textField($data,'name');
-							echo $form->error($data,'name');
-							echo '</div>';
+					$newitem = 0;
+					echo '<div id="divizq">Nombre:</div>';
+					echo '<div id="divder">Valor:</div>';
+					echo '<br style="clear:both;"/>';
+					echo '<div id="att">';
+					if(!$model->isNewRecord)
+					{
+						foreach ($model->datas as $i => $data)
+						{
+							$nombrevar = $data['name'];
+							$valuevar = $data['value'];
+							$valueid = $data['id'];
+							echo "<p id='{$newitem}litem'>";
+							echo "<input class='atributos' type='text' name='{$newitem}nombre' size='5' value='$nombrevar'/>";
+							echo " <input class='atributos' type='text' name='{$newitem}valor' size='5' value='$valuevar'/>";
+							echo "<input type='hidden' name='{$newitem}id' value='$valueid'/>";
+							echo " <a href='#' onclick='deleteli(\"{$newitem}litem\")'>Borrar</a>";
+							echo '</p>';
 						}
+					}
+					else
+					{
+						echo '<p id = "litem0">';
+						echo '<input class="atributos" type="text" name="nombre0" size="5"/>';
+						echo ' <input class="atributos" type="text" name="valor0" size="5"/>';
+						echo " <a href='#' onclick='deleteli(\"litem0\")'>Borrar</a>";
+						echo '</p>';
+					}
+					echo '</div>';
+					echo "<a href='#' onclick='agregarAtributo()'>Agregar otro</a>";
+					
+					
 					?>
 					
 				</div>

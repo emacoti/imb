@@ -5,15 +5,12 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'Listar Propiedades', 'url'=>array('index')),
-	array('label'=>'Crear Propiedad', 'url'=>array('create')),
-	array('label'=>'Editar Propiedad', 'url'=>array('update', 'id'=>$model->id)),
-	array('label'=>'Borrar Propiedad', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id),'confirm'=>'Seguro desea borrar la propiedad?')),
-	array('label'=>'Manage Propiedades', 'url'=>array('admin')),
+	array('label'=>'Crear propiedad', 'url'=>array('create')),
+	array('label'=>'Administrar propiedades', 'url'=>array('admin')),
 );
 ?>
 
-<h1>Propiedad</h1>
+<h1>Viendo propiedad #<?php echo $model->id; ?></h1>
 
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,

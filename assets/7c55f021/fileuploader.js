@@ -13,6 +13,7 @@
 
 var qq = qq || {};
 var randomid = 0;
+var attid = 1;
 
 function deleteimg(url)
 {
@@ -23,7 +24,12 @@ function deleteimg(url)
 
 function deleteimg2(nombre)
 {
-	var url = "../../borrarArchivo/nombre/" + nombre;
+	var url = "";
+	var ele = document.getElementById("accion");
+	if(ele.value == 'update')
+		url = "../../borrarArchivo/nombre/" + nombre;
+	else
+		url = "./borrarArchivo/nombre/" + nombre;
 	var requestEmi = new XMLHttpRequest();
 	requestEmi.open("GET", url, true);
 	requestEmi.send();
@@ -41,6 +47,46 @@ function borrarli(id)
 	elem.parentNode.removeChild(elem);
 }
 
+function agregarAtributo()
+{
+	var elem = document.getElementById("att");
+	
+	var newp = document.createElement('p');
+	newp.setAttribute('id','litem' + attid);
+	
+	var input1 = document.createElement('input');
+	input1.setAttribute('class','atributos');
+	input1.setAttribute('type','text');
+	input1.setAttribute('name','nombre' + attid);
+	input1.setAttribute('size','5');
+	
+	var strong1 = document.createElement('strong');
+	strong1.innerHTML = '&nbsp;';
+	
+	var strong2 = document.createElement('strong');
+	strong2.innerHTML = '&nbsp;';
+	
+	var input2 = document.createElement('input');
+	input2.setAttribute('class','atributos');
+	input2.setAttribute('type','text');
+	input2.setAttribute('name','valor' + attid);
+	input2.setAttribute('size','5');
+	
+	var aref = document.createElement('a');
+	aref.setAttribute('href','#');
+	aref.setAttribute('onclick','deleteli(\"litem'+attid+'\")');
+	aref.innerHTML = 'Borrar';
+	
+	attid++;
+	
+	newp.appendChild(input1);
+	newp.appendChild(strong1);
+	newp.appendChild(input2);
+	newp.appendChild(strong2);
+	newp.appendChild(aref);
+	
+	elem.appendChild(newp);
+}
 /**
  * Adds all missing properties from second obj to first obj
  */
