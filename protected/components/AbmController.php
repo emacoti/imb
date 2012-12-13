@@ -9,6 +9,8 @@ class AbmController extends Controller
 	 * @var array menu de administracion.
 	 */
 	public $menuAdmin=array();
+	public $setArtMenu="setActiveArtMenu('admin-menu');";
+	public $layout='//layouts/column2';
 	
 	public function init() {
 		$this->homeLink= CHtml::link(Yii::t('zii','Administrar'), array('admin/index'));

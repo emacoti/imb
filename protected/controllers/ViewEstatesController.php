@@ -2,6 +2,7 @@
 
 class ViewEstatesController extends Controller
 {	
+	public $layout='//layouts/column0';
 	/**
 	 * This is the default 'index' action that is invoked
 	 * when an action is not explicitly requested by users.

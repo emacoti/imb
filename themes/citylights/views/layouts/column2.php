@@ -67,5 +67,9 @@
             </div>
         </div>
     </div>
+	
+	<script>
+		<?php echo $this->setArtMenu; ?>
+	</script>
 </div>
 <?php $this->endContent(); ?>

@@ -1083,7 +1083,8 @@ input, select, textarea, select
 {
   position: relative;
   z-index: 1;
-  padding: 14px;
+  /*padding: 14px;*/
+  padding: 17px;
 }
 
 .art-post-tr, .art-post-tl, .art-post-br, .art-post-bl, .art-post-tc, .art-post-bc,.art-post-cr, .art-post-cl
@@ -1138,13 +1139,13 @@ input, select, textarea, select
 .art-post-tc
 {
   top: 0;
-  clip: rect(auto, auto, 17px, auto);
+  clip: rect(auto, auto, 25px, auto);
 }
 
 .art-post-bc
 {
   bottom: 0;
-  clip: rect(17px, auto, auto, auto);
+  clip: rect(9px, auto, auto, auto);
 }
 
 .art-post-cr, .art-post-cl
@@ -1158,13 +1159,13 @@ input, select, textarea, select
 .art-post-cr
 {
   right: 0;
-  clip: rect(auto, auto, auto, 17px);
+  clip: rect(auto, auto, auto, 9px);
 }
 
 .art-post-cl
 {
   left: 0;
-  clip: rect(auto, 17px, auto, auto);
+  clip: rect(auto, 25px, auto, auto);
 }
 
 .art-post-cc

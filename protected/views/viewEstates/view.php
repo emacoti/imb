@@ -61,6 +61,7 @@
 	</div>
 	<script>
 	$('#divMod .modal').appendTo($("body"));
+	setActiveArtMenu('states-menu');
 	</script>
 	
 </div>

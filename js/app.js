@@ -33,3 +33,11 @@ function setBackDropClass(styleClass) {
 	var xx= jQuery('.modal-backdrop');
 	xx.addClass(styleClass);
 }
+
+/* seteo el menu activo
+ * para aquellas pantallas que no se auto
+ * setean con el estilo
+*/
+function setActiveArtMenu(id) {
+	jQuery('.art-menu #' + id).addClass('active');
+}

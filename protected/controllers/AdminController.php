@@ -1,8 +1,7 @@
 <?php
 
 class AdminController extends AbmController
-{		
-	public $layout='//layouts/column2';
+{
 	
 	public function init() {
 		$this->homeLink= null;
