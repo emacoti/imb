@@ -1,2 +1,3 @@
-*protected/data/*.db
+*protected/data/
 *protected/runtime/*.log
+*assets/
