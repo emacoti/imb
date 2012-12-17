@@ -10,7 +10,7 @@ class AbmController extends Controller
 	 */
 	public $menuAdmin=array();
 	public $setArtMenu="setActiveArtMenu('admin-menu');";
-	public $layout='//layouts/column2';
+	public $layout='//layouts/column2-admin';
 	
 	public function init() {
 		$this->homeLink= CHtml::link(Yii::t('zii','Administrar'), array('admin/index'));

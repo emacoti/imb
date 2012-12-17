@@ -366,6 +366,37 @@ function artButtonsSetupJsHover(className) {
 				button.parentNode.insertBefore(wrapper, button);
 				wrapper.appendChild(button);
 			}
+			
+			// agregado para estilos sobre el icono del boton
+			i= jQuery(button).next();
+			if (i.length > 0) { // si se agrego el icono en el boton
+				artEventHelper.bind(i[0], 'mouseover', function(e) {
+					e = e || window.event;
+					wrapper = (e.target || e.srcElement).parentNode;
+					wrapper.className += " hover";
+				});
+				artEventHelper.bind(i[0], 'mouseout', function(e) {
+					e = e || window.event;
+					button = e.target || e.srcElement;
+					wrapper = button.parentNode;
+					wrapper.className = wrapper.className.replace(/hover/, "");
+					if (!artHasClass(button, 'active')) wrapper.className = wrapper.className.replace(/active/, "");
+				});
+				artEventHelper.bind(i[0], 'mousedown', function(e) {
+					e = e || window.event;
+					i = e.target || e.srcElement;
+					wrapper = i.parentNode;
+					if (!artHasClass(i, 'active')) wrapper.className += " active";
+					button.click();
+				});
+				artEventHelper.bind(i[0], 'mouseup', function(e) {
+					e = e || window.event;
+					button = e.target || e.srcElement;
+					wrapper = button.parentNode;
+					if (!artHasClass(button, 'active')) wrapper.className = wrapper.className.replace(/active/, "");
+				});
+			}
+			
 			artEventHelper.bind(button, 'mouseover', function(e) {
 				e = e || window.event;
 				wrapper = (e.target || e.srcElement).parentNode;

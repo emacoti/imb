@@ -4803,7 +4803,7 @@ input[type="submit"].btn.btn-mini {
 .pagination-right {
   text-align: right;
 }
-
+/*
 .pager {
   margin: 20px 0;
   text-align: center;
@@ -4857,7 +4857,7 @@ input[type="submit"].btn.btn-mini {
   color: #999999;
   cursor: default;
   background-color: #fff;
-}
+}*/
 
 .modal-open .modal .dropdown-menu {
   z-index: 2050;

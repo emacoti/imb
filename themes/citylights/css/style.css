@@ -1388,11 +1388,15 @@ blockquote,
   position: absolute;
   z-index: -1;
   background-repeat: no-repeat;
-  background-image: url('images/footer.png');
-  width: 890px;
-  height: 150px;
+  background-image: url('images/nFooter.png');
+  /*background-image: url('images/footer.png');*/
+  width: 892px;
+  /*width: 890px;*/
+  height: 50px;
+  /*height: 150px;*/
   bottom: 0;
-  left: 0;
+  left: -1px;
+  /*left: 0px;*/
 }
 
 
@@ -1435,7 +1439,8 @@ blockquote,
 .art-footer .art-footer-text a:hover
 {
   text-decoration: none;
-  color: #291C0A;
+  color: white;
+  /*color: #291C0A;*/
 
 
 }

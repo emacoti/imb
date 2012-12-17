@@ -5,6 +5,7 @@ $this->breadcrumbs=array(
 );
 ?>
 
+<div class="art-panel">
 <h1>Ingresar</h1>
 
 <p>Por favor, complete los siguientes datos:</p>
@@ -44,3 +45,4 @@ $this->breadcrumbs=array(
 
 <?php $this->endWidget(); ?>
 </div><!-- form -->
+</div>

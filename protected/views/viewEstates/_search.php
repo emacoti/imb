@@ -82,7 +82,8 @@
 				<span class="art-button-wrapper">
 					<span class="l"> </span>
 					<span class="r"> </span>
-					<?php echo CHtml::submitButton('Buscar', array('class'=>'art-button')); ?>
+					<?php echo CHtml::submitButton('Buscar', array('class'=>'art-button btn-icon')); ?>
+					<i class="icon-search icon-white"></i>
 				</span>
 				
 			</div>

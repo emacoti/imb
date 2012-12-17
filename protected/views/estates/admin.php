@@ -43,7 +43,6 @@ or <b>=</b>) al principio de cada uno de los cuadros de busqueda.
 	'emptyText'=>'La busqueda no arrojo resultados.',
 	'summaryText'=>Yii::t('zii','Mostrando {start}-{end} de {count} resultados.'),
 	'columns'=>array(
-		'id',
 		'category_id',
 		'condition_id',
 		'location_id',
@@ -53,6 +52,9 @@ or <b>=</b>) al principio de cada uno de los cuadros de busqueda.
 		'description',
 		array(
 			'class'=>'CButtonColumn',
+			'viewButtonOptions'=>array('title'=>'Ver Detalle'),
+			'updateButtonOptions'=>array('title'=>'Editar'),
+			'deleteButtonOptions'=>array('title'=>'Eliminar')
 		),
 	),
 )); ?>

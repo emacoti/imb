@@ -1,15 +1,14 @@
 
 <div class="view-estate">
 
-	<h2>Propiedad ubicada en barrio: <?php echo $model->neighborhood; ?></h2>
-	</br>
+	<h2 class="title">Propiedad ubicada en barrio: <i><?php echo $model->neighborhood; ?></i></h2>
 
 	<div class="estate-description">
 		<?php echo $model->description; ?>
 	</div>
-	</br>
+	</br></br>
 
-	<h4>Detalles:</h4>
+	<h4 class="title">Detalles</h4>
 	 <?php 
 	 
 		$auxx= CHtml::listData($model->datas,'name','value');
@@ -35,8 +34,9 @@
 		'htmlOptions'=>array('class'=>'detail-view view-est-att')
 	)); ?>
 
-	<br />
-	<h4>Imagenes:</h4>
+	<br /></br>
+	
+	<h4 class="title">Imagenes</h4>
 	<div class="view-est-img">
 	<?php 
 		$img= '';

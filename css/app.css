@@ -96,8 +96,46 @@ input[type="file"] {
   line-height: 30px;
 }
 
+.art-postcontent .art-panel {
+	margin: 20px;
+}
+
+.art-button-wrapper .art-button.btn-icon {
+	padding: 0 45px 0 25px !important;
+}
+.art-button-wrapper .art-button+i {
+	position: absolute;
+	top: 8px;
+	right: 23px;
+}
+.art-button-wrapper .art-button+i:hover {
+	cursor: pointer;
+}
+
+.wide.form label {
+	margin-top: 8px;
+}
+
 /****** Estilos generales ********/
 
+
+/****** Pager ********/
+
+.pager ul.yiiPager li a {
+	text-decoration: none;
+}
+.pager ul.yiiPager li.hidden a {
+	color: #888;
+}
+.pager ul.yiiPager .page a {
+	font-weight: bold;
+}
+.pager ul.yiiPager li {
+	background: none;
+	padding-left: 0px;
+}
+
+/****** Pager ********/
 
 
 /****** Administracion ********/
@@ -114,11 +152,26 @@ input[type="file"] {
 	float: right;
 }
 
+.grid-view .items .filters input {
+	width: 85%;
+	padding: 3px;
+}
+.grid-view .items .button-column img {
+	margin: 0px;
+}
+
 /* propiedades */
-.form .row textarea {
+#estates-form .form .row textarea {
 	width: 98%;
 	max-width: 100%;
 	min-height: 80px;
+}
+#estates-grid.grid-view  .button-column {
+	width: 30px;
+}
+#estates-grid.grid-view  .button-column a {
+	display: block;
+	margin-bottom: 10px;
 }
 /***************/
 
@@ -175,6 +228,7 @@ input[type="file"] {
 }
 .controls-row .span .art-button-wrapper {
 	margin-top: 16px;
+	margin-right: 7px;
 }
 .search-estates select,
 .search-estates input[type="text"] {
@@ -241,6 +295,18 @@ div.view.view-estates {
 
 /****** Ver propiedad ********/
 
+.view-estate .title {
+	background: #333;
+	padding: 5px;
+	margin-top: 0;
+	color: white;
+}
+.view-estate h2.title {
+	font-size: 17px;
+}
+.view-estate h4.title {
+	font-size: 15px;
+}
 .view-estate .estate-description {
 	text-align: justify;
 }
@@ -266,6 +332,9 @@ div.view.view-estates {
 }
 .detail-view.view-est-att .even td {
 	background: #F8F8F8;
+}
+.view-est-img {
+	border: 1px solid #B8B8B8;
 }
 .view-est-img a {
 	outline: 0px;
@@ -361,6 +430,9 @@ div.view  {
 	margin-right: 20px;
 }
 
+.carousel .carousel-control {
+	top: 45%;
+}
 .carousel .carousel-control.left,
 .carousel .carousel-control.right {
 	text-decoration: none;

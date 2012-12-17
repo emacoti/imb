@@ -35,16 +35,29 @@ class ViewEstatesController extends Controller
 	function hasSearch($attributes) {
 		
 		$title= '';
+		$allEstates= true;
+		$hasCategory= null;
+		$seted= array();
 		
 		if ($attributes['category_id'] != null) {
-			$title= Categories::model()->findByPk($attributes['category_id'])->name;
+			$seted[0]= Categories::model()->findByPk($attributes['category_id'])->name;
 		}
 		
-		if ($title === '') {
+		if ($attributes['condition_id'] != null) {
+			$seted[1]= Conditions::model()->findByPk($attributes['condition_id'])->name;
+		}
+		
+		if (count($seted) > 0) {
+			
+			foreach ($seted as $name) {
+				$title= $title . ', ' . $name;
+			}
+		}
+		else {
 			$title= 'Todas';
 		}
 			
-		return $title;
+		return substr($title,2);
 	}
 	
 	/**
