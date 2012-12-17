@@ -42,7 +42,7 @@ class Images extends CActiveRecord
 		return array(
 			array('estate_id', 'required'),
 			array('estate_id', 'numerical', 'integerOnly'=>true),
-			array('path_name', 'length', 'max'=>20),
+			array('path_name', 'length', 'max'=>150),
 			array('description', 'length', 'max'=>250),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
@@ -69,9 +69,9 @@ class Images extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-			'estate_id' => 'Estate',
-			'path_name' => 'Path Name',
-			'description' => 'Description',
+			'estate_id' => 'ID de la propiedad',
+			'path_name' => 'Ruta de la imagen',
+			'description' => 'Descripcion',
 		);
 	}
 

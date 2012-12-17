@@ -4,14 +4,16 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'Create Conditions', 'url'=>array('create')),
-	array('label'=>'Manage Conditions', 'url'=>array('admin')),
+	array('label'=>'Crear condiciones', 'url'=>array('create')),
+	array('label'=>'Administrar condiciones', 'url'=>array('admin')),
 );
 ?>
 
-<h1>Conditions</h1>
+<h1>Condiciones</h1>
 
 <?php $this->widget('zii.widgets.CListView', array(
 	'dataProvider'=>$dataProvider,
 	'itemView'=>'_view',
+	'emptyText'=>'La busqueda no arrojo resultados.',
+	'summaryText'=>Yii::t('zii','Mostrando {start}-{end} de {count} resultados.'),
 )); ?>

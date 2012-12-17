@@ -36,6 +36,7 @@ $db->exec(
 			condition_id INTEGER UNSIGNED NOT NULL,
 			location_id INTEGER UNSIGNED NOT NULL,
 			currency_id INTEGER UNSIGNED NOT NULL,
+			destacado INTEGER UNSIGNED NOT NULL,
 			value INTEGER,
 			neighborhood VARCHAR(50) NOT NULL,
 			description TEXT,
@@ -104,8 +105,8 @@ $description= "IBB - Villa Belgrano - Lucero al 2.600 - DAUB Inmobiliaria vende 
 	todo en construccion hasta dinteles, tiene un tanque australiano chico en el patio. se ubica en Villa Belgrano a mts. de la ruta, implantado sobre lote de 240 m2.";
 $db->exec(utf8_encode(
 	'INSERT INTO
-		estates (category_id, condition_id, location_id, currency_id, value, neighborhood, description)
-		VALUES (1, 1, 1, 1, 200000, "Villa Belgrano", "' . $description . '");'));
+		estates (category_id, condition_id, location_id, currency_id, value, neighborhood, description, destacado)
+		VALUES (1, 1, 1, 1, 200000, "Villa Belgrano", "' . $description . '", 1);'));
 
 /*** Inserto atributos ***/
 $db->exec(utf8_encode('INSERT INTO data (estate_id, name, data_type, value) VALUES (1, "Living-comedor", "VARCHAR", "3.00 x 5.00");'));

@@ -61,6 +61,11 @@ return array(
 			),*/
 		),
 		
+		'request' => array(
+                'class' => 'application.components.EHttpRequest',
+        ),
+
+		
 		'db'=>array(
 			'connectionString' => 'sqlite:'.dirname(__FILE__).'/../data/inmoDB.db',
 		),

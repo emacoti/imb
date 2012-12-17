@@ -109,10 +109,24 @@ class ImagesController extends AbmController
 	 */
 	public function actionDelete($id)
 	{
-		if(Yii::app()->request->isPostRequest)
+
+		if(!Yii::app()->request->isPostRequest)
 		{
+			//print_r($id);
+			//file_put_contents($_SERVER['DOCUMENT_ROOT']."/log.txt", print_r($id, true));
+			$model = $this->loadModel($id);
+			if(file_exists("./images/estates/" . $model->path_name))
+				unlink("./images/estates/" . $model->path_name);
 			// we only allow deletion via POST request
-			$this->loadModel($id)->delete();
+			$model->delete();
+		}
+		else if(Yii::app()->request->isPostRequest)
+		{
+			$model = $this->loadModel($id);
+			if(file_exists("./images/estates/" . $model->estate_id . "/" . $model->path_name))
+				unlink("./images/estates/" . $model->estate_id . "/" . $model->path_name);
+			// we only allow deletion via POST request
+			$model->delete();
 
 			// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
 			if(!isset($_GET['ajax']))

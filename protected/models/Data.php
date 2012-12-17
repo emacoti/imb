@@ -69,10 +69,10 @@ class Data extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-			'estate_id' => 'Estate',
-			'name' => 'Name',
-			'data_type' => 'Data Type',
-			'value' => 'Value',
+			'estate_id' => 'ID de la propiedad',
+			'name' => 'Nombre',
+			'data_type' => 'Tipo de dato',
+			'value' => 'Valor',
 		);
 	}
 

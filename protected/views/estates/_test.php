@@ -14,6 +14,7 @@
 					echo $form->errorSummary($mod);  ?>
 
 					<div class="row">
+						
 						<?php echo $form->labelEx($mod,'path_name'); ?>
 						<?php echo Chtml::fileField('path_name','', array('id'=>'pathNameInput')); ?>
 						<?php echo $form->error($mod,'path_name'); ?>

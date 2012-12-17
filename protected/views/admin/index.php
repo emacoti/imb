@@ -14,7 +14,7 @@ $this->menuAdmin=array(
 );
 ?>
 
-<h1>Administracion de Inmobiliaria</h1>
+<h1>Administraci&oacute;n de Inmobiliaria</h1>
 
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data'=>array(),

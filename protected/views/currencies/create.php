@@ -5,11 +5,10 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'List Currencies', 'url'=>array('index')),
-	array('label'=>'Manage Currencies', 'url'=>array('admin')),
+	array('label'=>'Administrar monedas', 'url'=>array('admin')),
 );
 ?>
 
-<h1>Create Currencies</h1>
+<h1>Crear moneda</h1>
 
 <?php echo $this->renderPartial('_form', array('model'=>$model)); ?>

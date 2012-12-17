@@ -4,8 +4,8 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'Create Currencies', 'url'=>array('create')),
-	array('label'=>'Manage Currencies', 'url'=>array('admin')),
+	array('label'=>'Crear moneda', 'url'=>array('create')),
+	array('label'=>'Administrar monedas', 'url'=>array('admin')),
 );
 ?>
 
@@ -13,5 +13,7 @@ $this->menu=array(
 
 <?php $this->widget('zii.widgets.CListView', array(
 	'dataProvider'=>$dataProvider,
+	'emptyText'=>'La busqueda no arrojo resultados.',
+	'summaryText'=>Yii::t('zii','Mostrando {start}-{end} de {count} resultados.'),
 	'itemView'=>'_view',
 )); ?>

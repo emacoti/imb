@@ -6,13 +6,11 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'List Currencies', 'url'=>array('index')),
-	array('label'=>'Create Currencies', 'url'=>array('create')),
-	array('label'=>'View Currencies', 'url'=>array('view', 'id'=>$model->id)),
-	array('label'=>'Manage Currencies', 'url'=>array('admin')),
+	array('label'=>'Crear moneda', 'url'=>array('create')),
+	array('label'=>'Administrar monedas', 'url'=>array('admin')),
 );
 ?>
 
-<h1>Update Currencies <?php echo $model->id; ?></h1>
+<h1>Actualizando moneda #<?php echo $model->id; ?></h1>
 
 <?php echo $this->renderPartial('_form', array('model'=>$model)); ?>

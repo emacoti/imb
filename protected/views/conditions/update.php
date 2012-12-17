@@ -6,13 +6,11 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'List Conditions', 'url'=>array('index')),
-	array('label'=>'Create Conditions', 'url'=>array('create')),
-	array('label'=>'View Conditions', 'url'=>array('view', 'id'=>$model->id)),
-	array('label'=>'Manage Conditions', 'url'=>array('admin')),
+	array('label'=>'Crear condiciones', 'url'=>array('create')),
+	array('label'=>'Administrar condiciones', 'url'=>array('admin')),
 );
 ?>
 
-<h1>Update Conditions <?php echo $model->id; ?></h1>
+<h1>Actualizar condici&oacute;n <?php echo $model->id; ?></h1>
 
 <?php echo $this->renderPartial('_form', array('model'=>$model)); ?>

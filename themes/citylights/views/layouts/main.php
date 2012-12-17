@@ -89,9 +89,7 @@
                         <div class="art-footer-inner">
                             <a href="#" class="art-rss-tag-icon" title="RSS"></a>
                             <div class="art-footer-text">
-                                <p><a href="#">Contact Us</a> | <a href="#">Terms of Use</a> | <a href="#">Trademarks</a>
-                                    | <a href="#">Privacy Statement</a><br />
-                                    Copyright &copy; 2010 ---. All Rights Reserved.</p>
+                                <p><a href="mailto:info@filipponeinmobiliaria.com.ar">Contactenos</a> | <a href="http://www.yiiframework.com/">Yii</a> | <a href="http://yiithemes.mehesz.net/theme/65/artisteer-city-lights">Theme</a><br /> Copyright &copy; 2012. Cortes - del Castillo.</p>
                             </div>
                         </div>
                         <div class="art-footer-background"></div>
@@ -100,7 +98,6 @@
                 </div>
             </div>
             <div class="cleared"></div>
-            <p class="art-page-footer"><a href="http://www.artisteer.com/">Web Template</a> created with Artisteer.</p>
         </div>
 
     </body>

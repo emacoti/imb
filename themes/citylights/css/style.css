@@ -1523,3 +1523,21 @@ img.image
     padding:0;
     border:none;
 }
+
+#divizq
+{
+	width: 170px;
+	float: left;
+}
+
+#divder
+{	
+	float: left;
+}
+
+.atributos
+{
+	display:block;
+	margin-left:55px;
+	width: 150px;
+}

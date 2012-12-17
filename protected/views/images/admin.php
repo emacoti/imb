@@ -41,6 +41,8 @@ or <b>=</b>) al principio de cada uno de los cuadros de busqueda.
 	'id'=>'images-grid',
 	'dataProvider'=>$model->search(),
 	'filter'=>$model,
+	'emptyText'=>'La busqueda no arrojo resultados.',
+	'summaryText'=>Yii::t('zii','Mostrando {start}-{end} de {count} resultados.'),
 	'columns'=>array(
 		'id',
 		'estate_id',
