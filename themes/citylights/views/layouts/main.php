@@ -93,7 +93,17 @@
                             'items'=>array(
 								array('label'=>'Home', 'url'=>array('/site/index')),
 								array('label'=>'Propiedades', 'url'=>array('/viewEstates/index'), 'linkOptions'=>array('id'=>'states-menu')),
-								array('label'=>'Acerca de..', 'url'=>array('/site/page', 'view'=>'about')),
+								array('label'=>'Informacion', 'url'=>array('/site/page', 'view'=>'about'), 'items'=>array(
+									array('label'=>'Acerca de..', 'url'=>array('/site/page', 'view'=>'about'), 'linkOptions'=>array('class'=>'submenu-info')),
+									array('label'=>'Requisitos Alquilar', 'url'=>array('/site/page', 'view'=>'req'), 'linkOptions'=>array('class'=>'submenu-info')),
+									array('label'=>'Preguntas Frecuentes', 'url'=>array('/site/page', 'view'=>'ask'), 'linkOptions'=>array('class'=>'submenu-info')),
+									array('label'=>'Servicios', 'url'=>'', 'items'=>array(
+										array('label'=>'Tasaciones', 'url'=>array('/site/page', 'view'=>'tas')),
+										array('label'=>'Venta y alquiler', 'url'=>array('/site/page', 'view'=>'sale')),
+										array('label'=>'Administraciones', 'url'=>array('/site/page', 'view'=>'adm')),
+										array('label'=>'Servicios al desarrollador', 'url'=>array('/site/page', 'view'=>'serv'))
+									), 'linkOptions'=>array('class'=>'submenu-info', 'id'=>'info-sub-menu'))
+								), 'linkOptions'=>array('id'=>'info-menu')),
 								array('label'=>'Contacto', 'url'=>array('/site/contact')),
 								array('label'=>'Administrar', 'url'=>array('/admin/index'), 'visible'=>!Yii::app()->user->isGuest, 'linkOptions'=>array('id'=>'admin-menu')),
 								array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),

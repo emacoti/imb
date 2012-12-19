@@ -1,7 +1,9 @@
 
 <div class="view-estate">
 
-	<h2 class="title">Propiedad ubicada en barrio: <i><?php echo $model->neighborhood; ?></i></h2>
+	<h2 class="title">Propiedad ubicada en barrio: <i><?php echo $model->neighborhood; ?></i>
+		<?php echo CHtml::link('Volver',Yii::app()->request->urlReferrer, array('class'=>'link-back')); ?>
+	</h2>
 
 	<div class="estate-description">
 		<?php echo $model->description; ?>
@@ -13,14 +15,6 @@
 	 
 		$auxx= CHtml::listData($model->datas,'name','value');
 		$arr= array();
-		
-		//$arr[0]= array('label'=>'Rubro', 'value'=>Categories::model()->findByPk($model->category_id)->name);
-		
-		//$arr[1]= array('label'=>'Condicion', 'value'=>Conditions::model()->findByPk($model->condition_id)->name);
-		
-		//$arr[2]= array('label'=>'Localidad', 'value'=>Locations::model()->findByPk($model->location_id)->name);
-		
-		//$arr[3]= array('label'=>'Barrio', 'value'=>$model->neighborhood);
 		
 		$ind= 0;
 		foreach ($auxx as $name =>$value) {
@@ -55,7 +49,20 @@
 			}
 		}
 	?>
-	</div>
+	</div></br>
+	
+	<h4 class="title">Ubicaci&oacute;n</h4>
+	
+	<iframe width="820" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com.ar/maps?saddr=Panama+1501,+Bahia+Blanca,+Buenos+Aires&amp;t=h&amp;ie=UTF8&amp;z=14&amp;output=embed" style="margin-left: 8px">
+	</iframe>
+	<br />
+	<small style="margin-left: 8px">
+	<a href="https://maps.google.com.ar/maps?saddr=Panama+1501,+Bahia+Blanca,+Buenos+Aires&amp;t=h&amp;ie=UTF8&amp;z=14&amp;" target="_blank" style="color:#0000FF;text-align:left">
+		Ver mapa m&aacute;s grande
+	</a>
+	</small>
+	
+	
 	<div id="divMod">
 		<?php $this->renderPartial('_modalImg', array('images'=>$model->images, 'index'=>0)); ?>
 	</div>
@@ -63,5 +70,4 @@
 	$('#divMod .modal').appendTo($("body"));
 	setActiveArtMenu('states-menu');
 	</script>
-	
 </div>

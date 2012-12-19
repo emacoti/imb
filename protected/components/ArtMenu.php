@@ -260,7 +260,20 @@ class ArtMenu extends CWidget
                         $label=$this->prelinklabel.$item['label'].$this->postlinklabel; 
                         if ($item['active'])
                         {
-                                $item['linkOptions']=array('class' => 'active');
+							if (isset($item['linkOptions'])) {
+								
+								if(isset($item['linkOptions']['class'])) {
+								
+									$item['linkOptions']['class']= $item['linkOptions']['class'] . ' active';
+								}
+								else {
+									$item['linkOptions']['class']= 'active';
+								}
+							}
+							else {
+							
+								$item['linkOptions']=array('class' => 'active');
+							}
                         } // end of customization
 
 			return CHtml::link($label,$item['url'],isset($item['linkOptions']) ? $item['linkOptions'] : array());
