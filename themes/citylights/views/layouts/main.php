@@ -37,16 +37,17 @@
 			<h3>Edici&oacute;n de imagen</h3>  
 		</div>  
 		<div class="modal-body" style="text-align:center;">  
-			<img id="imgedit" src="../../../upload/diagrama.png" style="max-width: 500px; max-height: 400px;">          
+			<img id="imgedit" src="" style="max-width: 500px; max-height: 400px;">          
 		</div>  
 		<div class="modal-footer">
-			<form action="crop.php" method="post">
-				<input type="text" name="x1" value="" />
-				<input type="text" name="y1" value="" />
-				<input type="text" name="x2" value="" />
-				<input type="text" name="y2" value="" />
-			</form>
-			<a href="#" onclick="" class="btn">Redimensionar</a>  
+			<input type="text" name="x1" id="x1" value="" />
+			<input type="text" name="y1" id="y1" value="" />
+			<input type="text" name="x2" id="x2" value="" />
+			<input type="text" name="y2" id="y2" value="" />
+			<input type="text" name="nomimg" id="nomimg" value="" />
+			<input type="text" name="tipo" id="tipo" value="" />
+
+			<a href="#" onclick="cortarYRedimensionar();" class="btn" data-dismiss="modal">Redimensionar</a>  
 			<a href="#" class="btn" onclick="$('#imgedit').imgAreaSelect({ instance: true });" data-dismiss="modal">Close</a>  
 		</div>  
 	</div>

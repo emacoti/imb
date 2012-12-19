@@ -27,7 +27,7 @@ class EstatesController extends AbmController
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view','create','update','admin','delete','updateAjax','upload', 'uploades', 'borrarArchivo'),
+				'actions'=>array('index','view','create','update','admin','delete','updateAjax','upload', 'uploades', 'borrarArchivo', 'resize'),
 				'users'=>array('admin'),
 			),
 			array('deny',  // deny all users
@@ -383,6 +383,71 @@ class EstatesController extends AbmController
         echo $return;// it's array
 	}
 	
+	public function actionResize()
+	{
+		if(isset($_POST['x1']) && isset($_POST['y1']) && isset($_POST['x2']) && isset($_POST['y2']) && isset($_POST['nomimg']) && isset($_POST['tipo']))
+		{
+			$nomimg = $_POST['nomimg'];
+			$temp = explode("?", $nomimg);
+			$nomimg = $temp[0];
+			
+			$tipo = $_POST['tipo'];
+			
+			if($tipo == "destacado")
+				$ruta = "./uploades/" . $nomimg;
+			else
+				$ruta = "./upload/" . $nomimg;
+				
+			$dimensiones = getimagesize($ruta);
+			$anchoReal = $dimensiones[0];
+			$altoReal = $dimensiones[1];
+			$multiplicador = 1;
+			if($anchoReal > 500 || $altoReal > 400)
+			{
+				if($anchoReal > 500 && $altoReal > 400)
+				{
+					// redimensionar por ancho
+					if(($anchoReal / $altoReal) >= 1.25)
+					{						
+						$multiplicador = $anchoReal / 500;
+					}
+					// redimensionar por alto
+					else
+					{
+						$multiplicador = $altoReal / 400;
+					}
+				}
+				// redimensionar por ancho
+				else if($anchoReal > 500)
+				{
+					$multiplicador = $anchoReal / 500;
+				}
+				// redimensionar por alto
+				else if($altoReal > 400)
+				{
+					$multiplicador = $altoReal / 400;
+				}
+			}
+			
+			$x1 = floor($_POST['x1'] * $multiplicador);
+			$y1 = floor($_POST['y1'] * $multiplicador);
+			$x2 = floor($_POST['x2'] * $multiplicador);
+			$y2 = floor($_POST['y2'] * $multiplicador);
+			
+			$image = new SimpleImage();
+			$image->load($ruta);
+			$image->crop($x1,$y1,$x2,$y2);
+			$image->save($ruta);
+			
+			if($tipo == "destacado")
+			{
+				$image = new SimpleImage();
+				$image->load($ruta);
+				$image->resize(820,320);
+				$image->save($ruta);
+			}
+		}
+	}
 	
 	public function actionUpdateAjax()
     {

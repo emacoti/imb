@@ -23,6 +23,25 @@ function deleteimg(url)
 	requestEmi.send();
 }
 
+function cortarYRedimensionar(){
+
+	var datos='x1='+document.getElementById("x1").value+'&y1='+document.getElementById("y1").value+'&x2='+document.getElementById("x2").value+'&y2='+document.getElementById("y2").value+'&nomimg='+document.getElementById("nomimg").value+'&tipo='+document.getElementById("tipo").value;
+
+	$.ajax({
+	type: "POST",
+	url: docrot + "/estates/resize",
+	data: datos,
+	dataType:   "json",
+	success: function(data) {
+		if(data.success){}
+		else
+		{
+			alert("Error: Por favor intente nuevamente.");	
+		}
+	}
+	});
+}
+
 function deleteimg2(nombre)
 {
 	var url = "";
@@ -46,6 +65,18 @@ function borrarli(id)
 {
 	var elem = document.getElementsByName(id)[0];
 	elem.parentNode.removeChild(elem);
+}
+
+function reloadImg(id) {
+   var obj = document.getElementById(id);
+   var src = obj.src;
+   var pos = src.indexOf('?');
+   if (pos >= 0) {
+      src = src.substr(0, pos);
+   }
+   var date = new Date();
+   obj.src = src + '?v=' + date.getTime();
+   return false;
 }
 
 function agregarAtributo()
@@ -87,6 +118,15 @@ function agregarAtributo()
 	newp.appendChild(aref);
 	
 	elem.appendChild(newp);
+}
+
+function reiniciar()
+{
+	document.getElementById("x1").value = 0;
+	document.getElementById("y1").value = 0;
+	document.getElementById("x2").value = 0;
+	document.getElementById("y2").value = 0;
+	$("#imgedit").imgAreaSelect({remove:true});
 }
 /**
  * Adds all missing properties from second obj to first obj
@@ -233,17 +273,24 @@ qq.setValueDes = function(element, text){
 qq.setName = function(element){
 	element.name = randomid;
 };
-qq.setEditarVars = function(element, text){
+qq.setEditarVars = function(element, text, destacado){
 	var ele = document.getElementById("accion");
 	if(ele.value == 'update')
-		element.setAttribute('onclick', '$("#modalResize").modal("show"); document.getElementById("imgedit").src="../../../upload/'+text+'"; $("#imgedit").imgAreaSelect({remove:true}); $("#imgedit").imgAreaSelect({ aspectRatio: "4:3", handles: true, parent: "#modalResize", onSelectChange: selectedDim});');
+	{
+		if(destacado)
+			element.setAttribute('onclick', '$("#modalResize").modal("show"); document.getElementById("imgedit").src="../../../uploades/'+text+'"; document.getElementById("nomimg").value="'+text+'"; document.getElementById("tipo").value="destacado"; reloadImg("imgedit"); reiniciar(); $("#imgedit").imgAreaSelect({remove:true}); $("#imgedit").imgAreaSelect({ aspectRatio: "41:16", handles: true, parent: "#modalResize", onSelectChange: selectedDim});');
+		else
+			element.setAttribute('onclick', '$("#modalResize").modal("show"); document.getElementById("imgedit").src="../../../upload/'+text+'"; document.getElementById("nomimg").value="'+text+'"; document.getElementById("tipo").value="normal"; reloadImg("imgedit"); reiniciar(); $("#imgedit").imgAreaSelect({remove:true}); $("#imgedit").imgAreaSelect({ aspectRatio: "4:3", handles: true, parent: "#modalResize", onSelectChange: selectedDim});');
+	}	
 	else
-		element.setAttribute('onclick', '$("#modalResize").modal("show"); document.getElementById("imgedit").src="../../upload/'+text+'"; $("#imgedit").imgAreaSelect({remove:true}); $("#imgedit").imgAreaSelect({ aspectRatio: "4:3", handles: true, parent: "#modalResize", onSelectChange: selectedDim});');
-
+	{
+		if(destacado)
+			element.setAttribute('onclick', '$("#modalResize").modal("show"); document.getElementById("imgedit").src="../uploades/'+text+'"; document.getElementById("nomimg").value="'+text+'"; document.getElementById("tipo").value="destacado"; reloadImg("imgedit"); reiniciar(); $("#imgedit").imgAreaSelect({remove:true}); $("#imgedit").imgAreaSelect({ aspectRatio: "41:16", handles: true, parent: "#modalResize", onSelectChange: selectedDim});');
+		else
+			element.setAttribute('onclick', '$("#modalResize").modal("show"); document.getElementById("imgedit").src="../upload/'+text+'"; document.getElementById("nomimg").value="'+text+'"; document.getElementById("tipo").value="normal"; reloadImg("imgedit"); reiniciar(); $("#imgedit").imgAreaSelect({remove:true}); $("#imgedit").imgAreaSelect({ aspectRatio: "4:3", handles: true, parent: "#modalResize", onSelectChange: selectedDim});');
+	}
 	element.href = "#";
 };
-//
-// Selecting elements
 
 qq.children = function(element){
     var children = [],
@@ -743,16 +790,19 @@ qq.extend(qq.FileUploader.prototype, {
 		var fileElement = this._find(item, 'borrar');
         qq.setLink(fileElement, fileName);
 		
-		var fileElement = this._find(item, 'editar');
-        qq.setEditarVars(fileElement, fileName);
-		
 		if(this._listElement.id == "nombrelista0")
 		{
+			var fileElement = this._find(item, 'editar');
+			qq.setEditarVars(fileElement, fileName, true);
+			
 			var fileElement = this._find(item, 'input');
 			qq.setValueDes(fileElement, fileName);	
 		}
 		else
 		{
+			var fileElement = this._find(item, 'editar');
+			qq.setEditarVars(fileElement, fileName, false);
+			
 			var fileElement = this._find(item, 'input');
 			qq.setValue(fileElement, fileName);	
 		}

@@ -4,6 +4,7 @@
 )); ?>
 
 <script type="text/javascript">
+	var docrot = <?php echo "'" . Yii::app()->getBaseUrl(true) . "'";?>;
 	$(document).ready(function() {
 		$(".fancybox").fancybox({
 			maxWidth   : 500,

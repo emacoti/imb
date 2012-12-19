@@ -10048,3 +10048,167 @@ Stack trace:
 REQUEST_URI=/filipponeinmobiliaria/upload/diagrama.png
 HTTP_REFERER=http://localhost/filipponeinmobiliaria/estates/update/id/1
 ---
+2012/12/19 16:19:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/diagrama.png".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('upload/diagrama...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\filipponeinmobiliaria\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/filipponeinmobiliaria/upload/diagrama.png
+HTTP_REFERER=http://localhost/filipponeinmobiliaria/estates/update/id/1
+---
+2012/12/19 16:19:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/diagrama.png".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('upload/diagrama...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\filipponeinmobiliaria\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/filipponeinmobiliaria/upload/diagrama.png
+HTTP_REFERER=http://localhost/filipponeinmobiliaria/estates/update/id/1
+---
+2012/12/19 16:29:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/diagrama.png".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('upload/diagrama...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\filipponeinmobiliaria\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/filipponeinmobiliaria/upload/diagrama.png
+HTTP_REFERER=http://localhost/filipponeinmobiliaria/estates/update/id/1
+---
+2012/12/19 16:29:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/diagrama.png".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('upload/diagrama...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\filipponeinmobiliaria\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/filipponeinmobiliaria/upload/diagrama.png
+HTTP_REFERER=http://localhost/filipponeinmobiliaria/estates/update/id/1
+---
+2012/12/19 16:36:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "upload/diagrama.png".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('upload/diagrama...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\filipponeinmobiliaria\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/filipponeinmobiliaria/upload/diagrama.png
+HTTP_REFERER=http://localhost/filipponeinmobiliaria/estates/create
+---
+2012/12/19 16:44:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "uploades/Sin título.png".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('uploades/Sin t?...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\filipponeinmobiliaria\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/filipponeinmobiliaria/uploades/Sin%20t%C3%ADtulo.png
+HTTP_REFERER=http://localhost/filipponeinmobiliaria/estates/create
+---
+2012/12/19 19:30:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "resize".' in C:\xampp\htdocs\yii\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(271): CController->missingAction('resize')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(283): CController->run('resize')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('estates/resize')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\filipponeinmobiliaria\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/filipponeinmobiliaria/estates/resize
+---
+2012/12/19 20:33:10 [error] [php] imagejpeg() [<a href='function.imagejpeg'>function.imagejpeg</a>]: Unable to open 'r_./uploades/prode.png' for writing: No such file or directory (C:\xampp\htdocs\filipponeinmobiliaria\protected\vendors\Simpleimage.php:46)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(50): EstatesController->actionResize()
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(309): CInlineAction->runWithParams()
+#2 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(134): EstatesController->runAction()
+#3 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#5 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(59): EstatesController->filterAccessControl()
+#6 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(292): CFilterChain->run()
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(266): EstatesController->runActionWithFilters()
+#9 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(283): EstatesController->run()
+#10 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#11 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#12 C:\xampp\htdocs\filipponeinmobiliaria\index.php(13): CWebApplication->run()
+REQUEST_URI=/filipponeinmobiliaria/estates/resize
+in C:\xampp\htdocs\filipponeinmobiliaria\protected\vendors\Simpleimage.php (46)
+in C:\xampp\htdocs\filipponeinmobiliaria\protected\controllers\EstatesController.php (436)
+in C:\xampp\htdocs\filipponeinmobiliaria\index.php (13)
+2012/12/19 21:06:46 [error] [php] imagecreatetruecolor() [<a href='function.imagecreatetruecolor'>function.imagecreatetruecolor</a>]: Invalid image dimensions (C:\xampp\htdocs\filipponeinmobiliaria\protected\vendors\Simpleimage.php:119)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(50): EstatesController->actionResize()
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(309): CInlineAction->runWithParams()
+#2 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(134): EstatesController->runAction()
+#3 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#5 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(59): EstatesController->filterAccessControl()
+#6 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(292): CFilterChain->run()
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(266): EstatesController->runActionWithFilters()
+#9 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(283): EstatesController->run()
+#10 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#11 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#12 C:\xampp\htdocs\filipponeinmobiliaria\index.php(13): CWebApplication->run()
+REQUEST_URI=/filipponeinmobiliaria/estates/resize
+in C:\xampp\htdocs\filipponeinmobiliaria\protected\vendors\Simpleimage.php (119)
+in C:\xampp\htdocs\filipponeinmobiliaria\protected\controllers\EstatesController.php (436)
+in C:\xampp\htdocs\filipponeinmobiliaria\index.php (13)
+2012/12/19 21:08:50 [error] [php] imagecreatetruecolor() [<a href='function.imagecreatetruecolor'>function.imagecreatetruecolor</a>]: Invalid image dimensions (C:\xampp\htdocs\filipponeinmobiliaria\protected\vendors\Simpleimage.php:119)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(50): EstatesController->actionResize()
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(309): CInlineAction->runWithParams()
+#2 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(134): EstatesController->runAction()
+#3 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#5 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(59): EstatesController->filterAccessControl()
+#6 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(292): CFilterChain->run()
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(266): EstatesController->runActionWithFilters()
+#9 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(283): EstatesController->run()
+#10 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#11 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#12 C:\xampp\htdocs\filipponeinmobiliaria\index.php(13): CWebApplication->run()
+REQUEST_URI=/filipponeinmobiliaria/estates/resize
+in C:\xampp\htdocs\filipponeinmobiliaria\protected\vendors\Simpleimage.php (119)
+in C:\xampp\htdocs\filipponeinmobiliaria\protected\controllers\EstatesController.php (444)
+in C:\xampp\htdocs\filipponeinmobiliaria\index.php (13)
+2012/12/19 21:18:48 [error] [php] getimagesize(./uploades/prode.png) [<a href='function.getimagesize'>function.getimagesize</a>]: failed to open stream: No such file or directory (C:\xampp\htdocs\filipponeinmobiliaria\protected\controllers\EstatesController.php:398)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(309): CInlineAction->runWithParams()
+#1 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(134): EstatesController->runAction()
+#2 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#3 C:\xampp\htdocs\yii\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#4 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(59): EstatesController->filterAccessControl()
+#5 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(292): CFilterChain->run()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(266): EstatesController->runActionWithFilters()
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(283): EstatesController->run()
+#9 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#10 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\filipponeinmobiliaria\index.php(13): CWebApplication->run()
+REQUEST_URI=/filipponeinmobiliaria/estates/resize
+in C:\xampp\htdocs\filipponeinmobiliaria\protected\controllers\EstatesController.php (398)
+in C:\xampp\htdocs\filipponeinmobiliaria\index.php (13)
+2012/12/19 22:33:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "uploades/Sin título.png".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:287
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('uploades/Sin t?...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\filipponeinmobiliaria\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/filipponeinmobiliaria/uploades/Sin%20t%C3%ADtulo.png
+HTTP_REFERER=http://localhost/filipponeinmobiliaria/estates/update/id/1
+---
+2012/12/19 22:40:04 [error] [php] getimagesize(./upload/[object HTMLInputElement]) [<a href='function.getimagesize'>function.getimagesize</a>]: failed to open stream: No such file or directory (C:\xampp\htdocs\filipponeinmobiliaria\protected\controllers\EstatesController.php:398)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(309): CInlineAction->runWithParams()
+#1 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(134): EstatesController->runAction()
+#2 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#3 C:\xampp\htdocs\yii\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#4 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(59): EstatesController->filterAccessControl()
+#5 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(292): CFilterChain->run()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(266): EstatesController->runActionWithFilters()
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(283): EstatesController->run()
+#9 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#10 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\filipponeinmobiliaria\index.php(13): CWebApplication->run()
+REQUEST_URI=/filipponeinmobiliaria/estates/resize
+in C:\xampp\htdocs\filipponeinmobiliaria\protected\controllers\EstatesController.php (398)
+in C:\xampp\htdocs\filipponeinmobiliaria\index.php (13)
