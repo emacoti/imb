@@ -3,6 +3,10 @@ Yii::import('application.extensions.EWideImage.EWideImage');
 
 class SiteController extends Controller
 {
+	public $info=array();
+	public $services=array();
+	public $ask=array();
+	public $setArtMenu="setActiveArtMenu('info-menu'); setActiveSubArtMenu('info-sub-menu')";
 	/**
 	 * Declares class-based actions.
 	 */
@@ -30,9 +34,13 @@ class SiteController extends Controller
 	{
 		// renders the view file 'protected/views/site/index.php'
 		// using the default layout 'protected/views/layouts/main.php'
-		//$url= 'http://'.Yii::app()->request->getServerName() . $this->createUrl('/images/bootstrap-mdo-sfmoma-01.jpg');
-		//$tt= EWideImage::load($url)->crop('center', 'center', 350, 350)->output('png');
-		$this->render('index');
+		
+		$estates= Estates::model()->findAll(array(
+			'condition'=>'destacado=:des',
+			'params'=>array(':des'=>1),
+			'limit'=>5
+		));
+		$this->render('index', array('estates'=>$estates));
 	}
 
 	/**
@@ -47,6 +55,26 @@ class SiteController extends Controller
 	    	else
 	        	$this->render('error', $error);
 	    }
+	}
+	
+	/**
+	 * Displays the contact page
+	 */
+	public function actionPage($view)
+	{
+		$this->layout= '//layouts/column2-info';
+		$this->info=array(
+			array('label'=>'Acerca de..', 'url'=>array('/site/page', 'view'=>'about')),
+			array('label'=>'Requisitos alquilar', 'url'=>array('/site/page', 'view'=>'req')),
+			array('label'=>'Preguntas frecuentes', 'url'=>array('/site/page', 'view'=>'ask'))
+		);
+		$this->services=array(
+			array('label'=>'Tasaciones', 'url'=>array('/site/page', 'view'=>'tas')),
+			array('label'=>'Venta y alquiler', 'url'=>array('/site/page', 'view'=>'sale')),
+			array('label'=>'Administraciones', 'url'=>array('/site/page', 'view'=>'adm')),
+			array('label'=>'Servicios al desarrollador', 'url'=>array('/site/page', 'view'=>'serv'))
+		);
+		$this->render('pages/'.$view);
 	}
 
 	/**

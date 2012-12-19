@@ -12,7 +12,7 @@
         Filtros
       </a>
     </div>
-    <div id="filtersBody" class="accordion-body collapse in">
+    <div id="filtersBody" class="accordion-body collapse">
       <div class="accordion-inner well search-estates">
 	  
 		<div class="controls controls-row">

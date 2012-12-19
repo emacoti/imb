@@ -39,5 +39,14 @@ function setBackDropClass(styleClass) {
  * setean con el estilo
 */
 function setActiveArtMenu(id) {
-	jQuery('.art-menu #' + id).addClass('active');
+	jQuery('.art-menu #' + id).first().addClass('active');
+}
+function setActiveSubArtMenu(id) {
+	var activeSubMenu= jQuery('.art-menu #' + id).first().parent().find('li.active');
+	if (activeSubMenu.length > 0) {
+	
+		var parent= activeSubMenu.parent('ul');
+		// agrego clase active al item li que contiene al submenu
+		parent.prev('a#info-sub-menu').parent('li').addClass('active');
+	}
 }

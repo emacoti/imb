@@ -1,5 +1,5 @@
 
-<h2 class="art-postheader">Propiedades: <?php echo($title); ?></h2>
+<h2 class="title-estates">Propiedades: <?php echo($title); ?></h2>
 
 <?php $this->renderPartial('_search',array(
 	'model'=>$model,
