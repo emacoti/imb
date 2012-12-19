@@ -14,6 +14,7 @@
 var qq = qq || {};
 var randomid = 0;
 var attid = 1;
+var nombrelista = 0;
 
 function deleteimg(url)
 {
@@ -225,8 +226,21 @@ qq.setValue = function(element, text){
 	element.name = 'file' + randomid++;
     element.value = text;
 };
+qq.setValueDes = function(element, text){
+	element.name = 'filedes';
+    element.value = text;
+};
 qq.setName = function(element){
 	element.name = randomid;
+};
+qq.setEditarVars = function(element, text){
+	var ele = document.getElementById("accion");
+	if(ele.value == 'update')
+		element.setAttribute('onclick', '$("#modalResize").modal("show"); document.getElementById("imgedit").src="../../../upload/'+text+'"; $("#imgedit").imgAreaSelect({remove:true}); $("#imgedit").imgAreaSelect({ aspectRatio: "4:3", handles: true, parent: "#modalResize", onSelectChange: selectedDim});');
+	else
+		element.setAttribute('onclick', '$("#modalResize").modal("show"); document.getElementById("imgedit").src="../../upload/'+text+'"; $("#imgedit").imgAreaSelect({remove:true}); $("#imgedit").imgAreaSelect({ aspectRatio: "4:3", handles: true, parent: "#modalResize", onSelectChange: selectedDim});');
+
+	element.href = "#";
 };
 //
 // Selecting elements
@@ -339,7 +353,7 @@ qq.FileUploaderBasic = function(o){
         action: '/server/upload',
         params: {},
         button: null,
-        multiple: true,
+        multiple: false,
         maxConnections: 3,
         // validation
         allowedExtensions: [],
@@ -575,7 +589,7 @@ qq.FileUploader = function(o){
         template: '<div class="qq-uploader">' +
                 '<div class="qq-upload-drop-area"><span>Drop files here to upload</span></div>' +
                 '<div class="qq-upload-button">Subir imagen</div>' +
-                '<ul class="qq-upload-list"></ul>' +
+                '<ul class="qq-upload-list" id="nombrelista"></ul>' +
              '</div>',
 
         // template for one item in file list
@@ -583,8 +597,9 @@ qq.FileUploader = function(o){
                 '<span class="qq-upload-file"></span>' +
                 '<span class="qq-upload-spinner"></span>' +
                 '<span class="qq-upload-size"></span>' +
-                '<a class="qq-upload-cancel" href="#">Cancel</a>' +
-				'<a class="deletelink" href="" onclick="">Borrar</a>' +
+                '<a class="qq-upload-cancel" href="#">Cancelar</a>' +
+				'<a class="deletelink" href="" onclick="">Borrar</a> ' +
+				' <a class="editlink" href="" onclick="">Editar</a>' +
                 '<span class="qq-upload-failed-text">Failed</span>' +
 				'<input type="hidden" value="" class="hiddeninput" name="" />' +
             '</li>',
@@ -599,6 +614,7 @@ qq.FileUploader = function(o){
             file: 'qq-upload-file',
             spinner: 'qq-upload-spinner',
 			borrar: 'deletelink',
+			editar: 'editlink',
             size: 'qq-upload-size',
             cancel: 'qq-upload-cancel',
 			input: 'hiddeninput',
@@ -613,7 +629,8 @@ qq.FileUploader = function(o){
     qq.extend(this._options, o);
 
     this._element = this._options.element;
-    this._element.innerHTML = this._options.template;
+	var temptemplate = (this._options.template).replace("nombrelista", "nombrelista" + nombrelista++);
+    this._element.innerHTML = temptemplate;
     this._listElement = this._options.listElement || this._find(this._element, 'list');
 
     this._classes = this._options.classes;
@@ -724,10 +741,24 @@ qq.extend(qq.FileUploader.prototype, {
         this._find(item, 'size').style.display = 'none';
 
 		var fileElement = this._find(item, 'borrar');
-        qq.setLink(fileElement, this._formatFileName(fileName));
+        qq.setLink(fileElement, fileName);
 		
-		var fileElement = this._find(item, 'input');
-        qq.setValue(fileElement, this._formatFileName(fileName));		
+		var fileElement = this._find(item, 'editar');
+        qq.setEditarVars(fileElement, fileName);
+		
+		if(this._listElement.id == "nombrelista0")
+		{
+			var fileElement = this._find(item, 'input');
+			qq.setValueDes(fileElement, fileName);	
+		}
+		else
+		{
+			var fileElement = this._find(item, 'input');
+			qq.setValue(fileElement, fileName);	
+		}
+		
+		if(this._listElement.id == "nombrelista0")
+			$(document.getElementById("nombrelista0")).empty();
 		
         this._listElement.appendChild(item);
     },

@@ -40,6 +40,7 @@ or <b>=</b>) al principio de cada uno de los cuadros de busqueda.
 	'id'=>'locations-grid',
 	'dataProvider'=>$model->search(),
 	'emptyText'=>'La busqueda no arrojo resultados.',
+	'pager'=>array('nextPageLabel'=>'Siguiente', 'prevPageLabel'=>'Anterior', 'header'=>'<br/>'),
 	'summaryText'=>Yii::t('zii','Mostrando {start}-{end} de {count} resultados.'),
 	'filter'=>$model,
 	'columns'=>array(

@@ -12,6 +12,7 @@
  * @property integer $value
  * @property string $neighborhood
  * @property string $description
+ * @property string $imgdes
  * @property integer $destacado
  *
  * The followings are the available model relations:
@@ -54,6 +55,7 @@ class Estates extends CActiveRecord
 			array('category_id, condition_id, location_id, currency_id, value, destacado',
 					'numerical', 'integerOnly'=>true),
 			array('neighborhood', 'length', 'max'=>50),
+			array('imgdes', 'length', 'max'=>100),
 			array('description', 'safe'),
 			array('value', 'default', 'value'=>0),
 			// The following rule is used by search().
@@ -95,6 +97,7 @@ class Estates extends CActiveRecord
 			'neighborhood' => 'Barrio',
 			'description' => 'Descripcion',
 			'destacado' => 'Destacado',
+			'imgdes' => 'Imagen destacada',
 		);
 	}
 
@@ -118,9 +121,12 @@ class Estates extends CActiveRecord
 		$criteria->compare('neighborhood',$this->neighborhood,true);
 		$criteria->compare('description',$this->description,true);
 				
-		if ($this->value != null) {
+		if ($this->value != null && !($this->value[0] == "=" || $this->value[0] == ">" || $this->value[0] == "<"))
+		{
 			$criteria->compare('value','<= ' . $this->value);
 		}
+		else
+			$criteria->compare('value',$this->value);
 		
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

@@ -27,7 +27,7 @@ class EstatesController extends AbmController
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view','create','update','admin','delete','updateAjax','upload', 'borrarArchivo'),
+				'actions'=>array('index','view','create','update','admin','delete','updateAjax','upload', 'uploades', 'borrarArchivo'),
 				'users'=>array('admin'),
 			),
 			array('deny',  // deny all users
@@ -54,17 +54,31 @@ class EstatesController extends AbmController
 	public function actionCreate()
 	{
 		$rutas = array();
+		$att = array();
+		
 		for($i=0; $i<100; $i++)
 		{
 			$nombre = "file";
 			$nombre.= strval($i);
 			
+			$nomatt = strval($i).'nombre';
+			$valatt = strval($i).'valor';
+			
+			$nomatt2 = 'nombre'.strval($i);
+			$valatt2 = 'valor'.strval($i);
+			
 			if(isset($_POST[$nombre]))
 			{
 				$rutas[$i] = $_POST[$nombre];
 			}
-			else
-				continue;
+			if(isset($_POST[$nomatt]) && isset($_POST[$valatt]))
+			{
+				$att[$_POST[$nomatt]] = $_POST[$valatt];
+			}
+			if(isset($_POST[$nomatt2]) && isset($_POST[$valatt2]))
+			{
+				$att[$_POST[$nomatt2]] = $_POST[$valatt2];
+			}
 		}
 		
 		$model=new Estates;
@@ -80,19 +94,46 @@ class EstatesController extends AbmController
 				foreach ($rutas as $i => $v) 
 				{	
 					$id = $model->id;
-					if (!is_dir('./upload/'.$id)) 
+					foreach ($att as $k => $m)
 					{
-						mkdir('./upload/'.$id);
+						$da= new Data;
+						$da->attributes= array('estate_id'=>$id, 'name'=>$k, 'data_type'=>'-', 'value'=>$m);
+						$da->save();
+					}
+					
+					if (!is_dir('./images/estates/'.$id)) 
+					{
+						mkdir('./images/estates/'.$id);
 					}
 					$old = "./upload/" . $v;
 					$new = "./images/estates/".$id."/".$v;
 					rename($old, $new) or die("No se puede mover $old a $new.");
 					
 					$img= new Images;
-					$img->attributes= array('path_name'=>$id.$v, 'estate_id'=>$id, 'description'=>'descripcion');
+					$img->attributes= array('path_name'=>$id."/".$v, 'estate_id'=>$id, 'description'=>'descripcion');
 					$img->save();
 				}
 				
+				if(isset($_POST["filedes"]) && $model->destacado == 1)
+				{
+					$destacado = $_POST["filedes"];
+					$old = "./uploades/" . $destacado;
+					$new = "./images/estates/".$id."/des".$destacado;
+					rename($old, $new) or die("No se puede mover $old a $new.");
+					$model->imgdes=$id."/des".$destacado;
+				}
+				else if($model->destacado == 1 && isset($_POST["olddes"]))
+				{
+					$model->imgdes = $_POST["olddes"];
+				}
+				else
+				{
+					$model->imgdes = "";
+					$model->destacado = 0;
+				}
+				
+				$model->save();
+			
 				$this->redirect(array('view','id'=>$model->id));
 			}
 		}
@@ -145,9 +186,6 @@ class EstatesController extends AbmController
 			}
 		}
 		
-		
-		//file_put_contents($_SERVER['DOCUMENT_ROOT']."/log.txt", print_r($rutas, true));
-		
 		$model=$this->loadModel($id);
 		
 		// Uncomment the following line if AJAX validation is needed
@@ -156,13 +194,27 @@ class EstatesController extends AbmController
 		if(isset($_POST['Estates']))
 		{
 			$model->attributes=$_POST['Estates'];
+			
+			if(isset($_POST["filedes"]) && $model->destacado == 1)
+			{
+				$destacado = $_POST["filedes"];
+				$old = "./uploades/" . $destacado;
+				$new = "./images/estates/".$id."/des".$destacado;
+				rename($old, $new) or die("No se puede mover $old a $new.");
+				$model->imgdes=$id."/des".$destacado;
+			}
+			else if($model->destacado == 1 && isset($_POST["olddes"]))
+			{
+				$model->imgdes = $_POST["olddes"];
+			}
+			else
+			{
+				$model->imgdes = "";
+				$model->destacado = 0;
+			}	
 			if($model->save())
-			{				
-				foreach ($ids as $k => $v)
-				{
-					$dato = Data::model()->findByPk($v);
-					$dato->delete();
-				}
+			{	
+				Data::model()->deleteAll('estate_id = ?' , array($model->id));
 				
 				foreach ($att as $k => $v)
 				{
@@ -313,6 +365,24 @@ class EstatesController extends AbmController
  
         echo $return;// it's array
 	}
+	
+	public function actionUploades()
+	{
+        Yii::import("ext.EAjaxUpload.qqFileUploader");
+		$folder="./uploades/";
+        $allowedExtensions = array("jpg", "png", "jpeg");//array("jpg","jpeg","gif","exe","mov" and etc...
+        $sizeLimit = 10 * 1024 * 1024;// maximum file size in bytes
+        $uploader = new qqFileUploader($allowedExtensions, $sizeLimit);
+        $result = $uploader->handleUpload($folder);
+
+        $return = htmlspecialchars(json_encode($result), ENT_NOQUOTES);
+ 
+        $fileSize=filesize($folder.$result['filename']);//GETTING FILE SIZE
+        $fileName=$result['filename'];//GETTING FILE NAME
+ 
+        echo $return;// it's array
+	}
+	
 	
 	public function actionUpdateAjax()
     {

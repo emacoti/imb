@@ -39,6 +39,7 @@ $db->exec(
 			destacado INTEGER UNSIGNED NOT NULL,
 			value INTEGER,
 			neighborhood VARCHAR(50) NOT NULL,
+			imgdes VARCHAR(100),
 			description TEXT,
 			
 			FOREIGN KEY(category_id) REFERENCES categories(id),
@@ -105,14 +106,14 @@ $description= "IBB - Villa Belgrano - Lucero al 2.600 - DAUB Inmobiliaria vende 
 	todo en construccion hasta dinteles, tiene un tanque australiano chico en el patio. se ubica en Villa Belgrano a mts. de la ruta, implantado sobre lote de 240 m2.";
 $db->exec(utf8_encode(
 	'INSERT INTO
-		estates (category_id, condition_id, location_id, currency_id, value, neighborhood, description, destacado)
-		VALUES (1, 1, 1, 1, 200000, "Villa Belgrano", "' . $description . '", 1);'));
+		estates (category_id, condition_id, location_id, currency_id, value, neighborhood, description, destacado, imgdes)
+		VALUES (1, 1, 1, 1, 200000, "Villa Belgrano", "' . $description . '", 1, "1/1_m.jpg");'));
 
 /*** Inserto atributos ***/
 $db->exec(utf8_encode('INSERT INTO data (estate_id, name, data_type, value) VALUES (1, "Living-comedor", "VARCHAR", "3.00 x 5.00");'));
 
 /*** Inserto imagenes ***/
-$db->exec(utf8_encode('INSERT INTO images (estate_id, path_name) VALUES (1, "1_m.jpg");'));
+$db->exec(utf8_encode('INSERT INTO images (estate_id, path_name) VALUES (1, "1/1_m.jpg");'));
 
 /*** Inserto usuario admin ***/
 $db->exec(utf8_encode('INSERT INTO users (username, password, salt) VALUES ("admin", "d4863fb315f0e9ea68bc848f4f53b351", "25948");'));

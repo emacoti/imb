@@ -1,14 +1,21 @@
-
 <?php $form=$this->beginWidget('CActiveForm', array(
 	'id'=>'estates-form',
 	'enableAjaxValidation'=>false,
 )); ?>
 
+<script type="text/javascript">
+	$(document).ready(function() {
+		$(".fancybox").fancybox({
+			maxWidth   : 500,
+			maxHeight	: 500,
+		});
+	});
+</script>
+
 <div>
 <div class="form">
 	<p class="note">Los campos con <span class="required">*</span> son requeridos.</p>
 </div>
-
 <div class="accordion" id="estate">
 
 	<div class="accordion-group">
@@ -35,8 +42,56 @@
 					
 					<div class="row">
 						<?php echo $form->labelEx($model,'destacado'); ?>
-						<?php echo $form->checkBox($model,'destacado', array('value'=>1, 'uncheckValue'=>0)); ?>
+						<?php echo $form->checkBox($model,'destacado',
+						array(
+							'value'=>1, 'uncheckValue'=>0,
+							'onclick'=>'js:$(this).is(":checked")? document.getElementById("imgdes").style.display = "block": document.getElementById("imgdes").style.display = "none";'
+						)); ?>
 						<?php echo $form->error($model,'destacado'); ?>
+					</div>
+					
+					<div class="row" id="imgdes" <?php if($model->destacado == 0) echo "style='display:none;'" ?>>
+					<?php echo $form->labelEx($model,'imgdes'); ?>
+					<?
+					$this->widget('ext.EAjaxUpload.EAjaxUpload',
+						array(
+							'id'=>'uploadFile2',
+							'config'=>array(
+							   'action'=>Yii::app()->getBaseUrl(true) . '/estates/uploades/',
+							   'allowedExtensions'=>array("jpg", "png","jpeg"),//array("jpg","jpeg","gif","exe","mov" and etc...
+							   'sizeLimit'=>10*1024*1024,// maximum file size in bytes
+							   'minSizeLimit'=>1*1024,// minimum file size in bytes
+							   'messages'=>array(
+												 'typeError'=>"{file} has invalid extension. Only {extensions} are allowed.",
+												 'sizeError'=>"{file} is too large, maximum file size is {sizeLimit}.",
+												 'minSizeError'=>"{file} is too small, minimum file size is {minSizeLimit}.",
+												 'emptyError'=>"{file} is empty, please select files again without it.",
+												 'onLeave'=>"The files are being uploaded, if you leave now the upload will be cancelled."
+												),
+							   'showMessage'=>"js:function(message){ alert(message); }"
+							)
+					));
+					?>
+					<!--<div id="uploadFile"><div class="qq-uploader">-->
+					<ul class="qq-upload-list">
+					<?php 
+					if($model->imgdes != "")
+					{
+						echo 'Imagen actual:';
+						echo "<li id='imgdes0' class=' qq-upload-success'>";
+						echo '<span class="qq-upload-file">';
+						$url = $model->imgdes;
+						$var = explode("/",$url, 2);
+						$nombre = $var[1];
+						echo "<a class='fancybox' data-fancybox-group='dgallery' rel='group' href='../../../images/estates/$url'>$nombre</a>";
+						echo '</span>';
+						echo '</li>';
+						$oldvalue = $model->imgdes;
+						echo "<input type='hidden' name='olddes' value='$oldvalue' />";
+					}
+					?>
+					</ul>
+					<!--</div></div>-->
 					</div>
 					
 					<div class="row">
@@ -147,7 +202,6 @@
 			<div class="accordion-inner">
 				
 				<div class="form">
-					
 					<?php
 					$newitem = 0;
 					echo '<div id="divizq">Nombre:</div>';
@@ -167,6 +221,7 @@
 							echo "<input type='hidden' name='{$newitem}id' value='$valueid'/>";
 							echo " <a href='#' onclick='deleteli(\"{$newitem}litem\")'>Borrar</a>";
 							echo '</p>';
+							$newitem++;
 						}
 					}
 					else
@@ -195,6 +250,7 @@
 	</div>
 </div>
 
-</div>
 
+
+</div>
 <?php $this->endWidget(); ?>

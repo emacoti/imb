@@ -4896,6 +4896,7 @@ input[type="submit"].btn.btn-mini {
 }
 
 .modal {
+  text-decoration:none;
   position: fixed;
   top: 50%;
   left: 50%;
@@ -4916,6 +4917,10 @@ input[type="submit"].btn.btn-mini {
   -webkit-background-clip: padding-box;
      -moz-background-clip: padding-box;
           background-clip: padding-box;
+}
+
+.modal a{
+  text-decoration:none !important;
 }
 
 .modal.fade {

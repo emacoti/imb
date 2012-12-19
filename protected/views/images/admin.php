@@ -42,6 +42,7 @@ or <b>=</b>) al principio de cada uno de los cuadros de busqueda.
 	'dataProvider'=>$model->search(),
 	'filter'=>$model,
 	'emptyText'=>'La busqueda no arrojo resultados.',
+	'pager'=>array('nextPageLabel'=>'Siguiente', 'prevPageLabel'=>'Anterior', 'header'=>'<br/>'),
 	'summaryText'=>Yii::t('zii','Mostrando {start}-{end} de {count} resultados.'),
 	'columns'=>array(
 		'id',

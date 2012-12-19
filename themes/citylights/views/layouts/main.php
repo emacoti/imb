@@ -10,7 +10,9 @@
         <title><?php echo CHtml::encode(Yii::app()->name); ?></title>
 
 		<!--<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/main.css" />-->
-	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/bootstrap.css" />
+		<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/bootstrap.css" />
+		<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/jquery.fancybox.css" />
+		<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/imgareaselect-default.css" />
         <link rel="stylesheet" href="<?php echo Yii::app()->theme->baseUrl; ?>/css/style.css" type="text/css" media="screen, projection" />
         <link rel="stylesheet" href="<?php echo Yii::app()->theme->baseUrl; ?>/css/form.css" type="text/css" media="screen, projection" />
         <!--[if IE 6]><link rel="stylesheet" href="<?php echo Yii::app()->theme->baseUrl; ?>/css/style.ie6.css" type="text/css" media="screen" /><![endif]-->
@@ -20,20 +22,43 @@
 
         <script type="text/javascript" src="<?php echo Yii::app()->theme->baseUrl; ?>/css/script.js"></script>
 		<?php
-		Yii::app()->clientScript->registerScriptFile(Yii::app()->baseUrl.'/js/bootstrap.js'); 
-		Yii::app()->clientScript->registerScriptFile(Yii::app()->baseUrl.'/js/app.js'); 
+		Yii::app()->clientScript->registerScriptFile(Yii::app()->baseUrl.'/js/bootstrap.js');
+		Yii::app()->clientScript->registerScriptFile(Yii::app()->baseUrl.'/js/app.js');
+		Yii::app()->clientScript->registerScriptFile(Yii::app()->baseUrl.'/js/jquery.fancybox.pack.js');
+		Yii::app()->clientScript->registerScriptFile(Yii::app()->baseUrl.'/js/jquery.imgareaselect.min.js');
+		
 		Yii::app()->clientScript->registerCoreScript('jquery');
 	?>
     </head>
     <body>
-		<!--
-        <div id="art-page-background-simple-gradient">
-            <div id="art-page-background-gradient"></div>
-        </div>
-        <div id="art-page-background-glare">
-            <div id="art-page-background-glare-image"></div>
-        </div>
-		-->
+	<div id="modalResize" class="modal hide fade in" style="display: none; ">  
+		<div class="modal-header">  
+			<a class="close" data-dismiss="modal">X</a>  
+			<h3>Edici&oacute;n de imagen</h3>  
+		</div>  
+		<div class="modal-body" style="text-align:center;">  
+			<img id="imgedit" src="../../../upload/diagrama.png" style="max-width: 500px; max-height: 400px;">          
+		</div>  
+		<div class="modal-footer">
+			<form action="crop.php" method="post">
+				<input type="text" name="x1" value="" />
+				<input type="text" name="y1" value="" />
+				<input type="text" name="x2" value="" />
+				<input type="text" name="y2" value="" />
+			</form>
+			<a href="#" onclick="" class="btn">Redimensionar</a>  
+			<a href="#" class="btn" onclick="$('#imgedit').imgAreaSelect({ instance: true });" data-dismiss="modal">Close</a>  
+		</div>  
+	</div>
+	<script language='JavaScript'>
+	function selectedDim(img, selection)
+	{
+		$('input[name="x1"]').val(selection.x1);
+		$('input[name="y1"]').val(selection.y1);
+		$('input[name="x2"]').val(selection.x2);
+		$('input[name="y2"]').val(selection.y2);
+	}
+	</script>
         <div id="art-main">
             <div class="art-sheet">
                 <div class="art-sheet-tl"></div>

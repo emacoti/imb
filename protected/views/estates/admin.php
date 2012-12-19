@@ -41,15 +41,36 @@ or <b>=</b>) al principio de cada uno de los cuadros de busqueda.
 	'dataProvider'=>$model->search(),
 	'filter'=>$model,
 	'emptyText'=>'La busqueda no arrojo resultados.',
+	'pager'=>array('nextPageLabel'=>'Siguiente', 'prevPageLabel'=>'Anterior', 'header'=>'<br/>'),
 	'summaryText'=>Yii::t('zii','Mostrando {start}-{end} de {count} resultados.'),
 	'columns'=>array(
-		'category_id',
-		'condition_id',
-		'location_id',
-		'currency_id',
+		
+		array(
+		'name' => 'category_id',
+		'value' => '$data->category->name',
+		'filter' => CHtml::listData( Categories::model()->findAll(), 'id', 'name' )
+		),
+		
+		array(
+		'name'=>'condition_id',
+		'value' => '$data->condition->name',
+		'filter' => CHtml::listData( Conditions::model()->findAll(), 'id', 'name' )
+		),
+		
+		array(
+		'name'=>'location_id',
+		'value' => '$data->location->name',
+		'filter' => CHtml::listData( Locations::model()->findAll(), 'id', 'name' )
+		),
+		
+		array(
+		'name'=>'currency_id',
+		'value'=> '$data->currency->name',
+		'filter' => CHtml::listData( Currencies::model()->findAll(), 'id', 'name' )
+		),
+
 		'value',
 		'neighborhood',
-		'description',
 		array(
 			'class'=>'CButtonColumn',
 			'viewButtonOptions'=>array('title'=>'Ver Detalle'),

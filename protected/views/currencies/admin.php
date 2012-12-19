@@ -39,6 +39,7 @@ or <b>=</b>) al principio de cada uno de los cuadros de busqueda.
 <?php $this->widget('zii.widgets.grid.CGridView', array(
 	'id'=>'currencies-grid',
 	'emptyText'=>'La busqueda no arrojo resultados.',
+	'pager'=>array('nextPageLabel'=>'Siguiente', 'prevPageLabel'=>'Anterior', 'header'=>'<br/>'),
 	'summaryText'=>Yii::t('zii','Mostrando {start}-{end} de {count} resultados.'),
 	'dataProvider'=>$model->search(),
 	'filter'=>$model,

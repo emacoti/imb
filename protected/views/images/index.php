@@ -15,5 +15,6 @@ $this->menu=array(
 	'emptyText'=>'La busqueda no arrojo resultados.',
 	'summaryText'=>Yii::t('zii','Mostrando {start}-{end} de {count} resultados.'),
 	'dataProvider'=>$dataProvider,
+	'pager'=>array('nextPageLabel'=>'Siguiente', 'prevPageLabel'=>'Anterior', 'header'=>'<br/>'),
 	'itemView'=>'_view',
 )); ?>

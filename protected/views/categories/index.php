@@ -12,7 +12,9 @@ $this->menu=array(
 <h1>Rubros</h1>
 
 <?php $this->widget('zii.widgets.CListView', array(
+	'emptyText'=>'La busqueda no arrojo resultados.',
 	'summaryText'=>Yii::t('zii','Mostrando {start}-{end} de {count} resultados.'),
+	'pager'=>array('nextPageLabel'=>'Siguiente', 'prevPageLabel'=>'Anterior', 'header'=>'<br/>'),
 	'dataProvider'=>$dataProvider,
 	'itemView'=>'_view',
 )); ?>
