@@ -127,6 +127,8 @@ function reiniciar()
 	document.getElementById("x2").value = 0;
 	document.getElementById("y2").value = 0;
 	$("#imgedit").imgAreaSelect({remove:true});
+	$("#imgedit").imgAreaSelect({remove:true});
+	$("#imgedit").imgAreaSelect({remove:true});
 }
 /**
  * Adds all missing properties from second obj to first obj

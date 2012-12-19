@@ -116,6 +116,7 @@ class EstatesController extends AbmController
 				
 				if(isset($_POST["filedes"]) && $model->destacado == 1)
 				{
+					$id = $model->id;
 					$destacado = $_POST["filedes"];
 					$old = "./uploades/" . $destacado;
 					$new = "./images/estates/".$id."/des".$destacado;
@@ -397,7 +398,7 @@ class EstatesController extends AbmController
 				$ruta = "./uploades/" . $nomimg;
 			else
 				$ruta = "./upload/" . $nomimg;
-				
+			
 			$dimensiones = getimagesize($ruta);
 			$anchoReal = $dimensiones[0];
 			$altoReal = $dimensiones[1];

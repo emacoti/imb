@@ -56,6 +56,7 @@ class Estates extends CActiveRecord
 					'numerical', 'integerOnly'=>true),
 			array('neighborhood', 'length', 'max'=>50),
 			array('imgdes', 'length', 'max'=>100),
+			array('googledata', 'length', 'max'=>150),
 			array('description', 'safe'),
 			array('value', 'default', 'value'=>0),
 			// The following rule is used by search().
@@ -97,6 +98,7 @@ class Estates extends CActiveRecord
 			'neighborhood' => 'Barrio',
 			'description' => 'Descripcion',
 			'destacado' => 'Destacado',
+			'googledata' => 'Google Maps',
 			'imgdes' => 'Imagen destacada',
 		);
 	}

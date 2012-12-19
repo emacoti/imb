@@ -40,6 +40,7 @@ $db->exec(
 			value INTEGER,
 			neighborhood VARCHAR(50) NOT NULL,
 			imgdes VARCHAR(100),
+			googledata VARCHAR(150),
 			description TEXT,
 			
 			FOREIGN KEY(category_id) REFERENCES categories(id),

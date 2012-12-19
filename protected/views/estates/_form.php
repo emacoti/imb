@@ -135,6 +135,13 @@
 						<?php echo $form->textField($model,'neighborhood',array('size'=>50,'maxlength'=>50)); ?>
 						<?php echo $form->error($model,'neighborhood'); ?>
 					</div>
+					
+					<div class="row">
+						<?php echo $form->labelEx($model,'googledata'); ?>
+						<?php echo $form->textField($model,'googledata',array('size'=>100,'maxlength'=>150)); ?>
+						(Ej: Alem 100, Bahia Blanca, Buenos Aires)
+						<?php echo $form->error($model,'googledata'); ?>
+					</div>
 
 					<div class="row">
 						<?php echo $form->labelEx($model,'description'); ?>
