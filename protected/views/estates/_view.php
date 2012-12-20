@@ -8,7 +8,7 @@
 			' <i class="icon-search icon-white"></i> ',
 			array('view', 'id'=>$data->id),
 			array('class'=>'btn btn-primary btn-large', 'title'=>'Ver Propidad')); ?>
-		</div>
+	</div>
 	<br />
 	
 	<b><?php echo CHtml::encode($data->getAttributeLabel('category_id')); ?>:</b>

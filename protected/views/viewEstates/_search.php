@@ -53,14 +53,14 @@
 			<div class="span span-custom">
 				<?php echo $form->label($model,'Valor Desde'); ?>
 				<?php echo $form->textField(
-									$model,'value',
+									$model,'valueFrom',
 									array('class'=>'input-custom')); ?>
 			</div>
 			
 			<div class="span span-custom">
 				<?php echo $form->label($model,'Valor Hasta'); ?>
 				<?php echo $form->textField(
-									$model,'value',
+									$model,'valueTo',
 									array('class'=>'input-custom')); ?>
 			</div>			
 			

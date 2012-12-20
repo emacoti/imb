@@ -17,11 +17,13 @@ class ViewEstatesController extends Controller
 		if(isset($_GET['Estates'])) {
 		
 			$aux= $_GET['Estates'];
+			$model->valueFrom= $aux['valueFrom'];
+			$model->valueTo= $aux['valueTo'];
 			$model->attributes= $aux;
 			
 			$title= $this->hasSearch($aux);
 			$wasSearch= true;
-		}		
+		}
 		
 		$this->render('index',array(
 			'model'=>$model,
@@ -47,6 +49,24 @@ class ViewEstatesController extends Controller
 			$seted[1]= Conditions::model()->findByPk($attributes['condition_id'])->name;
 		}
 		
+		if ($attributes['location_id'] != null) {
+			$seted[2]= 'en ' . Locations::model()->findByPk($attributes['location_id'])->name;
+		}
+		
+		if ($attributes['valueFrom'] != null && $attributes['valueTo'] != null) {
+			$seted[3]= 'desde ' . $attributes['valueFrom'] . ' hasta ' . $attributes['valueTo'];
+		}
+		else {
+			
+			if ($attributes['valueFrom'] != null) {
+				$seted[3]= 'desde ' . $attributes['valueFrom'];
+			}
+			
+			if ($attributes['valueTo'] != null) {
+				$seted[3]= 'hasta ' . $attributes['valueTo'];
+			}
+		}
+		
 		if (count($seted) > 0) {
 			
 			foreach ($seted as $name) {
@@ -54,7 +74,7 @@ class ViewEstatesController extends Controller
 			}
 		}
 		else {
-			$title= 'Todas';
+			$title= '  Todas';
 		}
 			
 		return substr($title,2);

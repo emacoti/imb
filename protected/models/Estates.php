@@ -25,6 +25,8 @@
 class Estates extends CActiveRecord
 {
 	public $img= array();
+	public $valueTo= null;
+	public $valueFrom= null;
 	/**
 	 * Returns the static model of the specified AR class.
 	 * @param string $className active record class name.
@@ -129,6 +131,16 @@ class Estates extends CActiveRecord
 		}
 		else
 			$criteria->compare('value',$this->value);
+		
+		if ($this->valueFrom != null) {
+
+			$criteria->compare('value','>= ' . $this->valueFrom);
+		}
+		
+		if ($this->valueTo != null) {
+
+			$criteria->compare('value','<= ' . $this->valueTo);
+		}
 		
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
