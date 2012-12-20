@@ -6,12 +6,7 @@
 )); ?>
 
 <div class="accordion" id="filters">
-  <div class="accordion-group">
-    <div class="accordion-heading">
-      <a class="accordion-toggle" data-toggle="collapse" data-parent="#filters" href="#filtersBody">
-        Filtros
-      </a>
-    </div>
+   
     <div id="filtersBody" class="accordion-body collapse">
       <div class="accordion-inner well search-estates">
 	  
@@ -92,7 +87,6 @@
 		
       </div>
     </div>
-  </div>
 </div>
 
 <?php $this->endWidget(); ?>

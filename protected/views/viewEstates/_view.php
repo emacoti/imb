@@ -1,6 +1,6 @@
 
-<a href="view/id/<?php echo($data->id); ?>">
-	<div class="view view-estates">
+<a href="view/id/<?php echo($data->id); ?>" class="view-estates">
+	<div class="view">
 	
 		<?php 
 			$img= '';

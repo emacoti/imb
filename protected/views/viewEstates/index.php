@@ -1,5 +1,9 @@
 
-<h2 class="title-estates">Propiedades: <?php echo($title); ?></h2>
+<h2 class="title-estates">Propiedades: <?php echo($title); ?>
+	<a class="link-back" data-toggle="collapse" data-parent="#filters" href="#filtersBody" title="Busqueda de propiedades">
+        Busqueda
+      </a>
+</h2>
 
 <?php $this->renderPartial('_search',array(
 	'model'=>$model,

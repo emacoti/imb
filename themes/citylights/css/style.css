@@ -586,7 +586,8 @@ table.position
   background-repeat: repeat-x;
   border-width: 1px;
   border-style: solid;
-  border-color: #E4BE8B;
+  border-color: #746766;
+  /*border-color: #E4BE8B;*/
 }
 
 .art-nav ul.art-menu ul span, .art-nav ul.art-menu ul span span
@@ -624,7 +625,7 @@ table.position
 .art-menu ul li:hover>a
 {
   color: #3B3B3B;
-  border-color: #DAA662;
+  border-color: #928282;
   background-position: 0 -26px;
 }
 
@@ -635,7 +636,7 @@ table.position
 
 .art-nav .art-menu ul li:hover>a span, .art-nav .art-menu ul li:hover>a span span
 {
-  color: #3B3B3B;
+  color: #928282;
 }
 
 

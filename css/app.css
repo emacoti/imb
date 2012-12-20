@@ -118,7 +118,7 @@ input[type="file"] {
 
 .art-nav .art-menu ul li.active>a span, .art-nav .art-menu ul li.active>a span span
 {
-  color: #3B3B3B;
+  color: #928282;
 }
 
 .art-blockcontent-body .portlet ul li {
@@ -255,15 +255,32 @@ input[type="file"] {
 /************ home *****************/
 
 /****** Listado propiedades ********/
+
 h2.title-estates {
 	background: #333;
 	padding: 5px 10px;
 	margin-top: 0;
 	color: white;
 	font-size: 17px;
+	margin-bottom: 0px;
+}
+h2.title-estates .link-back {
+	float: right;
+	font-size: 15px;
+	margin-right: 10px;
+	color: #C75656;
+}
+h2.title-estates .link-back:hover {
+	color: #C75656;
 }
 .accordion-inner.well.search-estates {
 	padding: 20px;
+	background-color: #B4B4B4;
+	border: 1px solid #CEA9A9;
+	border-top: 1px solid #860000;
+	-webkit-border-radius: 2px;
+	   -moz-border-radius: 2px;
+			border-radius: 2px;
 }
 .search-estates .controls-row  {
 	margin-bottom: 20px;
@@ -317,32 +334,36 @@ h2.title-estates {
 	text-decoration: none;
 	color: #AB2B2B;
 	cursor: pointer;
+	border: 1px solid #AB2B2B;
 }
 
-div.view.view-estates {
+a.view-estates {
 	margin: 0px 0px 10px;
+	display: block;
 }
-
-.view.view-estates {
+.view-estates .view {
 	display: inline-block;
+	margin: 0px;
 }
-
-.view.view-estates .img {
+.view-estates .view:hover {
+	border: 0px;
+}
+.view-estates .view .img {
 	float: left;
 	margin-right: 10px;
 }
-.view.view-estates .img img {
+.view-estates .view .img img {
 	width: 140px;
 	height: 105px;
 }
-.view.view-estates .info {
+.view-estates .view .info {
 	float: left;
 	width: 650px;
 }
-.view.view-estates .info div {
+.view-estates .view .info div {
 	display: inline;
 }
-.view.view-estates .info div.right {
+.view-estates .view .info div.right {
 	float: right;
 }
 
