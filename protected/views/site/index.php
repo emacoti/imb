@@ -26,7 +26,7 @@
 							echo	'<p>&nbsp;</p>';
 						}
 						else {
-							echo	'<p>' . $estate['description'] . '</p>';
+							echo	'<p>' . substr($estate['description'],0,323). "..." . '</p>';
 						}
 						echo 	'</div>';
 						echo '</div>';

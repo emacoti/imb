@@ -18,9 +18,9 @@ var nombrelista = 0;
 
 function deleteimg(url)
 {
-	var requestEmi = new XMLHttpRequest();
-	requestEmi.open("GET", url, true);
-	requestEmi.send();
+	var req = new XMLHttpRequest();
+	req.open("GET", url, true);
+	req.send();
 }
 
 function cortarYRedimensionar(){
@@ -50,9 +50,9 @@ function deleteimg2(nombre)
 		url = "../../borrarArchivo/nombre/" + nombre;
 	else
 		url = "./borrarArchivo/nombre/" + nombre;
-	var requestEmi = new XMLHttpRequest();
-	requestEmi.open("GET", url, true);
-	requestEmi.send();
+	var req = new XMLHttpRequest();
+	req.open("GET", url, true);
+	req.send();
 }
 
 function deleteli(id)

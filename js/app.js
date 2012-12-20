@@ -55,15 +55,12 @@ function setActiveSubArtMenu(id) {
 	}
 }
 
-function test() {
+function testConnection() {
 
-	jQuery.ajax({
-	url : 'http://google.com.ar',
-	type : 'GET',
-	error: function() {
-       alert("Connection active!");
-	   var xx= jQuery('.view-estate .map').css('display','none');
-	   var yy= jQuery('.view-estate .no_map').css('display','block');
-	},
-	});
+	var a=navigator.onLine;
+	if(a){
+		var xx= jQuery('.view-estate .map').css('display','block');
+		var yy= jQuery('.view-estate .no_map').css('display','none');
+	}else{
+	}
 }

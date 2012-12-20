@@ -67,7 +67,7 @@ foreach($files as $file){
 					
 					<div class="row" id="imgdes" <?php if($model->destacado == 0) echo "style='display:none;'" ?>>
 					<?php echo $form->labelEx($model,'imgdes'); ?>
-					<?
+					<?php
 					$this->widget('ext.EAjaxUpload.EAjaxUpload',
 						array(
 							'id'=>'uploadFile2',
@@ -183,7 +183,7 @@ foreach($files as $file){
 					echo("<input type='hidden' id='accion' value='update'/>");
 				?>
 				<div id="imgf" class="form">					
-				<?	
+				<?php
 				$this->widget('ext.EAjaxUpload.EAjaxUpload',
 					array(
 						'id'=>'uploadFile',

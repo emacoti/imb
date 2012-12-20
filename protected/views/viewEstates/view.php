@@ -57,17 +57,17 @@
 		if ($model->googledata != '') {
 			$address= str_replace(' ', '+', $model->googledata);
 	?>
-	<div class="map">
-		<iframe width="820" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com.ar/maps?saddr=<?php echo $address ?>&amp;t=h&amp;ie=UTF8&amp;z=14&amp;output=embed" style="margin-left: 8px" onerror="alert(11);">
+	<div class="map" style="display:none">
+		<iframe width="820" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com.ar/maps?saddr=<?php echo $address ?>&amp;t=h&amp;ie=UTF8&amp;z=16&amp;output=embed" style="margin-left: 8px" onerror="alert(11);">
 		</iframe>
 		<br />
 		<small style="margin-left: 8px">
-		<a href="https://maps.google.com.ar/maps?saddr=Panama+1501,+Bahia+Blanca,+Buenos+Aires&amp;t=h&amp;ie=UTF8&amp;z=14&amp;" target="_blank" style="color:#0000FF;text-align:left">
+		<a href="https://maps.google.com.ar/maps?saddr=Panama+1501,+Bahia+Blanca,+Buenos+Aires&amp;t=h&amp;ie=UTF8&amp;z=16&amp;" target="_blank" style="color:#0000FF;text-align:left">
 			Ver mapa m&aacute;s grande
 		</a>
 		</small>
 	</div>
-	<div class="no_map" style="display:none">
+	<div class="no_map">
 		No es posible mostrar la ubicacion ya que no hay conexion a internet.
 	</div>
 	<?php
@@ -84,6 +84,6 @@
 	<script>
 	$('#divMod .modal').appendTo($("body"));
 	setActiveArtMenu('states-menu');
-	test();
+	testConnection();
 	</script>
 </div>
