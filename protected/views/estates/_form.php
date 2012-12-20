@@ -12,7 +12,21 @@
 		});
 	});
 </script>
-
+<?php
+// Limpiando la carpeta de imagenes
+$ruta = Yii::app()->getBasePath()."/../upload/*";
+$files = glob($ruta);
+foreach($files as $file){
+	if(is_file($file) && is_writable($file))
+		unlink($file);
+}
+// Limpiando la carpeta de imagenes destacadas
+$files = glob(Yii::app()->getBasePath()."/../uploades/*");
+foreach($files as $file){
+	if(is_file($file) && is_writable($file))
+		unlink($file);
+}
+?>
 <div>
 <div class="form">
 	<p class="note">Los campos con <span class="required">*</span> son requeridos.</p>

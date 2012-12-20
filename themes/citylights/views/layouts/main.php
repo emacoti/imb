@@ -36,19 +36,20 @@
 			<a class="close" data-dismiss="modal">X</a>  
 			<h3>Edici&oacute;n de imagen</h3>  
 		</div>  
-		<div class="modal-body" style="text-align:center;">  
-			<img id="imgedit" src="" style="max-width: 500px; max-height: 400px;">          
+		<div class="modal-body" style="text-align:center;">
+		Para redimensionar la imagen dibuje un rectangulo sobre la misma.<br/>
+			<img id="imgedit" src="" style="border:1px solid; max-width: 500px; max-height: 400px;">          
 		</div>  
 		<div class="modal-footer">
-			<input type="text" name="x1" id="x1" value="" />
-			<input type="text" name="y1" id="y1" value="" />
-			<input type="text" name="x2" id="x2" value="" />
-			<input type="text" name="y2" id="y2" value="" />
-			<input type="text" name="nomimg" id="nomimg" value="" />
-			<input type="text" name="tipo" id="tipo" value="" />
+			<input type="hidden" name="x1" id="x1" value="" />
+			<input type="hidden" name="y1" id="y1" value="" />
+			<input type="hidden" name="x2" id="x2" value="" />
+			<input type="hidden" name="y2" id="y2" value="" />
+			<input type="hidden" name="nomimg" id="nomimg" value="" />
+			<input type="hidden" name="tipo" id="tipo" value="" />
 
 			<a href="#" onclick="cortarYRedimensionar();" class="btn" data-dismiss="modal">Redimensionar</a>  
-			<a href="#" class="btn" onclick="$('#imgedit').imgAreaSelect({ instance: true });" data-dismiss="modal">Close</a>  
+			<a href="#" class="btn" onclick="$('#imgedit').imgAreaSelect({ instance: true });" data-dismiss="modal">Cancelar</a>  
 		</div>  
 	</div>
 	<script language='JavaScript'>

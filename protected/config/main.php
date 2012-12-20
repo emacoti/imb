@@ -11,7 +11,7 @@ return array(
 
 	// preloading 'log' component
 	'preload'=>array('log'),
-	
+	'language' => 'es',
 	'theme'=> 'citylights',
 
 	// autoloading model and component classes

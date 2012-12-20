@@ -91,20 +91,21 @@ class EstatesController extends AbmController
 			$model->attributes=$_POST['Estates'];
 			if($model->save())
 			{
+				$id = $model->id;
+				// Creacion del directorio para las imagenes
+				if (!is_dir('./images/estates/'.$id)) 
+				{
+					mkdir('./images/estates/'.$id);
+				}
 				foreach ($rutas as $i => $v) 
 				{	
-					$id = $model->id;
 					foreach ($att as $k => $m)
 					{
 						$da= new Data;
 						$da->attributes= array('estate_id'=>$id, 'name'=>$k, 'data_type'=>'-', 'value'=>$m);
 						$da->save();
 					}
-					
-					if (!is_dir('./images/estates/'.$id)) 
-					{
-						mkdir('./images/estates/'.$id);
-					}
+					// Moviendo las imagenes
 					$old = "./upload/" . $v;
 					$new = "./images/estates/".$id."/".$v;
 					rename($old, $new) or die("No se puede mover $old a $new.");
@@ -113,7 +114,7 @@ class EstatesController extends AbmController
 					$img->attributes= array('path_name'=>$id."/".$v, 'estate_id'=>$id, 'description'=>'descripcion');
 					$img->save();
 				}
-				
+				// Creando la imagen destacada
 				if(isset($_POST["filedes"]) && $model->destacado == 1)
 				{
 					$id = $model->id;
@@ -122,15 +123,20 @@ class EstatesController extends AbmController
 					$new = "./images/estates/".$id."/des".$destacado;
 					rename($old, $new) or die("No se puede mover $old a $new.");
 					$model->imgdes=$id."/des".$destacado;
+					$dimensiones = getimagesize($new);
+					$anchoReal = $dimensiones[0];
+					$altoReal = $dimensiones[1];
+					if($anchoReal != 820 || $altoReal != 320)
+					{
+						$image = new SimpleImage();
+						$image->load($new);
+						$image->resize(820,320);
+						$image->save($new);
+					}
 				}
 				else if($model->destacado == 1 && isset($_POST["olddes"]))
 				{
 					$model->imgdes = $_POST["olddes"];
-				}
-				else
-				{
-					$model->imgdes = "";
-					$model->destacado = 0;
 				}
 				
 				$model->save();
@@ -203,6 +209,16 @@ class EstatesController extends AbmController
 				$new = "./images/estates/".$id."/des".$destacado;
 				rename($old, $new) or die("No se puede mover $old a $new.");
 				$model->imgdes=$id."/des".$destacado;
+				$dimensiones = getimagesize($new);
+				$anchoReal = $dimensiones[0];
+				$altoReal = $dimensiones[1];
+				if($anchoReal != 820 || $altoReal != 320)
+				{
+					$image = new SimpleImage();
+					$image->load($new);
+					$image->resize(820,320);
+					$image->save($new);
+				}
 			}
 			else if($model->destacado == 1 && isset($_POST["olddes"]))
 			{
@@ -275,6 +291,17 @@ class EstatesController extends AbmController
 			// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
 			if(!isset($_GET['ajax']))
 				$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('admin'));
+				
+			// Limpiando la carpeta de imagenes
+			$ruta = Yii::app()->getBasePath()."/../images/estates/".$id."/*";
+			$files = glob($ruta);
+			foreach($files as $file){
+				if(is_file($file) && is_writable($file))
+					unlink($file);
+			}
+			$ruta = Yii::app()->getBasePath()."/../images/estates/".$id;
+			if(is_dir($ruta))
+				rmdir($ruta);
 		}
 		else
 			throw new CHttpException(400,'Invalid request. Please do not repeat this request again.');

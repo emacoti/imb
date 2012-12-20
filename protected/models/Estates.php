@@ -56,6 +56,7 @@ class Estates extends CActiveRecord
 					'numerical', 'integerOnly'=>true),
 			array('neighborhood', 'length', 'max'=>50),
 			array('imgdes', 'length', 'max'=>100),
+			array('imgdes', 'default', 'value'=>'d/noimg.jpg'),
 			array('googledata', 'length', 'max'=>150),
 			array('description', 'safe'),
 			array('value', 'default', 'value'=>0),
