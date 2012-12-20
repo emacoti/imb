@@ -54,3 +54,16 @@ function setActiveSubArtMenu(id) {
 		parent.prev('a#info-sub-menu').parent('li').addClass('active');
 	}
 }
+
+function test() {
+
+	jQuery.ajax({
+	url : 'http://google.com.ar',
+	type : 'GET',
+	error: function() {
+       alert("Connection active!");
+	   var xx= jQuery('.view-estate .map').css('display','none');
+	   var yy= jQuery('.view-estate .no_map').css('display','block');
+	},
+	});
+}

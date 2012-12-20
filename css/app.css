@@ -228,6 +228,8 @@ input[type="file"] {
 .panel-preview  .carousel .carousel-caption p {
 	margin: 0px;
 	line-height: 17px;
+	max-height: 50px;
+	text-align: justify;
 }
 /************ about **************/
 
@@ -263,6 +265,10 @@ h2.title-estates {
 	color: white;
 	font-size: 17px;
 	margin-bottom: 0px;
+}
+h2.title-estates i {
+	font-size: 12px;
+	letter-spacing: 1px;
 }
 h2.title-estates .link-back {
 	float: right;

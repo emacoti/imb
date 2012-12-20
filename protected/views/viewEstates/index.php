@@ -1,5 +1,11 @@
 
-<h2 class="title-estates">Propiedades: <?php echo($title); ?>
+<h2 class="title-estates">
+	<strong>
+		Propiedades: 
+	</strong>
+	<i>
+		<?php echo($title); ?>
+	</i>
 	<a class="link-back" data-toggle="collapse" data-parent="#filters" href="#filtersBody" title="Busqueda de propiedades">
         Busqueda
       </a>
