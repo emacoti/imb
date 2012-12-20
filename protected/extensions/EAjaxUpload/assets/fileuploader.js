@@ -771,6 +771,8 @@ qq.extend(qq.FileUploader.prototype, {
         // mark completed
         var item = this._getItemByFileId(id);
         qq.remove(this._find(item, 'cancel'));
+		this._find(item, 'editar').setAttribute('style', 'display:initial;');
+		
         qq.remove(this._find(item, 'spinner'));
 
         if (result.success){
@@ -795,6 +797,7 @@ qq.extend(qq.FileUploader.prototype, {
 		if(this._listElement.id == "nombrelista0")
 		{
 			var fileElement = this._find(item, 'editar');
+			fileElement.setAttribute('style', 'display:none;');
 			qq.setEditarVars(fileElement, fileName, true);
 			
 			var fileElement = this._find(item, 'input');
@@ -803,6 +806,7 @@ qq.extend(qq.FileUploader.prototype, {
 		else
 		{
 			var fileElement = this._find(item, 'editar');
+			fileElement.setAttribute('style', 'display:none;');
 			qq.setEditarVars(fileElement, fileName, false);
 			
 			var fileElement = this._find(item, 'input');
