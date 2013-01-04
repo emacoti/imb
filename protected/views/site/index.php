@@ -14,21 +14,25 @@
 				
 					foreach($estates as $i => $estate) {
 						
+						$item= '';
 						if ($i == 0) {
 							echo '<div class="active item">';
 						}
 						else {
 							echo '<div class="item">';
 						}
-						echo 	'<img src="' . Yii::app()->request->baseUrl . '/images/estates/' . $estate['imgdes'] . '" alt="">';
-						echo 	'<div class="carousel-caption">';
+						$item= $item . '<img src="' . Yii::app()->request->baseUrl . '/images/estates/' . $estate['imgdes'] . '" alt="">';
+						$item= $item . '<div class="carousel-caption">';
 						if ($estate['description'] == '') {
-							echo	'<p>&nbsp;</p>';
+							$item= $item . '<p>&nbsp;</p>';
 						}
 						else {
-							echo	'<p>' . substr($estate['description'],0,323). "..." . '</p>';
+							$item= $item . '<p>' . substr($estate['description'],0,323). "..." . '</p>';
 						}
-						echo 	'</div>';
+						$item= $item . '</div>';
+						echo CHtml::link(
+						$item,
+						array('/viewEstates/view', 'id'=>$estate['id']));
 						echo '</div>';
 					}
 				?>

@@ -126,7 +126,13 @@
                         <div class="art-footer-inner">
                             <a href="#" class="art-rss-tag-icon" title="RSS"></a>
                             <div class="art-footer-text">
-                                <p><a href="mailto:info@filipponeinmobiliaria.com.ar">Contactenos</a> | <a href="http://www.yiiframework.com/">Yii</a> | <a href="http://yiithemes.mehesz.net/theme/65/artisteer-city-lights">Theme</a><br /> Copyright &copy; 2012. Cortes - del Castillo.</p>
+                                <p>
+								<?php echo CHtml::link('Contactenos', array('/site/contact')); ?>
+								| 
+								<a href="http://www.yiiframework.com/" target="_blank">Yii</a>
+								<br /> 
+								Copyright &copy; 2012. Filippone Inmobiliaria.
+								</p>
                             </div>
                         </div>
                         <div class="art-footer-background"></div>

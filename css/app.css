@@ -340,6 +340,8 @@ h2.title-estates .link-back:hover {
 	text-decoration: none;
 	color: #AB2B2B;
 	cursor: pointer;
+}
+.list-view-estates .items a .view:hover {
 	border: 1px solid #AB2B2B;
 }
 
