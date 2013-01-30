@@ -77,11 +77,11 @@ foreach($files as $file){
 							   'sizeLimit'=>10*1024*1024,// maximum file size in bytes
 							   'minSizeLimit'=>1*1024,// minimum file size in bytes
 							   'messages'=>array(
-												 'typeError'=>"{file} has invalid extension. Only {extensions} are allowed.",
-												 'sizeError'=>"{file} is too large, maximum file size is {sizeLimit}.",
-												 'minSizeError'=>"{file} is too small, minimum file size is {minSizeLimit}.",
-												 'emptyError'=>"{file} is empty, please select files again without it.",
-												 'onLeave'=>"The files are being uploaded, if you leave now the upload will be cancelled."
+												 'typeError'=>"{file} no tiene un formato compatible. Solo se admite {extensions}.",
+												 'sizeError'=>"{file} es demasiado grande, el limite es {sizeLimit}.",
+												 'minSizeError'=>"{file} es demasiado grande, el limite es {minSizeLimit}.",
+												 'emptyError'=>"{file} es un archivo en blanco.",
+												 'onLeave'=>"Los archivos se estan subiendo, si abandona la pagina ahora la carga se cancelara."
 												),
 							   'showMessage'=>"js:function(message){ alert(message); }"
 							)
@@ -194,11 +194,11 @@ foreach($files as $file){
 						   'minSizeLimit'=>1*1024,// minimum file size in bytes
 						   'multiple'=>true,
 						   'messages'=>array(
-											 'typeError'=>"{file} has invalid extension. Only {extensions} are allowed.",
-											 'sizeError'=>"{file} is too large, maximum file size is {sizeLimit}.",
-											 'minSizeError'=>"{file} is too small, minimum file size is {minSizeLimit}.",
-											 'emptyError'=>"{file} is empty, please select files again without it.",
-											 'onLeave'=>"The files are being uploaded, if you leave now the upload will be cancelled."
+											 'typeError'=>"{file} no tiene un formato compatible. Solo se admite {extensions}.",
+											 'sizeError'=>"{file} es demasiado grande, el limite es {sizeLimit}.",
+											 'minSizeError'=>"{file} es demasiado grande, el limite es {minSizeLimit}.",
+											 'emptyError'=>"{file} es un archivo en blanco.",
+											 'onLeave'=>"Los archivos se estan subiendo, si abandona la pagina ahora la carga se cancelara."
 											),
 						   'showMessage'=>"js:function(message){ alert(message); }"
 						)
