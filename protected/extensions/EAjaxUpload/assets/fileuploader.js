@@ -1,7 +1,7 @@
 /**
  * http://github.com/valums/file-uploader
  *
- * Multiple file upload component with progress-bar, drag-and-drop.
+ * Multiple file upload component with progress-bar.
  * © 2010 Andrew Valums ( andrew(at)valums.com )
  *
  * Licensed under GNU GPL 2 or later, see license.txt.
@@ -13,123 +13,9 @@
 
 var qq = qq || {};
 var randomid = 0;
-var attid = 1;
 var nombrelista = 0;
 
-function deleteimg(url)
-{
-	var req = new XMLHttpRequest();
-	req.open("GET", url, true);
-	req.send();
-}
 
-function cortarYRedimensionar(){
-
-	var datos='x1='+document.getElementById("x1").value+'&y1='+document.getElementById("y1").value+'&x2='+document.getElementById("x2").value+'&y2='+document.getElementById("y2").value+'&nomimg='+document.getElementById("nomimg").value+'&tipo='+document.getElementById("tipo").value;
-
-	$.ajax({
-	type: "POST",
-	url: docrot + "/estates/resize",
-	data: datos,
-	dataType:   "json",
-	success: function(data) {
-		if(data.success){}
-		else
-		{
-			alert("Error: Por favor intente nuevamente.");	
-		}
-	}
-	});
-}
-
-function deleteimg2(nombre)
-{
-	var url = "";
-	var ele = document.getElementById("accion");
-	if(ele.value == 'update')
-		url = "../../borrarArchivo/nombre/" + nombre;
-	else
-		url = "./borrarArchivo/nombre/" + nombre;
-	var req = new XMLHttpRequest();
-	req.open("GET", url, true);
-	req.send();
-}
-
-function deleteli(id)
-{
-	var elem = document.getElementById(id);
-	elem.parentNode.removeChild(elem);
-}
-
-function borrarli(id)
-{
-	var elem = document.getElementsByName(id)[0];
-	elem.parentNode.removeChild(elem);
-}
-
-function reloadImg(id) {
-   var obj = document.getElementById(id);
-   var src = obj.src;
-   var pos = src.indexOf('?');
-   if (pos >= 0) {
-      src = src.substr(0, pos);
-   }
-   var date = new Date();
-   obj.src = src + '?v=' + date.getTime();
-   return false;
-}
-
-function agregarAtributo()
-{
-	var elem = document.getElementById("att");
-	
-	var newp = document.createElement('p');
-	newp.setAttribute('id','litem' + attid);
-	
-	var input1 = document.createElement('input');
-	input1.setAttribute('class','atributos');
-	input1.setAttribute('type','text');
-	input1.setAttribute('name','nombre' + attid);
-	input1.setAttribute('size','5');
-	
-	var strong1 = document.createElement('strong');
-	strong1.innerHTML = '&nbsp;';
-	
-	var strong2 = document.createElement('strong');
-	strong2.innerHTML = '&nbsp;';
-	
-	var input2 = document.createElement('input');
-	input2.setAttribute('class','atributos');
-	input2.setAttribute('type','text');
-	input2.setAttribute('name','valor' + attid);
-	input2.setAttribute('size','5');
-	
-	var aref = document.createElement('a');
-	aref.setAttribute('href','#');
-	aref.setAttribute('onclick','deleteli(\"litem'+attid+'\")');
-	aref.innerHTML = 'Borrar';
-	
-	attid++;
-	
-	newp.appendChild(input1);
-	newp.appendChild(strong1);
-	newp.appendChild(input2);
-	newp.appendChild(strong2);
-	newp.appendChild(aref);
-	
-	elem.appendChild(newp);
-}
-
-function reiniciar()
-{
-	document.getElementById("x1").value = 0;
-	document.getElementById("y1").value = 0;
-	document.getElementById("x2").value = 0;
-	document.getElementById("y2").value = 0;
-	$("#imgedit").imgAreaSelect({remove:true});
-	$("#imgedit").imgAreaSelect({remove:true});
-	$("#imgedit").imgAreaSelect({remove:true});
-}
 /**
  * Adds all missing properties from second obj to first obj
  */
@@ -619,7 +505,7 @@ qq.FileUploaderBasic.prototype = {
 
 
 /**
- * Class that creates upload widget with drag-and-drop and file list
+ * Class that creates upload widget with file list
  * @inherits qq.FileUploaderBasic
  */
 qq.FileUploader = function(o){
@@ -636,7 +522,6 @@ qq.FileUploader = function(o){
         listElement: null,
 
         template: '<div class="qq-uploader">' +
-                '<div class="qq-upload-drop-area"><span>Drop files here to upload</span></div>' +
                 '<div class="qq-upload-button">Subir imagen</div>' +
                 '<ul class="qq-upload-list" id="nombrelista"></ul>' +
              '</div>',
@@ -656,8 +541,6 @@ qq.FileUploader = function(o){
         classes: {
             // used to get elements from templates
             button: 'qq-upload-button',
-            drop: 'qq-upload-drop-area',
-            dropActive: 'qq-upload-drop-area-active',
             list: 'qq-upload-list',
 
             file: 'qq-upload-file',
@@ -687,7 +570,6 @@ qq.FileUploader = function(o){
     this._button = this._createUploadButton(this._find(this._element, 'button'));
 
     this._bindCancelEvent();
-    this._setupDragDrop();
 };
 
 // inherit from Basic Uploader
@@ -704,46 +586,6 @@ qq.extend(qq.FileUploader.prototype, {
         }
 
         return element;
-    },
-    _setupDragDrop: function(){
-        var self = this,
-            dropArea = this._find(this._element, 'drop');
-
-        var dz = new qq.UploadDropZone({
-            element: dropArea,
-            onEnter: function(e){
-                qq.addClass(dropArea, self._classes.dropActive);
-                e.stopPropagation();
-            },
-            onLeave: function(e){
-                e.stopPropagation();
-            },
-            onLeaveNotDescendants: function(e){
-                qq.removeClass(dropArea, self._classes.dropActive);
-            },
-            onDrop: function(e){
-                dropArea.style.display = 'none';
-                qq.removeClass(dropArea, self._classes.dropActive);
-                self._uploadFileList(e.dataTransfer.files);
-            }
-        });
-
-        dropArea.style.display = 'none';
-
-        qq.attach(document, 'dragenter', function(e){
-            if (!dz._isValidFileDrag(e)) return;
-
-            dropArea.style.display = 'block';
-        });
-        qq.attach(document, 'dragleave', function(e){
-            if (!dz._isValidFileDrag(e)) return;
-
-            var relatedTarget = document.elementFromPoint(e.clientX, e.clientY);
-            // only fire when leaving document out
-            if ( ! relatedTarget || relatedTarget.nodeName == "HTML"){
-                dropArea.style.display = 'none';
-            }
-        });
     },
     _onSubmit: function(id, fileName){
         qq.FileUploaderBasic.prototype._onSubmit.apply(this, arguments);
@@ -772,6 +614,7 @@ qq.extend(qq.FileUploader.prototype, {
         var item = this._getItemByFileId(id);
         qq.remove(this._find(item, 'cancel'));
 		this._find(item, 'editar').setAttribute('style', 'display:initial;');
+		this._find(item, 'borrar').setAttribute('style', 'display:initial;');
 		
         qq.remove(this._find(item, 'spinner'));
 
@@ -792,6 +635,7 @@ qq.extend(qq.FileUploader.prototype, {
         this._find(item, 'size').style.display = 'none';
 
 		var fileElement = this._find(item, 'borrar');
+		fileElement.setAttribute('style', 'display:none;');
         qq.setLink(fileElement, fileName);
 		
 		if(this._listElement.id == "nombrelista0")
@@ -849,93 +693,6 @@ qq.extend(qq.FileUploader.prototype, {
         });
     }
 });
-
-qq.UploadDropZone = function(o){
-    this._options = {
-        element: null,
-        onEnter: function(e){},
-        onLeave: function(e){},
-        // is not fired when leaving element by hovering descendants
-        onLeaveNotDescendants: function(e){},
-        onDrop: function(e){}
-    };
-    qq.extend(this._options, o);
-
-    this._element = this._options.element;
-
-    this._disableDropOutside();
-    this._attachEvents();
-};
-
-qq.UploadDropZone.prototype = {
-    _disableDropOutside: function(e){
-        // run only once for all instances
-        if (!qq.UploadDropZone.dropOutsideDisabled ){
-
-            qq.attach(document, 'dragover', function(e){
-                if (e.dataTransfer){
-                    e.dataTransfer.dropEffect = 'none';
-                    e.preventDefault();
-                }
-            });
-
-            qq.UploadDropZone.dropOutsideDisabled = true;
-        }
-    },
-    _attachEvents: function(){
-        var self = this;
-
-        qq.attach(self._element, 'dragover', function(e){
-            if (!self._isValidFileDrag(e)) return;
-
-            var effect = e.dataTransfer.effectAllowed;
-            if (effect == 'move' || effect == 'linkMove'){
-                e.dataTransfer.dropEffect = 'move'; // for FF (only move allowed)
-            } else {
-                e.dataTransfer.dropEffect = 'copy'; // for Chrome
-            }
-
-            e.stopPropagation();
-            e.preventDefault();
-        });
-
-        qq.attach(self._element, 'dragenter', function(e){
-            if (!self._isValidFileDrag(e)) return;
-
-            self._options.onEnter(e);
-        });
-
-        qq.attach(self._element, 'dragleave', function(e){
-            if (!self._isValidFileDrag(e)) return;
-
-            self._options.onLeave(e);
-
-            var relatedTarget = document.elementFromPoint(e.clientX, e.clientY);
-            // do not fire when moving a mouse over a descendant
-            if (qq.contains(this, relatedTarget)) return;
-
-            self._options.onLeaveNotDescendants(e);
-        });
-
-        qq.attach(self._element, 'drop', function(e){
-            if (!self._isValidFileDrag(e)) return;
-
-            e.preventDefault();
-            self._options.onDrop(e);
-        });
-    },
-    _isValidFileDrag: function(e){
-        var dt = e.dataTransfer,
-            // do not check dt.types.contains in webkit, because it crashes safari 4
-            isWebkit = navigator.userAgent.indexOf("AppleWebKit") > -1;
-
-        // dt.effectAllowed is none in Safari 5
-        // dt.types.contains check is for firefox
-        return dt && dt.effectAllowed != 'none' &&
-            (dt.files || (!isWebkit && dt.types.contains && dt.types.contains('Files')));
-
-    }
-};
 
 qq.UploadButton = function(o){
     this._options = {

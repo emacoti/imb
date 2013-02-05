@@ -64,8 +64,8 @@ class User extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-			'username' => 'Username',
-			'password' => 'Password',
+			'username' => 'Usuario',
+			'password' => 'Contraseña',
 			'salt' => 'Salt',
 		);
 	}
